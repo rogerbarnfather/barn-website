@@ -102,19 +102,19 @@
           <div>
             <span class="kicker">Migration</span>
             <h2>Change style without a rewrite.</h2>
-            <p>Architectures should be allowed to change as you learn. Barnark moves your real code from one template to another, <strong>previewing every move first</strong>.</p>
-            <p>If anything has no clear destination, it stops and asks rather than guessing. When it’s done, it checks the result against the new template.</p>
+            <p>Architectures should be allowed to change as you learn. Barnark moves your real code from one template to another, <strong>asking you about each move</strong> and saving the plan as you go.</p>
+            <p>Confirm a suggestion, rename, choose another home or leave it where it is. Stop whenever you like and carry on later. Nothing moves until the plan is complete, and then it checks the result against the new template.</p>
           </div>
-          <div class="panel" aria-label="A switch from one template to another, previewed">
-            <p class="muted" style="margin-bottom: 14px">Domain Driven Design → <strong style="color: var(--text)">Library</strong> · preview</p>
+          <div class="panel" aria-label="A switch plan from one template to another, part decided">
+            <p class="muted" style="margin-bottom: 14px">Domain Driven Design → <strong style="color: var(--text)">Library</strong> · plan</p>
             <ul class="examples" style="margin-top: 0">
               <li><span class="lamp green"></span>Context/FrontDesk<span class="state">→ Internal/Feature/FrontDesk</span></li>
               <li><span class="lamp green"></span>Context/Property<span class="state">→ Internal/Feature/Property</span></li>
               <li><span class="lamp green"></span>Context/Reservation<span class="state">→ Internal/Feature/Reservation</span></li>
-              <li><span class="lamp yellow"></span>Kernel/Infrastructure/Persistence<span class="state">no destination yet</span></li>
-              <li><span class="lamp yellow"></span>Transport/Http/Json/V1/Guest<span class="state">no destination yet</span></li>
+              <li><span class="lamp yellow"></span>Kernel/Infrastructure/Persistence<span class="state">decide later</span></li>
+              <li><span class="lamp yellow"></span>Transport/Http/Json/V1/Guest<span class="state">decide later</span></li>
             </ul>
-            <p class="muted" style="margin: 16px 0 0; font-size: 0.9rem">A real preview of a hotel-booking codebase. Two paths need a decision first, so nothing was written.</p>
+            <p class="muted" style="margin: 16px 0 0; font-size: 0.9rem">A hotel-booking codebase part way through its plan. Two paths are still to decide, so nothing has been written.</p>
           </div>
         </div>
       </div>
@@ -160,9 +160,9 @@
             </div>
           </details>
           <details>
-            <summary><span>Switching templates<small>Previews, mappings and refusals</small></span></summary>
+            <summary><span>Switching templates<small>A plan, one decision at a time</small></span></summary>
             <div class="body">
-              <p>A switch moves each real subtree to its equivalent place in the target template, rewriting namespaces as it goes. It previews by default. It refuses to guess: an unmapped concept, or two concepts merging into one, stops it with nothing written. You can supply your own mapping table, and it always finishes with a check against the new template.</p>
+              <p>A switch asks what to do with each real piece of a folder: move it under a concept of the new template (keeping its name or giving it a new one), leave it where it is, or decide later. A mapping table only suggests; you confirm. The plan is saved after every answer in <code>.barnark/switch-plans/</code>, so you can stop and carry on. When nothing is left to decide it runs in one go: units move with their namespaces rewritten, empty old folders go if you asked, the folder's roles are recorded, and a check against the new template lists what is left to tidy inside the moved folders. Plan it in the terminal or in the GUI's switch tab: they share the plan, so you can start in one and finish in the other.</p>
             </div>
           </details>
           <details>
@@ -171,7 +171,7 @@
 <pre><code><span class="p">$ </span>barnark template:check              <span class="c"># check every tracked folder</span>
 <span class="p">$ </span>barnark template:offers src/Context <span class="c"># what may be created here?</span>
 <span class="p">$ </span>barnark template:new Context Billing src/Context
-<span class="p">$ </span>barnark template:switch "Domain Driven Design" "Library" ./src   <span class="c"># preview</span></code></pre>
+<span class="p">$ </span>barnark template:switch Library src   <span class="c"># plan a switch, one question at a time</span></code></pre>
               <p>Tracked folders live in <code>barnark-workspace.json</code>, committed with your code, so a check needs no arguments.</p>
             </div>
           </details>

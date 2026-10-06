@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barncept · BarnSuite</title>
+  <meta name="description" content="Barncept captures how you understand a domain as a graph of linked concepts, independent of how it is ever built.">
+  <link rel="icon" href="assets/barncept.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-brand="cept">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="index.html"><span class="suite-mark" aria-hidden="true"><i></i><i></i><i></i></span>BarnSuite</a>
+      <nav aria-label="Tools">
+        <ul class="nav">
+          <li data-brand="spec"><a href="barnspec.html"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
+          <li data-brand="ark"><a href="barnark.html"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
+          <li data-brand="cept"><a href="barncept.html" aria-current="page"><span class="dot" aria-hidden="true"></span>Barncept</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept</span>
+        <h1>Your understanding <span class="accent">outlives your code</span>.</h1>
+        <p class="lede">Code is rewritten, frameworks come and go, folders get reshuffled. What lasts is how you understand the domain. Barncept captures that understanding as a graph of linked concepts, each with a plain meaning, so it can be realised in any way you like.</p>
+        <div class="actions">
+          <a class="btn" href="#get-started">Get started</a>
+          <a class="btn ghost" href="#deeper">Go deeper</a>
+        </div>
+      </div>
+      <div class="wrap wide hero-shot">
+        <figure class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Schema editor</span></div>
+          <img src="assets/screens/cept-vocab.webp" width="1280" height="720" alt="The Barncept schema editor showing a hotel's reservations vocabulary as a tree of concepts. The selected concept, booking, means a guest's hold on a room for a run of nights, and is linked to the facts is confirmed and has been cancelled.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="feature">
+          <div>
+            <span class="kicker">Meaning first</span>
+            <h2>Concepts that explain themselves.</h2>
+            <p>Every concept has a name and <strong>a meaning written in plain words</strong>, and it’s linked to the concepts it depends on. Months later, anyone can open the graph and understand not just what exists, but what each thing is for.</p>
+          </div>
+          <figure class="panel" style="margin: 0">
+            <svg viewBox="0 0 490 300" role="img" aria-labelledby="graph-title" style="display: block; width: 100%; height: auto">
+              <title id="graph-title">The reservations vocabulary: a room, a guest and a booking, with what can be true of rooms and bookings</title>
+              <g stroke="var(--border)" stroke-width="2">
+                <line x1="240" y1="64" x2="100" y2="150"/>
+                <line x1="240" y1="64" x2="240" y2="150"/>
+                <line x1="240" y1="64" x2="380" y2="150"/>
+                <line x1="100" y1="150" x2="50" y2="240"/>
+                <line x1="100" y1="150" x2="155" y2="240"/>
+                <line x1="380" y1="150" x2="312" y2="240"/>
+                <line x1="380" y1="150" x2="436" y2="240"/>
+              </g>
+              <circle cx="240" cy="64" r="20" fill="var(--brand)"/>
+              <g fill="var(--brand-tint)" stroke="var(--brand)" stroke-width="2">
+                <circle cx="100" cy="150" r="15"/>
+                <circle cx="240" cy="150" r="15"/>
+                <circle cx="380" cy="150" r="15"/>
+                <circle cx="50" cy="240" r="10"/>
+                <circle cx="155" cy="240" r="10"/>
+                <circle cx="312" cy="240" r="10"/>
+                <circle cx="436" cy="240" r="10"/>
+              </g>
+              <g font-family="var(--sans)" font-size="13" font-weight="650" fill="var(--text)" text-anchor="middle">
+                <text x="240" y="28">reservations</text>
+                <text x="100" y="122">room</text>
+                <text x="240" y="122">guest</text>
+                <text x="380" y="122">booking</text>
+              </g>
+              <g font-family="var(--sans)" font-size="12" fill="var(--text-muted)" text-anchor="middle">
+                <text x="50" y="272">is on offer</text>
+                <text x="155" y="272">is out of service</text>
+                <text x="312" y="272">is confirmed</text>
+                <text x="436" y="272">has been cancelled</text>
+              </g>
+            </svg>
+          </figure>
+        </div>
+
+        <div class="feature flip">
+          <div>
+            <span class="kicker">From stories</span>
+            <h2>The words your stories use, organised.</h2>
+            <p>The people, things and actions in your <a href="barnspec.html">Barnspec</a> stories can be exported as a concept graph in one step. The business’s own vocabulary becomes something you can see whole, reorganise and build on, rather than words scattered across tickets.</p>
+          </div>
+          <div class="panel" aria-label="Concepts exported from a hotel's reservation stories">
+            <p class="muted" style="margin-bottom: 14px">Exported from a hotel’s reservation stories</p>
+            <ul class="examples" style="margin-top: 0">
+              <li><strong>guest</strong><span class="state">choosing and securing somewhere to stay</span></li>
+              <li><strong>room</strong><span class="state">a room the hotel lets to guests</span></li>
+              <li><strong>booking</strong><span class="state">a guest’s hold on a room for a run of nights</span></li>
+              <li><strong>book a room</strong><span class="state">an action a guest takes</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature stacked">
+          <div>
+            <div class="copy-head">
+              <span class="kicker">Realise it any way</span>
+              <h2>One model. Any shape.</h2>
+            </div>
+            <div>
+            <p>Barncept never decides what a graph becomes. A folder structure, a diagram and a set of documents are each <strong>one possible realisation</strong>, never the model itself. Turn the same graph into real folders, an architecture to check code against, or whatever you need next.</p>
+            <p>Every <a href="barnark.html">Barnark</a> architecture template is a Barncept graph, edited in exactly the same way.</p>
+            </div>
+          </div>
+          <figure>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Schema editor</span></div>
+              <img src="assets/screens/cept-editor.webp" width="1280" height="720" alt="The Barncept editor open on the Domain Driven Design architecture template, with the Command concept selected and its meaning shown.">
+            </div>
+            <figcaption>An architecture template is a concept graph too.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="deeper">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Go deeper</span>
+          <h2>How it works underneath.</h2>
+          <p>Everything above, in more detail, for when you want it.</p>
+        </div>
+        <div class="deeper">
+          <details>
+            <summary><span>The three kinds of concept<small>Definitions, Abstractions and Implementations</small></span></summary>
+            <div class="body">
+              <ul>
+                <li><strong>Definition</strong>: a concept that can require other concepts beneath it, such as <code>Application</code> or <code>Domain</code>.</li>
+                <li><strong>Abstraction</strong>: a role that concrete things fulfil, such as <code>Aggregate</code> or <code>Command</code>.</li>
+                <li><strong>Implementation</strong>: a concrete thing that fulfils one Abstraction, such as <code>Basket</code> fulfilling <code>Aggregate</code>.</li>
+              </ul>
+              <p>The editor marks them with a square, a triangle and a circle.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>Templates and custom schemas<small>Portable vocabulary, and the things that use it</small></span></summary>
+            <div class="body">
+              <p>A <strong>template</strong> schema holds only Definitions and Abstractions: a reusable vocabulary. A <strong>custom</strong> schema adds Implementations, so it can be resolved from a root into a concrete, named tree. A bad schema fails loudly, naming the missing reference or the cycle it found.</p>
+<pre><code>Root
+|
++--Application
++--Domain</code></pre>
+            </div>
+          </details>
+          <details>
+            <summary><span>Realising a graph as folders<small>Scaffold it, then check it still matches</small></span></summary>
+            <div class="body">
+              <p>Barnscaff, Barncept’s companion, turns a resolved graph into real directories and files, and scans an existing folder to check it still matches.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barnscaff scaffold library Root ./generated --apply
+<span class="p">$ </span>vendor/bin/barnscaff scan library Root ./generated</code></pre>
+            </div>
+          </details>
+          <details>
+            <summary><span>From PHP<small>Schemas are plain arrays or JSON</small></span></summary>
+            <div class="body">
+<pre><code>$schema   = new SchemaFactory()->create($data);
+$instance = new ResolverFactory()->create()
+    ->resolve($schema, ImplementationKey::new('Root'));
+
+echo new PresenterFactory()->create()->present($instance);</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="get-started">
+      <div class="wrap cta">
+        <span class="kicker">Get started</span>
+        <h2>Open your concepts in the browser.</h2>
+        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. Set up your project once, then open the editor.</p>
+<pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>vendor/bin/barncept init
+<span class="p">$ </span>vendor/bin/barncept gui</code></pre>
+        <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">
+          <details>
+            <summary><span>Installation<small>Not on Packagist yet: install from a BarnSuite checkout</small></span></summary>
+            <div class="body">
+              <p>Add path repositories for <code>package/barncept</code>, <code>cli/barncept-cli</code> and <code>gui/barncept-gui</code>, then:</p>
+<pre><code><span class="p">$ </span>composer require rmb32/barncept rmb32/barncept-cli rmb32/barncept-gui</code></pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="grid two">
+          <a class="card product" data-brand="spec" href="barnspec.html"><span class="role">Understand the need</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="5" height="5" rx="1.2"/><rect x="9.5" y="3" width="5" height="5" rx="1.2"/><rect x="16" y="3" width="5" height="5" rx="1.2"/><rect x="3" y="9.5" width="5" height="5" rx="1.2"/><rect x="16" y="9.5" width="5" height="5" rx="1.2"/><rect x="3" y="16" width="5" height="5" rx="1.2"/></svg>Barnspec</h3><p>Where the vocabulary comes from: stories about real people.</p><span class="more">Explore Barnspec</span></a>
+          <a class="card product" data-brand="ark" href="barnark.html"><span class="role">Shape the software</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21V11a9 9 0 0 1 18 0v10h-5V11a4 4 0 0 0-8 0v10z"/></svg>Barnark</h3><p>Architecture templates built from Barncept graphs, checked against real code.</p><span class="more">Explore Barnark</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>BarnSuite · © Roger Barnfather</span>
+      <nav aria-label="Footer">
+        <a href="index.html">BarnSuite</a>
+        <a href="barnspec.html">Barnspec</a>
+        <a href="barnark.html">Barnark</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

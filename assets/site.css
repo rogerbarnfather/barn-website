@@ -930,6 +930,65 @@ figcaption {
   font-size: 0.85rem;
 }
 
+.terms {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+}
+
+.terms > div {
+  padding-left: 14px;
+  border-left: 3px solid color-mix(in srgb, var(--brand) 55%, transparent);
+}
+
+.terms > div.who {
+  border-left-color: color-mix(in srgb, #8250df 55%, transparent);
+}
+
+.terms dt {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.terms .kind {
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  vertical-align: 2px;
+}
+
+.terms dd {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+}
+
+.terms ul {
+  display: grid;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+}
+
+.terms ul b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.terms-note {
+  margin: 22px 0 0;
+  padding: 16px 0 0;
+  border-top: 1px dashed var(--border);
+  color: var(--text-muted);
+  font-size: 0.93rem;
+}
+
 /* ---------- Principle ---------- */
 
 .principle {

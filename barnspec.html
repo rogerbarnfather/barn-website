@@ -61,6 +61,41 @@
           </div>
         </div>
 
+        <div class="feature flip" id="glossary">
+          <div>
+            <span class="kicker">One language</span>
+            <h2>One word, one meaning, for everyone.</h2>
+            <p>Every person, thing and action in a story is given a meaning in plain words the first time it’s used. From then on, every story and every example uses <strong>the same word for the same thing</strong>.</p>
+            <p>Together those words are the business’s own language, kept as a glossary beside the map. Stakeholders, developers and newcomers all read the same meanings, so nobody forgets what “booking” meant, and nobody gets lost coming back to it a year later.</p>
+            <p>The examples that prove each story are built from the same words, so the language and the software can’t quietly drift apart.</p>
+          </div>
+          <div class="panel" aria-label="An extract from a hotel’s reservations glossary">
+            <span class="stamp">📖 Glossary · reservations</span>
+            <dl class="terms">
+              <div class="who">
+                <dt>guest<span class="kind">who</span></dt>
+                <dd>choosing and securing somewhere to stay</dd>
+              </div>
+              <div>
+                <dt>booking<span class="kind">thing</span></dt>
+                <dd>a guest’s hold on a room for a run of nights</dd>
+                <dd><ul>
+                  <li><b>is confirmed</b>: holds the room for the guest on these nights</li>
+                  <li><b>has been cancelled</b>: no longer holds the room</li>
+                </ul></dd>
+              </div>
+              <div>
+                <dt>room<span class="kind">thing</span></dt>
+                <dd>a room the hotel lets to guests</dd>
+                <dd><ul>
+                  <li><b>is out of service</b>: the hotel is not letting it to guests for now</li>
+                </ul></dd>
+              </div>
+            </dl>
+            <p class="terms-note">Written once, then used word for word in every story, example and test.</p>
+          </div>
+        </div>
+
         <div class="feature stacked" id="proof">
           <div>
             <div class="copy-head">
@@ -154,7 +189,7 @@
           <div class="card">
             <span class="icon" aria-hidden="true">📖</span>
             <h3>Newcomers</h3>
-            <p>Generated story pages, a glossary of the business’s own words, and a map that links them all together.</p>
+            <p>Generated story pages, <a href="#glossary">a glossary</a> of the business’s own words, and a map that links them all together.</p>
           </div>
         </div>
       </div>
@@ -212,6 +247,15 @@
             <summary><span>Recording whether it mattered<small>Impact: evaluating, achieved, none, superseded</small></span></summary>
             <div class="body">
               <p>Each released story gets an <strong>Impact</strong>: dated observations, each saying who made it. Releasing a slice asks about earlier slices’ unsettled rewards, but never blocks the release. <strong>Achieved</strong> settles only on the word of the people the story was for, or someone speaking for them. Impact never changes a story’s colour: green and “none” is an honest, useful combination.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>How the glossary is built<small>The ubiquitous language, one glossary per area of business</small></span></summary>
+            <div class="body">
+              <p>Domain-Driven Design calls a business’s shared vocabulary its <strong>ubiquitous language</strong>. Barnspec builds it from the stories themselves: each role, subject, fact and action keeps the meaning it was given when it was created, and the glossary gathers them for each area of business. Who takes part, what they deal with and what can be true of it, and everything they can do.</p>
+              <p>Nothing is summarised or made up. It’s exactly what was written, sorted so any word can be found at a glance. Open it from the Glossary tab beside the map, or write it out next to the story pages, where the map links each area of business to its glossary.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barnspec glossary --output-dir=docs/glossary   <span class="c"># a page per area of business, plus an index</span></code></pre>
+              <p>The same words can be exported to <a href="barncept.html">Barncept</a> as a graph of concepts.</p>
             </div>
           </details>
           <details>

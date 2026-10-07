@@ -27,28 +27,33 @@
   --status-green: #1a7f37;
 
   /* Barnspec — mint. The fill is too light for text, so text uses -strong. */
-  --spec: #1daf8d;
+  --spec: #18d19e;
   --spec-ink: #072a22;
-  --spec-text: #0d6d5a;
-  --spec-tint: #e9f8f3;
+  --spec-text: #07795f;
+  --spec-bright: #11b88a;
+  --spec-tint: #e3fbf3;
 
   /* Barnark — burnt orange. */
-  --ark: #bc4c00;
+  --ark: #f25c05;
   --ark-ink: #ffffff;
-  --ark-text: #bc4c00;
-  --ark-tint: #fbefe6;
+  --ark-text: #c84600;
+  --ark-bright: #f25c05;
+  --ark-tint: #fff0e3;
 
   /* Barncept — sky blue, at Barnark's lightness and Barnspec's saturation. */
-  --cept: #0376a7;
+  --cept: #0b95e0;
   --cept-ink: #ffffff;
-  --cept-text: #0376a7;
-  --cept-tint: #e4f5ff;
+  --cept-text: #0a76b5;
+  --cept-bright: #0b95e0;
+  --cept-tint: #e0f3ff;
 
   --brand: var(--text);
   --brand-ink: var(--bg);
   /* Terminal windows are dark in both themes, so they take the dark one. */
   --brand-on-code: var(--code-muted);
   --brand-text: var(--text);
+  --brand-bright: var(--text);
+  --mark-ink: #ffffff;
   --brand-tint: var(--bg-alt);
 
   --radius: 8px;
@@ -75,44 +80,50 @@
     --status-red: #ff7b72;
     --status-green: #56d364;
 
-    --spec: #39d0ad;
+    --spec: #3ff0bf;
     --spec-ink: #071f19;
-    --spec-text: #62dabe;
-    --spec-tint: #15302a;
+    --spec-text: #8af5d6;
+    --spec-bright: #8af5d6;
+    --spec-tint: #123a30;
 
-    --ark: #f0883e;
+    --ark: #ff9244;
     --ark-ink: #2a1400;
-    --ark-text: #f0883e;
-    --ark-tint: #2b1d14;
+    --ark-text: #ff9244;
+    --ark-bright: #ff9244;
+    --ark-tint: #3a2212;
 
-    --cept: #42bff8;
+    --cept: #55c9ff;
     --cept-ink: #04263a;
-    --cept-text: #42bff8;
-    --cept-tint: #133144;
+    --cept-text: #55c9ff;
+    --cept-bright: #55c9ff;
+    --cept-tint: #12354d;
   }
 }
 
 [data-brand="spec"] {
-  --brand-on-code: #39d0ad;
+  --brand-on-code: #3ff0bf;
   --brand: var(--spec);
   --brand-ink: var(--spec-ink);
   --brand-text: var(--spec-text);
+  --brand-bright: var(--spec-bright);
   --brand-tint: var(--spec-tint);
 }
 
 [data-brand="ark"] {
-  --brand-on-code: #f0883e;
+  --brand-on-code: #ff9244;
   --brand: var(--ark);
   --brand-ink: var(--ark-ink);
   --brand-text: var(--ark-text);
+  --brand-bright: var(--ark-bright);
   --brand-tint: var(--ark-tint);
 }
 
 [data-brand="cept"] {
-  --brand-on-code: #42bff8;
+  --brand-on-code: #55c9ff;
   --brand: var(--cept);
   --brand-ink: var(--cept-ink);
   --brand-text: var(--cept-text);
+  --brand-bright: var(--cept-bright);
   --brand-tint: var(--cept-tint);
 }
 
@@ -315,7 +326,7 @@ strong {
 
 .nav a:hover {
   background: var(--brand-tint);
-  color: var(--brand-text);
+  color: var(--brand-bright);
 }
 
 .nav a[aria-current="page"] {
@@ -368,7 +379,7 @@ strong {
 }
 
 .hero h1 .accent {
-  color: var(--brand-text);
+  color: var(--brand-bright);
 }
 
 .hero .lede {
@@ -396,7 +407,7 @@ strong {
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  color: var(--brand-text);
+  color: var(--brand-bright);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -409,7 +420,7 @@ strong {
   padding: 5px;
   border-radius: 8px;
   background: var(--brand);
-  color: var(--brand-ink);
+  color: var(--mark-ink);
 }
 
 .tri-rule {
@@ -461,7 +472,7 @@ strong {
 
 .btn.ghost {
   background: transparent;
-  color: var(--brand-text);
+  color: var(--brand-bright);
   border-color: var(--border);
 }
 
@@ -564,7 +575,7 @@ figcaption {
 .kicker {
   display: block;
   margin-bottom: 12px;
-  color: var(--brand-text);
+  color: var(--brand-bright);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -1056,7 +1067,7 @@ figcaption {
   margin-bottom: 16px;
   border-radius: 11px;
   background: var(--brand-tint);
-  color: var(--brand-text);
+  color: var(--brand-bright);
   font-size: 1.2rem;
 }
 
@@ -1081,7 +1092,7 @@ figcaption {
 }
 
 .product .role {
-  color: var(--brand-text);
+  color: var(--brand-bright);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -1102,13 +1113,13 @@ figcaption {
   padding: 6px;
   border-radius: 9px;
   background: var(--brand);
-  color: var(--brand-ink);
+  color: var(--mark-ink);
 }
 
 .product .more {
   margin-top: auto;
   padding-top: 20px;
-  color: var(--brand-text);
+  color: var(--brand-bright);
   font-weight: 650;
 }
 
@@ -1146,7 +1157,7 @@ figcaption {
 }
 
 .versus > div + div h3 {
-  color: var(--brand-text);
+  color: var(--brand-bright);
 }
 
 .versus ul {
@@ -1223,7 +1234,7 @@ figcaption {
   height: 28px;
   border-radius: 50%;
   background: var(--brand-tint);
-  color: var(--brand-text);
+  color: var(--brand-bright);
   font-size: 1.1rem;
   transition: transform 160ms;
 }

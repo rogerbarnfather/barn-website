@@ -808,6 +808,8 @@ figcaption {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 0.93rem;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
 }
 
 .lamp {

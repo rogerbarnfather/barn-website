@@ -1,5 +1,7 @@
 # BarnSuite website
 
+Part of [BarnSuite](https://rogerbarnfather.github.io/barnsuite-website/).
+
 A static site for BarnSuite: a home page plus one page each for Barnspec,
 Barnark and Barncept. There is no build step.
 

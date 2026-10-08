@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build a barn · Barn</title>
+  <meta name="description" content="A barn is a PHP project with its story map and its architecture under one roof: one command builds it, one app shows its business and its architecture side by side.">
+  <link rel="icon" href="assets/barn.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="index.html"><span class="barn-mark" aria-hidden="true"><i></i><i></i><i></i></span>Barn</a>
+      <nav aria-label="Tools">
+        <ul class="nav">
+          <li><a href="barn.html" aria-current="page">Barn</a></li>
+          <li data-brand="spec"><a href="barnspec.html"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
+          <li data-brand="ark"><a href="barnark.html"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
+          <li data-brand="cept"><a href="barncept.html"><span class="dot" aria-hidden="true"></span>Barncept</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="tri-rule" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h1>Build a barn. <span class="accent">Everything under one roof.</span></h1>
+        <p class="lede">A barn is a PHP project with its story map and its architecture ready to use. One command builds it, one app shows what the business needs and what shape the code is in, side by side, and everything it knows is committed with your code.</p>
+        <div class="actions">
+          <a class="btn" href="#get-started">Get started</a>
+          <a class="btn ghost" href="#deeper">Go deeper</a>
+        </div>
+      </div>
+      <div class="wrap wide hero-shot">
+        <figure class="shot">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barn · Home</span></div>
+          <img src="assets/screens/barn-home.webp" width="1360" height="384" alt="The home page of a barn. Business lists each area of business with its scenarios counted green, yellow, red and not started. Architecture lists each tracked folder with its template and whether it is clean.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="feature">
+          <div>
+            <span class="kicker">Three tabs</span>
+            <h2>Home, Business and Architecture.</h2>
+            <p><strong>Home</strong> is where the barn stands: every area of business with its scenarios counted by colour, and every tracked folder with whether it still fits its template.</p>
+            <p><strong>Business</strong> is <a href="barnspec.html">Barnspec</a>: the story map, its scenarios and the work behind them. <strong>Architecture</strong> is <a href="barnark.html">Barnark</a>: your folders, their templates and any switch you are planning.</p>
+            <p>The two are kept apart on purpose. Each speaks its own language, and the home page is where you see both at once.</p>
+          </div>
+          <div class="grid two">
+            <a class="card product" data-brand="spec" href="barnspec.html"><span class="role">Business</span><h3>Barnspec</h3><p>What people need, proven by the real software.</p><span class="more">Explore Barnspec</span></a>
+            <a class="card product" data-brand="ark" href="barnark.html"><span class="role">Architecture</span><h3>Barnark</h3><p>The shape the code keeps, checked against it.</p><span class="more">Explore Barnark</span></a>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div>
+            <span class="kicker">New or existing</span>
+            <h2>Start fresh, or bring a project in.</h2>
+            <p><strong>Build a barn</strong> in a new folder: a Composer project with <code>src/</code> scaffolded from the architecture you choose, an empty story map and a git repository, all installed.</p>
+            <p><strong>Adopt</strong> a project you already have. Its Barnspec and Barnark files move into the barn, everything else stays where it is, and you see every change before it is made.</p>
+          </div>
+<pre><code><span class="p">$ </span>barn build my-shop      <span class="c"># a new barn</span>
+<span class="p">$ </span>cd my-project
+<span class="p">$ </span>barn adopt              <span class="c"># an existing project</span>
+<span class="p">$ </span>barn gui                <span class="c"># Home, Business, Architecture</span>
+<span class="p">$ </span>barn status             <span class="c"># the home page, in the terminal</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="deeper">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Go deeper</span>
+          <h2>What a barn is made of.</h2>
+          <p>For when you want the detail.</p>
+        </div>
+        <div class="deeper">
+          <details>
+            <summary><span>The barn folder<small>One place, committed with your code</small></span></summary>
+            <div class="body">
+<pre><code>my-shop/
+  .barn/
+    barn.json                <span class="c"># marks the barn and names it</span>
+    barnspec.json            <span class="c"># where generated test ports go</span>
+    barnspec/                <span class="c"># the story map</span>
+    barnark-workspace.json   <span class="c"># tracked folders and their templates</span>
+    barnark/                 <span class="c"># your own templates, switches in progress</span>
+  composer.json
+  src/
+  tests/</code></pre>
+              <p>Every tool finds the barn from any folder inside it, so <code>barnspec</code>, <code>barnark template:check</code>, <code>port-generator</code> and <code>scenario-bridge</code> all work from deep in <code>src/</code>. Outside a barn each tool works as it always has.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>Building<small>What <code>barn build</code> asks and makes</small></span></summary>
+            <div class="body">
+              <p>It asks for the barn’s name, its Composer package, its root namespace and the architecture for <code>src/</code>, suggesting each from the folder’s name, with Domain Driven Design as the default. Every answer can be given as an option instead. The folder has to be new or empty.</p>
+<pre><code><span class="p">$ </span>barn build shop --package=acme/shop --namespace="Acme\Shop" --template=Library</code></pre>
+              <p>It runs <code>git init</code> without committing anything and then <code>composer install</code>; <code>--no-install</code> leaves that to you.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>Adopting<small>Moving an existing project in</small></span></summary>
+            <div class="body">
+              <p><code>barnspec.json</code>, <code>.barnspec/</code>, <code>barnark-workspace.json</code> and <code>.barnark/</code> move into <code>.barn/</code>, and any custom template the workspace names is renamed to match. A project with only one of the tools is adopted with what it has. If any move cannot be made, nothing is touched.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>The app<small>One server, three tabs</small></span></summary>
+            <div class="body">
+              <p><code>barn gui</code> serves the Barnspec and Barnark apps as the Business and Architecture tabs, with the home page beside them, from one local server. Started outside a barn, it offers to build one, showing <code>composer install</code> as it runs, or to adopt the project you are in.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="get-started">
+      <div class="wrap cta">
+        <span class="kicker">Get started</span>
+        <h2>Build your first barn.</h2>
+        <p>Barn needs PHP 8.5 with the <code>ds</code> extension, Composer and git.</p>
+<pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>composer global require rmb32/barn
+<span class="p">$ </span>barn build my-shop
+<span class="p">$ </span>cd my-shop &amp;&amp; vendor/bin/barn gui</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Barn · © Roger Barnfather</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="barnspec.html">Barnspec</a>
+        <a href="barnark.html">Barnark</a>
+        <a href="barncept.html">Barncept</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

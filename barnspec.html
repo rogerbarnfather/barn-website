@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barnspec · BarnSuite</title>
+  <title>Barnspec · Barn</title>
   <meta name="description" content="Barnspec maps software by the needs of the people it serves, builds it a slice at a time, and only calls work done when the real software proves it.">
   <link rel="icon" href="assets/barnspec.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -13,9 +13,10 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="index.html"><span class="suite-mark" aria-hidden="true"><i></i><i></i><i></i></span>BarnSuite</a>
+      <a class="wordmark" href="index.html"><span class="barn-mark" aria-hidden="true"><i></i><i></i><i></i></span>Barn</a>
       <nav aria-label="Tools">
         <ul class="nav">
+          <li><a href="barn.html">Barn</a></li>
           <li data-brand="spec"><a href="barnspec.html" aria-current="page"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
           <li data-brand="ark"><a href="barnark.html"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
           <li data-brand="cept"><a href="barncept.html"><span class="dot" aria-hidden="true"></span>Barncept</a></li>
@@ -29,7 +30,7 @@
       <div class="wrap">
         <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><mask id="spec-tick"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff"/><path d="M8 12.5l3 3 5-6" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask><rect x="3" y="3" width="18" height="18" rx="5" mask="url(#spec-tick)"/></svg>Barnspec</span>
         <h1>See what’s proven, what’s being built, and <span class="accent">why</span>.</h1>
-        <p class="lede">Barnspec maps your software by the needs of the people it serves. Build it a slice at a time, and watch each piece turn green only when the real software proves it.</p>
+        <p class="lede">Barnspec maps your software by the needs of the people it serves. Build it a slice at a time, and watch each piece turn green only when the real software proves it. In a <a href="barn.html">barn</a> it is the Business tab, and it works on its own in any project too.</p>
         <div class="actions">
           <a class="btn" href="#get-started">Get started</a>
           <a class="btn ghost" href="#deeper">Go deeper</a>
@@ -266,7 +267,7 @@
 <span class="p">$ </span>vendor/bin/barnspec review    <span class="c"># turn it into a real one</span>
 <span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
 <span class="p">$ </span>vendor/bin/barnspec map --output-dir=docs/map   <span class="c"># an HTML story map</span></code></pre>
-              <p>Everything is stored as readable JSON in <code>.barnspec/</code>, committed alongside your code.</p>
+              <p>Everything is stored as readable JSON in <code>.barnspec/</code> (in a barn, <code>.barn/barnspec/</code>), committed alongside your code.</p>
             </div>
           </details>
         </div>
@@ -303,9 +304,10 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>BarnSuite · © Roger Barnfather</span>
+      <span>Barn · © Roger Barnfather</span>
       <nav aria-label="Footer">
-        <a href="index.html">BarnSuite</a>
+        <a href="index.html">Home</a>
+        <a href="barn.html">Barn</a>
         <a href="barnark.html">Barnark</a>
         <a href="barncept.html">Barncept</a>
       </nav>

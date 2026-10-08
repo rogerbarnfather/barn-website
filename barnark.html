@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barnark · BarnSuite</title>
+  <title>Barnark · Barn</title>
   <meta name="description" content="Barnark keeps a codebase in the architecture you chose: drift shows up immediately, new parts land in the right place, and changing style is a guided move.">
   <link rel="icon" href="assets/barnark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
@@ -13,9 +13,10 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="index.html"><span class="suite-mark" aria-hidden="true"><i></i><i></i><i></i></span>BarnSuite</a>
+      <a class="wordmark" href="index.html"><span class="barn-mark" aria-hidden="true"><i></i><i></i><i></i></span>Barn</a>
       <nav aria-label="Tools">
         <ul class="nav">
+          <li><a href="barn.html">Barn</a></li>
           <li data-brand="spec"><a href="barnspec.html"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
           <li data-brand="ark"><a href="barnark.html" aria-current="page"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
           <li data-brand="cept"><a href="barncept.html"><span class="dot" aria-hidden="true"></span>Barncept</a></li>
@@ -29,7 +30,7 @@
       <div class="wrap">
         <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 14.5h20l-3.2 5.5H5.2zM6.5 13V9.5L12 5.5l5.5 4V13z"/></svg>Barnark</span>
         <h1>Keep your codebase in the shape <span class="accent">you chose</span>.</h1>
-        <p class="lede">Every team agrees an architecture. Few can tell when the code stops following it. Barnark gives your code a shape it can be checked against, grows it in the right places, and lets you change style later without starting again.</p>
+        <p class="lede">Every team agrees an architecture. Few can tell when the code stops following it. Barnark gives your code a shape it can be checked against, grows it in the right places, and lets you change style later without starting again. In a <a href="barn.html">barn</a> it is the Architecture tab, and it works on its own in any project too.</p>
         <div class="actions">
           <a class="btn" href="#get-started">Get started</a>
           <a class="btn ghost" href="#deeper">Go deeper</a>
@@ -49,7 +50,7 @@
           <div>
             <span class="kicker">No favourites</span>
             <h2>Any architecture. Yours included.</h2>
-            <p>Barnark has no style of its own. Pick from a catalogue of well-known shapes, or describe your own, and give each part of your project the one that suits it. An application’s core, its website and a shared library can each follow a different template in one workspace.</p>
+            <p>Barnark has no style of its own. Pick from a catalogue of well-known shapes, or describe your own, and give each part of your project the one that suits it. An application’s core, its website and a shared library can each follow a different template in one workspace. Every template says what it suits, and the GUI shows its shape before you pick it.</p>
           </div>
           <div class="grid two">
             <div class="card"><h3>Domain Driven Design</h3><p>Bounded contexts around a shared kernel.</p></div>
@@ -133,17 +134,17 @@
             <div class="body">
               <div class="table-wrap">
                 <table>
-                  <thead><tr><th scope="col">Template</th><th scope="col">Top-level shape</th></tr></thead>
+                  <thead><tr><th scope="col">Template</th><th scope="col">Top-level shape</th><th scope="col">Suits</th></tr></thead>
                   <tbody>
-                    <tr><td>Domain Driven Design</td><td><code>Context/</code> (one per bounded context), <code>Kernel/</code>, <code>Transport/</code></td></tr>
-                    <tr><td>Feature Based Architecture</td><td>One folder per feature, each with <code>Controller/ Entity/ Exception/ Repository/ Value/</code></td></tr>
-                    <tr><td>Model View Controller</td><td>Controller, model and view folders, named by you</td></tr>
-                    <tr><td>Library</td><td><code>Api/</code> (contracts, exceptions, factories, values) over <code>Internal/</code></td></tr>
-                    <tr><td>Package App</td><td>An application behind an <code>Api/</code>, with contexts, features and a kernel inside</td></tr>
+                    <tr><td>Domain Driven Design</td><td><code>Context/</code> (one per bounded context), <code>Kernel/</code>, <code>Transport/</code></td><td>A long-lived application with rich business rules and several distinct parts of the business</td></tr>
+                    <tr><td>Feature Based Architecture</td><td>One folder per feature, each with <code>Controller/ Entity/ Exception/ Repository/ Value/</code></td><td>A small or medium application whose features change independently</td></tr>
+                    <tr><td>Model View Controller</td><td>Controller, model and view folders, named by you</td><td>A conventional web application, especially one built on an MVC framework</td></tr>
+                    <tr><td>Library</td><td><code>Api/</code> (contracts, exceptions, factories, values) over <code>Internal/</code></td><td>A reusable package whose users should depend only on a stable surface</td></tr>
+                    <tr><td>Package App</td><td>An application behind an <code>Api/</code>, with contexts, features and a kernel inside</td><td>An application that other code installs and drives as a dependency</td></tr>
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concept graphs, so your own are written the same way.</p>
+              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concept graphs, so your own are written the same way, with a description of what they are and what they suit.</p>
             </div>
           </details>
           <details>
@@ -162,7 +163,7 @@
           <details>
             <summary><span>Switching templates<small>A plan, one decision at a time</small></span></summary>
             <div class="body">
-              <p>A switch asks what to do with each real piece of a folder: move it under a concept of the new template (keeping its name or giving it a new one), leave it where it is, or decide later. A mapping table only suggests; you confirm. The plan is saved after every answer in <code>.barnark/switch-plans/</code>, so you can stop and carry on. When nothing is left to decide it runs in one go: units move with their namespaces rewritten, empty old folders go if you asked, the folder's roles are recorded, and a check against the new template lists what is left to tidy inside the moved folders. Plan it in the terminal or in the GUI's switch tab: they share the plan, so you can start in one and finish in the other.</p>
+              <p>A switch asks what to do with each real piece of a folder: move it under a concept of the new template (keeping its name or giving it a new one), leave it where it is, or decide later. A mapping table only suggests; you confirm. The plan is saved after every answer in <code>.barnark/switch-plans/</code> (in a barn, <code>.barn/barnark/switch-plans/</code>), so you can stop and carry on. When nothing is left to decide it runs in one go: units move with their namespaces rewritten, empty old folders go if you asked, the folder's roles are recorded, and a check against the new template lists what is left to tidy inside the moved folders. Plan it in the terminal or in the GUI's switch tab: they share the plan, so you can start in one and finish in the other.</p>
             </div>
           </details>
           <details>
@@ -172,7 +173,7 @@
 <span class="p">$ </span>barnark template:offers src/Context <span class="c"># what may be created here?</span>
 <span class="p">$ </span>barnark template:new Context Billing src/Context
 <span class="p">$ </span>barnark template:switch Library src   <span class="c"># plan a switch, one question at a time</span></code></pre>
-              <p>Tracked folders live in <code>barnark-workspace.json</code>, committed with your code, so a check needs no arguments.</p>
+              <p>Tracked folders live in <code>barnark-workspace.json</code> (in a barn, <code>.barn/barnark-workspace.json</code>), committed with your code, so a check needs no arguments.</p>
             </div>
           </details>
         </div>
@@ -209,9 +210,10 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>BarnSuite · © Roger Barnfather</span>
+      <span>Barn · © Roger Barnfather</span>
       <nav aria-label="Footer">
-        <a href="index.html">BarnSuite</a>
+        <a href="index.html">Home</a>
+        <a href="barn.html">Barn</a>
         <a href="barnspec.html">Barnspec</a>
         <a href="barncept.html">Barncept</a>
       </nav>

@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BarnSuite</title>
-  <meta name="description" content="No estimates. No backlog. No “done” without proof. BarnSuite is a better way to plan, build and prove software.">
-  <link rel="icon" href="assets/barnsuite.svg" type="image/svg+xml">
+  <title>Barn</title>
+  <meta name="description" content="No estimates. No backlog. No “done” without proof. Barn is a better way to plan, build and prove software.">
+  <link rel="icon" href="assets/barn.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body data-brand="spec">
@@ -13,9 +13,10 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="index.html"><span class="suite-mark" aria-hidden="true"><i></i><i></i><i></i></span>BarnSuite</a>
+      <a class="wordmark" href="index.html"><span class="barn-mark" aria-hidden="true"><i></i><i></i><i></i></span>Barn</a>
       <nav aria-label="Tools">
         <ul class="nav">
+          <li><a href="barn.html">Barn</a></li>
           <li data-brand="spec"><a href="barnspec.html"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
           <li data-brand="ark"><a href="barnark.html"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
           <li data-brand="cept"><a href="barncept.html"><span class="dot" aria-hidden="true"></span>Barncept</a></li>
@@ -29,10 +30,10 @@
       <div class="wrap">
         <div class="tri-rule" aria-hidden="true"><i></i><i></i><i></i></div>
         <h1>No estimates. No backlog. <span class="accent">No “done” without proof.</span></h1>
-        <p class="lede">BarnSuite is a better way to plan and build software. Every piece of work carries the reason it exists, nothing counts as finished until the real software proves it, and once it ships you find out whether it actually made a difference.</p>
+        <p class="lede">Barn is a better way to plan and build software. Every piece of work carries the reason it exists, nothing counts as finished until the real software proves it, and once it ships you find out whether it actually made a difference.</p>
         <div class="actions">
-          <a class="btn" href="#how">See how it works</a>
-          <a class="btn ghost" href="barnspec.html">Take the tour</a>
+          <a class="btn" href="barn.html">Build a barn</a>
+          <a class="btn ghost" href="#how">See how it works</a>
         </div>
       </div>
       <div class="wrap wide hero-shot">
@@ -40,6 +41,33 @@
           <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · Story map</span></div>
           <img src="assets/screens/spec-map.webp" width="1408" height="711" alt="The Barnspec story map. The slice being built now is at the top and shows each story's real state: rough, expressed, in progress, and built but not yet proven. The three released slices below it are proven and ticked.">
         </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="kicker">One roof</span>
+          <h2>A barn is your project, with its business and its architecture beside it.</h2>
+          <p>Build a barn and you get a PHP project with a story map and an architecture ready to use, kept in one <code>.barn</code> folder that is committed with your code. One app shows it all.</p>
+        </div>
+        <div class="grid two">
+          <a class="card product" data-brand="spec" href="barnspec.html">
+            <span class="role">The Business tab</span>
+            <h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><mask id="spec-tick-roof"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff"/><path d="M8 12.5l3 3 5-6" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask><rect x="3" y="3" width="18" height="18" rx="5" mask="url(#spec-tick-roof)"/></svg>Barnspec</h3>
+            <p>What people need, in slices, each piece green only when the real software proves it.</p>
+            <span class="more">Explore Barnspec</span>
+          </a>
+          <a class="card product" data-brand="ark" href="barnark.html">
+            <span class="role">The Architecture tab</span>
+            <h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 14.5h20l-3.2 5.5H5.2zM6.5 13V9.5L12 5.5l5.5 4V13z"/></svg>Barnark</h3>
+            <p>The shape your code should keep, checked against the code itself.</p>
+            <span class="more">Explore Barnark</span>
+          </a>
+        </div>
+        <p class="punchline">The home page puts both side by side: every area of business with its scenarios by colour, and every folder with whether it still fits its shape.</p>
+<pre style="max-width: 560px; margin: 0 auto; text-align: left"><code><span class="p">$ </span>composer global require rmb32/barn
+<span class="p">$ </span>barn build my-shop</code></pre>
       </div>
     </section>
 
@@ -57,7 +85,7 @@
           <li><div><strong>Charts that measure busyness</strong>Velocity and burndown tell you work happened, not that it helped.</div></li>
           <li><div><strong>Work cut into layers</strong>One person on the database, one on the screen, nobody holding the whole thing.</div></li>
         </ul>
-        <p class="punchline">BarnSuite doesn’t manage these problems. It leaves no room for them.</p>
+        <p class="punchline">Barn doesn’t manage these problems. It leaves no room for them.</p>
       </div>
     </section>
 
@@ -175,7 +203,7 @@
               <h2>A codebase that can’t quietly rot.</h2>
             </div>
             <div>
-            <p>Choose a shape for your code, from a catalogue of styles or your own, and BarnSuite <strong>holds the code to it</strong>. Drift shows up the moment it happens, and new parts are created in the right place with one click.</p>
+            <p>Choose a shape for your code, from a catalogue of styles or your own, and Barn <strong>holds the code to it</strong>. Drift shows up the moment it happens, and new parts are created in the right place with one click.</p>
             <p>When it’s time to change style, the move is guided and previewed rather than a rewrite.</p>
             <a class="more" href="barnark.html">Meet Barnark</a>
             </div>
@@ -195,7 +223,7 @@
       <div class="wrap principle">
         <div class="tri-rule" aria-hidden="true"><i></i><i></i><i></i></div>
         <p class="big">If the software disappeared, the value shouldn’t.</p>
-        <p>Imagine every line of code vanished overnight. What BarnSuite holds should be enough for a different team, with different technology, to rebuild the product: the same things, for the same people, for the same reasons. Every story is written to pass that test.</p>
+        <p>Imagine every line of code vanished overnight. What a barn holds should be enough for a different team, with different technology, to rebuild the product: the same things, for the same people, for the same reasons. Every story is written to pass that test.</p>
       </div>
     </section>
 
@@ -204,7 +232,7 @@
         <div class="section-head center">
           <span class="kicker">The difference</span>
           <h2>Empirical, not predictive.</h2>
-          <p>The usual question is “when will it be finished?” BarnSuite asks better ones: what did we build, does it work, and did it matter?</p>
+          <p>The usual question is “when will it be finished?” Barn asks better ones: what did we build, does it work, and did it matter?</p>
         </div>
         <div class="versus">
           <div class="old">
@@ -220,7 +248,7 @@
             </ul>
           </div>
           <div class="new">
-            <h3>The BarnSuite way</h3>
+            <h3>The Barn way</h3>
             <ul>
               <li>Slices of real progress</li>
               <li>What’s proven, plus the one slice being built</li>
@@ -238,25 +266,25 @@
     <section class="section alt">
       <div class="wrap">
         <div class="section-head center">
-          <span class="kicker">The suite</span>
-          <h2>Three tools, one way of working.</h2>
-          <p>Use one, or all three. Each stands on its own.</p>
+          <span class="kicker">The tools</span>
+          <h2>Under the roof, and on their own.</h2>
+          <p>Barnspec and Barnark are a barn’s two tabs, and each also works alone in any project. Barncept, the concept graph under Barnark’s templates, is a separate package.</p>
         </div>
         <div class="grid three">
           <a class="card product" data-brand="spec" href="barnspec.html">
-            <span class="role">Understand the need</span>
+            <span class="role">Business · understand the need</span>
             <h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><mask id="spec-tick"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff"/><path d="M8 12.5l3 3 5-6" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask><rect x="3" y="3" width="18" height="18" rx="5" mask="url(#spec-tick)"/></svg>Barnspec</h3>
             <p>Map what people need, build it in slices, and prove every piece works.</p>
             <span class="more">Explore Barnspec</span>
           </a>
           <a class="card product" data-brand="ark" href="barnark.html">
-            <span class="role">Shape the software</span>
+            <span class="role">Architecture · shape the software</span>
             <h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 14.5h20l-3.2 5.5H5.2zM6.5 13V9.5L12 5.5l5.5 4V13z"/></svg>Barnark</h3>
             <p>Give your codebase a shape, keep it there, and change it without a rewrite.</p>
             <span class="more">Explore Barnark</span>
           </a>
           <a class="card product" data-brand="cept" href="barncept.html">
-            <span class="role">Organise the concepts</span>
+            <span class="role">A separate package · organise the concepts</span>
             <h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept</h3>
             <p>Capture how you understand a domain, independent of how it gets built.</p>
             <span class="more">Explore Barncept</span>
@@ -268,10 +296,10 @@
     <section class="section">
       <div class="wrap cta">
         <h2>Discipline that feels like simplicity.</h2>
-        <p>BarnSuite asks more of a team in one way, honesty, and much less in every other. Start with the story map and see what your work looks like when it has to prove itself.</p>
+        <p>Barn asks more of a team in one way, honesty, and much less in every other. Build a barn and see what your work looks like when it has to prove itself.</p>
         <div class="actions">
-          <a class="btn" href="barnspec.html">Start with Barnspec</a>
-          <a class="btn ghost" href="barnspec.html#deeper">Go deeper</a>
+          <a class="btn" href="barn.html">Build a barn</a>
+          <a class="btn ghost" href="barnspec.html">Start with Barnspec</a>
         </div>
       </div>
     </section>
@@ -279,8 +307,9 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>BarnSuite · © Roger Barnfather</span>
+      <span>Barn · © Roger Barnfather</span>
       <nav aria-label="Footer">
+        <a href="barn.html">Barn</a>
         <a href="barnspec.html">Barnspec</a>
         <a href="barnark.html">Barnark</a>
         <a href="barncept.html">Barncept</a>

@@ -1,15 +1,15 @@
-# BarnSuite website
+# Barn website
 
-Part of [BarnSuite](https://rogerbarnfather.github.io/barnsuite-website/).
+Part of [Barn](https://rogerbarnfather.github.io/barn-website/).
 
-A static site for BarnSuite: a home page plus one page each for Barnspec,
+A static site for Barn: a home page, a page for Barn itself, and one page each for Barnspec,
 Barnark and Barncept. There is no build step.
 
 It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
 The screenshots in `assets/screens/` are real: the three GUIs running against
 a copy of Pleasant Stay, with one extra in-progress Phase added to that copy
-so the map shows every status.
+so the map shows every status. `barn-home.webp` is the home page of Pleasant Stay adopted as a barn.
 
 The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
 `spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing

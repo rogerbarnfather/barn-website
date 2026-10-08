@@ -187,13 +187,10 @@
 <pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>barnark gui</code></pre>
         <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">
           <details>
-            <summary><span>Installation<small>Not on Packagist yet: install from a BarnSuite checkout</small></span></summary>
+            <summary><span>Installation<small>Install from Packagist</small></span></summary>
             <div class="body">
-              <p>Add path repositories for <code>barnark</code>, <code>barncept</code>, <code>barnscaff</code>, <code>barnark-cli</code> and <code>barnark-gui</code>, then:</p>
-<pre><code><span class="p">$ </span>composer require --dev \
-    "rmb32/barnark:^2.0" "rmb32/barnark-cli:dev-main" \
-    "rmb32/barncept:dev-main" "rmb32/barnscaff:dev-main" \
-    "rmb32/barnark-gui:dev-main"</code></pre>
+              <p>Require Barnark, its command line and its browser app. Composer pulls in Barncept and Barnscaff.</p>
+<pre><code><span class="p">$ </span>composer require --dev rmb32/barnark rmb32/barnark-cli rmb32/barnark-gui</code></pre>
             </div>
           </details>
         </div>

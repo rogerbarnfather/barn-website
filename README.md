@@ -11,6 +11,10 @@ The screenshots in `assets/screens/` are real: the three GUIs running against
 a copy of Pleasant Stay, with one extra in-progress Phase added to that copy
 so the map shows every status.
 
+The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
+`spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing
+one updates those READMEs too, and renaming or removing one breaks them.
+
 Open `index.html` in a browser, or serve the folder:
 
 ```bash

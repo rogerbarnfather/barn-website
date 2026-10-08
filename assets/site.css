@@ -275,29 +275,31 @@ strong {
 }
 
 .barn-mark {
-  display: inline-grid;
-  grid-template-columns: repeat(3, 7px);
-  gap: 3px;
-}
-
-.barn-mark i {
   display: block;
-  width: 7px;
-  height: 18px;
-  border-radius: 2px;
+  width: 26px;
+  height: 26px;
 }
 
-.barn-mark i:nth-child(1),
+.barn-mark g > :nth-child(1) {
+  fill: var(--spec);
+}
+
+.barn-mark g > :nth-child(2) {
+  fill: var(--ark);
+}
+
+.barn-mark g > :nth-child(3) {
+  fill: var(--cept);
+}
+
 .tri-rule i:nth-child(1) {
   background: var(--spec);
 }
 
-.barn-mark i:nth-child(2),
 .tri-rule i:nth-child(2) {
   background: var(--ark);
 }
 
-.barn-mark i:nth-child(3),
 .tri-rule i:nth-child(3) {
   background: var(--cept);
 }

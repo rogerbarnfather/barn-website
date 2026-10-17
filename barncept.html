@@ -38,8 +38,8 @@
       </div>
       <div class="wrap wide hero-shot">
         <figure class="shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Schema editor</span></div>
-          <img src="assets/screens/cept-vocab.webp" width="1280" height="720" alt="The Barncept schema editor showing a hotel's reservations vocabulary as a tree of concepts. The selected concept, booking, means a guest's hold on a room for a run of nights, and is linked to the facts is confirmed and has been cancelled.">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Framing editor</span></div>
+          <img src="assets/screens/cept-vocab.webp" width="1280" height="720" alt="The Barncept framing editor showing a hotel's reservations vocabulary as a tree of concepts. The selected concept, booking, means a guest's hold on a room for a run of nights, and is linked to the facts is confirmed and has been cancelled.">
         </figure>
       </div>
     </section>
@@ -50,7 +50,7 @@
           <div>
             <span class="kicker">Meaning first</span>
             <h2>Concepts that explain themselves.</h2>
-            <p>Every concept has a name and <strong>a meaning written in plain words</strong>, and it’s linked to the concepts it depends on. Months later, anyone can open the graph and understand not just what exists, but what each thing is for.</p>
+            <p>Every concept has a name and <strong>a meaning written in plain words</strong>, and it’s linked to the concepts it depends on. Months later, anyone can open the graph and understand not just what exists, but what each thing is for. Each framing’s <strong>Glossary</strong> puts every term and its meaning on one page, so a newcomer, or an AI agent, can learn the vocabulary in one read.</p>
           </div>
           <figure class="panel" style="margin: 0">
             <svg viewBox="0 0 490 300" role="img" aria-labelledby="graph-title" style="display: block; width: 100%; height: auto">
@@ -120,7 +120,7 @@
           </div>
           <figure>
             <div class="shot">
-              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Schema editor</span></div>
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Framing editor</span></div>
               <img src="assets/screens/cept-editor.webp" width="1280" height="720" alt="The Barncept editor open on the Domain Driven Design architecture template, with the Command concept selected and its meaning shown.">
             </div>
             <figcaption>An architecture template is a concept graph too.</figcaption>
@@ -149,9 +149,9 @@
             </div>
           </details>
           <details>
-            <summary><span>Templates and custom schemas<small>Portable vocabulary, and the things that use it</small></span></summary>
+            <summary><span>Framings, blank and settled<small>Portable vocabulary, and the things that use it</small></span></summary>
             <div class="body">
-              <p>A <strong>template</strong> schema holds only Definitions and Abstractions: a reusable vocabulary. A <strong>custom</strong> schema adds Implementations, so it can be resolved from a root into a concrete, named tree. A bad schema fails loudly, naming the missing reference or the cycle it found.</p>
+              <p>A <strong>framing</strong> is a way of seeing something: one graph of concepts. A framing with every role still open is a <strong>blank</strong> plan, a reusable vocabulary. Once Implementations fill its roles it is <strong>settled</strong>, and can be resolved from an entry point into a concrete, named tree. One framing can borrow another whole, so a vocabulary is written once and reused. A bad framing fails loudly, naming the missing reference or the cycle it found.</p>
 <pre><code>Root
 |
 +--Application
@@ -167,11 +167,11 @@
             </div>
           </details>
           <details>
-            <summary><span>From PHP<small>Schemas are plain arrays or JSON</small></span></summary>
+            <summary><span>From PHP<small>Framings are plain arrays or JSON</small></span></summary>
             <div class="body">
-<pre><code>$schema   = new SchemaFactory()->create($data);
+<pre><code>$framing  = new FramingFactory()->create($data);
 $instance = new ResolverFactory()->create()
-    ->resolve($schema, ImplementationKey::new('Root'));
+    ->resolve($framing, $framing->entryPoints()->first());
 
 echo new PresenterFactory()->create()->present($instance);</code></pre>
             </div>

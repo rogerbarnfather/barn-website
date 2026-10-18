@@ -107,6 +107,29 @@
           </div>
         </div>
 
+        <div class="feature">
+          <div>
+            <span class="kicker">Build on what you have</span>
+            <h2>Small concepts, built into bigger ones.</h2>
+            <p>A concept can <strong>borrow another one whole</strong>. A House borrows the Room concept three times, a Garden once, and a Kitchen that has a Room of its own. Write a thing once, and everything built on it follows when it changes. Choices made inside a borrowed concept come with it and stay put, so each decision is made in one place.</p>
+            <p>Because a borrow is live, a change can break the concepts built on it. Barncept checks first: <strong>before you save or delete, it tells you which concepts would stop working</strong>, and you decide whether to go ahead.</p>
+          </div>
+          <div class="panel" aria-label="The House concept and the concepts it borrows">
+            <p class="muted" style="margin-bottom: 14px">House · in the Home group</p>
+            <ul class="examples" style="margin-top: 0">
+              <li><strong>Living room</strong><span class="state">borrows Room</span></li>
+              <li><strong>Main bedroom</strong><span class="state">borrows Room</span></li>
+              <li><strong>Spare bedroom</strong><span class="state">borrows Room</span></li>
+              <li><strong>Back garden</strong><span class="state">borrows Garden</span></li>
+              <li><strong>Kitchen</strong><span class="state">borrows Kitchen, built on a Room</span></li>
+            </ul>
+            <ul class="examples">
+              <li><span class="lamp red"></span>Remove Room’s Lighting<span class="state">would break House</span></li>
+            </ul>
+            <p class="muted" style="margin: 16px 0 0; font-size: 0.9rem">House chose spotlights for its kitchen, which is a Room too, so Barncept asks before Lighting goes.</p>
+          </div>
+        </div>
+
         <div class="feature stacked">
           <div>
             <div class="copy-head">
@@ -145,17 +168,32 @@
                 <li><strong>Slot</strong>: a slot that has to be filled, such as <code>Aggregate</code> or <code>Command</code>.</li>
                 <li><strong>Choice</strong>: a concrete thing that fills one slot, such as <code>Basket</code> filling <code>Aggregate</code>.</li>
               </ul>
-              <p>The editor marks a part with a solid square, a slot with a dashed one waiting to be filled, and a choice with a puzzle piece.</p>
+              <p>The editor marks a part with a solid square, a slot with a dashed one waiting to be filled, and a choice with a puzzle piece. A thought that borrows another concept wears a corner arrow too.</p>
             </div>
           </details>
           <details>
             <summary><span>Concepts, blank and settled<small>Portable vocabulary, and the things that use it</small></span></summary>
             <div class="body">
-              <p>A <strong>concept</strong> is a broad, structured collection of thoughts about one thing, kept as one file. A concept with every slot still open is a <strong>blank</strong> plan, a reusable vocabulary. Once choices fill its slots it is <strong>settled</strong>, and can be resolved from an entry point into a concrete, named tree. One concept can borrow another whole, so a vocabulary is written once and reused: a House can borrow the Room concept three times. A bad concept fails loudly, naming the missing reference or the cycle it found.</p>
-<pre><code>Root
+              <p>A <strong>concept</strong> is a broad, structured collection of thoughts about one thing, kept as one file, with a name and a description of what it is for. The concept is itself the top of its tree: a part, always there wherever it is borrowed, or a slot, which a choice fills.</p>
+              <p>A concept with every slot still open is a <strong>blank</strong> plan, a reusable vocabulary. Once choices fill its slots it is <strong>settled</strong>, and resolves from an entry point, a choice no other choice picks, into a concrete, named tree. A dinner party, settled for Friday:</p>
+<pre><code>Friday with the Hendersons
 |
-+--Application
-+--Domain</code></pre>
++--Tomato soup
++--Mushroom risotto</code></pre>
+              <p>A bad concept fails loudly. A badly written file lists every fault at once, each with where it is, and a broken graph names the missing reference or the loop it found.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>Keeping many concepts in order<small>Groups, and a check for CI</small></span></summary>
+            <div class="body">
+              <p>Give related concepts the same <strong>group</strong> and the editor lists them together under one heading, so House, Room, Kitchen and Garden sit under Home. A group only tidies the list: it changes nothing about borrowing.</p>
+              <p><code>barncept check</code> composes every concept and prints one line each: settled, open (with the slots still open) or broken (with what broke it). It fails on a broken concept or an unreadable file, so it fits in CI. Open slots don’t fail it, because a plan left open is often deliberate.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barncept check
+Checking the concepts in /path/to/project/concepts
+Garden: open: nothing chosen yet
+House: broken: Concept "Kitchen" references concept "Room" but no such concept is registered
+Kitchen: broken: Concept "Kitchen" references concept "Room" but no such concept is registered
+Pet: open: nothing chosen yet</code></pre>
             </div>
           </details>
           <details>
@@ -167,9 +205,12 @@
             </div>
           </details>
           <details>
-            <summary><span>From PHP<small>Concepts are plain arrays or JSON</small></span></summary>
+            <summary><span>From PHP<small>Read a folder of concepts, compose one, resolve it</small></span></summary>
             <div class="body">
-<pre><code>$concept  = new ConceptFactory()->create($data);
+<pre><code>$registry = new ConceptRegistryFactory()->create('concepts');
+$concept  = new ConceptComposerFactory()->create($registry)
+    ->compose($registry->get('House'));
+
 $instance = new ResolverFactory()->create()
     ->resolve($concept, $concept->entryPoints()->first());
 

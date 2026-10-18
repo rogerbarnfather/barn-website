@@ -138,6 +138,7 @@
             </div>
             <div>
             <p>Barncept never decides what a graph becomes. A folder structure, a diagram and a set of documents are each <strong>one possible realisation</strong>, never the model itself. Turn the same graph into real folders, an architecture to check code against, or whatever you need next.</p>
+            <p>Four come built in, each for whoever reads it: a <strong>document</strong> for people, <strong>folders</strong> with a README in each for developers and tools, a <strong>diagram</strong> for a README, a pull request or a slide, and the plain tree for a quick look. View and download any of them in the browser, or export them from the command line.</p>
             <p>Every <a href="barnark.html">Barnark</a> architecture template is a Barncept graph, edited in exactly the same way.</p>
             </div>
           </div>
@@ -197,15 +198,28 @@ Pet: open: nothing chosen yet</code></pre>
             </div>
           </details>
           <details>
-            <summary><span>Realising a graph as folders<small>Scaffold it, then check it still matches</small></span></summary>
+            <summary><span>Exporting a concept<small>A document, folders or a diagram</small></span></summary>
             <div class="body">
-              <p>Barnscaff, Barncept’s companion, turns a resolved graph into real directories and files, and scans an existing folder to check it still matches.</p>
+              <p>Pick one realisation of a concept and export it. Nothing is ever overwritten: a file goes to a path that does not exist yet, and folders to an empty one.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barncept export House --as=markdown --to=docs/house.md
+<span class="p">$ </span>vendor/bin/barncept export House --as=folder --to=house
+<span class="p">$ </span>vendor/bin/barncept export House --as=mermaid
+flowchart TD
+    n1["12 Orchard Lane"]
+    n2["Ground floor"]
+    n1 --> n2</code></pre>
+            </div>
+          </details>
+          <details>
+            <summary><span>Realising a graph as a PHP codebase<small>Scaffold it, then check it still matches</small></span></summary>
+            <div class="body">
+              <p>Barnscaff, Barncept’s companion, turns a resolved graph into a PHP codebase’s directories and files, and scans an existing folder to check it still matches.</p>
 <pre><code><span class="p">$ </span>vendor/bin/barnscaff scaffold library Root ./generated --apply
 <span class="p">$ </span>vendor/bin/barnscaff scan library Root ./generated</code></pre>
             </div>
           </details>
           <details>
-            <summary><span>From PHP<small>Read a folder of concepts, compose one, resolve it</small></span></summary>
+            <summary><span>From PHP<small>Read a folder of concepts, compose one, resolve it, export it</small></span></summary>
             <div class="body">
 <pre><code>$registry = new ConceptRegistryFactory()->create('concepts');
 $concept  = new ConceptComposerFactory()->create($registry)
@@ -214,7 +228,11 @@ $concept  = new ConceptComposerFactory()->create($registry)
 $instance = new ResolverFactory()->create()
     ->resolve($concept, $concept->entryPoints()->first());
 
-echo new PresenterFactory()->create()->present($instance);</code></pre>
+$document = new ProjectorRegistryFactory()->create()
+    ->get(ProjectionKind::new('markdown'))
+    ->project($instance);
+
+new ProjectionWriterFactory()->create()->write($document, 'house.md');</code></pre>
             </div>
           </details>
         </div>

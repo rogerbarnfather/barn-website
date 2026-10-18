@@ -9,7 +9,7 @@ It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
 The screenshots in `assets/screens/` are real: the three GUIs running against
 a copy of Pleasant Stay, with one extra in-progress Phase added to that copy
-so the map shows every status. The two Barncept shots (`cept-vocab`, `cept-editor`) were retaken on 2026-10-18 for Barncept 5's Part, Slot and Choice: Pleasant Stay's exported reservations vocabulary and Barnark's Domain Driven Design template, each converted to the 5.0 shape, since port-generator and Barnark still write Barncept 2. `barn-home.webp` is the home page of Pleasant Stay adopted as a barn.
+so the map shows every status. The two Barncept shots (`cept-vocab`, `cept-editor`) were retaken on 2026-10-18 for Barncept 5's Part, Slot and Choice, and again that evening for the GUI's kind icons and Help button: Pleasant Stay's exported reservations vocabulary and Barnark's Domain Driven Design template, each converted to the 5.0 shape, since port-generator and Barnark still write Barncept 2. `barn-home.webp` is the home page of Pleasant Stay adopted as a barn.
 
 The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
 `spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing

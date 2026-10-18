@@ -39,7 +39,7 @@
       <div class="wrap wide hero-shot">
         <figure class="shot">
           <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Concept Manager</span></div>
-          <img src="assets/screens/cept-vocab.webp" width="1280" height="720" alt="The Barncept Concept Manager showing a hotel's reservations vocabulary as a tree of thoughts. The selected thought, booking, means a guest's hold on a room for a run of nights, and requires the facts is confirmed and has been cancelled.">
+          <img src="assets/screens/cept-vocab.webp" width="1280" height="720" alt="The Barncept Concept Manager showing a hotel's reservations vocabulary as a tree of thoughts. The selected thought, booking, means a guest's hold on a room for a run of nights, and holds two parts beneath it, the facts is confirmed and has been cancelled. Parts are marked with solid squares.">
         </figure>
       </div>
     </section>
@@ -121,7 +121,7 @@
           <figure>
             <div class="shot">
               <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Concept Manager</span></div>
-              <img src="assets/screens/cept-editor.webp" width="1280" height="720" alt="The Barncept Concept Manager open on the Domain Driven Design architecture template, with the Command thought selected and its meaning shown.">
+              <img src="assets/screens/cept-editor.webp" width="1280" height="720" alt="The Barncept Concept Manager open on the Domain Driven Design architecture template, with the Command thought selected and its meaning shown. Parts are marked with solid squares and slots with dashed ones.">
             </div>
             <figcaption>An architecture template is a concept graph too.</figcaption>
           </figure>
@@ -138,20 +138,20 @@
         </div>
         <div class="deeper">
           <details>
-            <summary><span>The three kinds of thought<small>Definitions, Abstractions and Implementations</small></span></summary>
+            <summary><span>The three kinds of thought<small>Parts, Slots and Choices</small></span></summary>
             <div class="body">
               <ul>
-                <li><strong>Definition</strong>: a thought that can require other thoughts beneath it, such as <code>Application</code> or <code>Domain</code>.</li>
-                <li><strong>Abstraction</strong>: a role that concrete things fulfil, such as <code>Aggregate</code> or <code>Command</code>.</li>
-                <li><strong>Implementation</strong>: a concrete thing that fulfils one Abstraction, such as <code>Basket</code> fulfilling <code>Aggregate</code>.</li>
+                <li><strong>Part</strong>: a part that is always there, and can hold other thoughts beneath it, such as <code>Application</code> or <code>Domain</code>.</li>
+                <li><strong>Slot</strong>: a slot that has to be filled, such as <code>Aggregate</code> or <code>Command</code>.</li>
+                <li><strong>Choice</strong>: a concrete thing that fills one slot, such as <code>Basket</code> filling <code>Aggregate</code>.</li>
               </ul>
-              <p>The editor marks them with a square, a triangle and a circle.</p>
+              <p>The editor marks a part with a solid square, a slot with a dashed one waiting to be filled, and a choice with a puzzle piece.</p>
             </div>
           </details>
           <details>
             <summary><span>Concepts, blank and settled<small>Portable vocabulary, and the things that use it</small></span></summary>
             <div class="body">
-              <p>A <strong>concept</strong> is a broad, structured collection of thoughts about one thing, kept as one file. A concept with every role still open is a <strong>blank</strong> plan, a reusable vocabulary. Once Implementations fill its roles it is <strong>settled</strong>, and can be resolved from an entry point into a concrete, named tree. One concept can borrow another whole, so a vocabulary is written once and reused: a House can borrow the Room concept three times. A bad concept fails loudly, naming the missing reference or the cycle it found.</p>
+              <p>A <strong>concept</strong> is a broad, structured collection of thoughts about one thing, kept as one file. A concept with every slot still open is a <strong>blank</strong> plan, a reusable vocabulary. Once choices fill its slots it is <strong>settled</strong>, and can be resolved from an entry point into a concrete, named tree. One concept can borrow another whole, so a vocabulary is written once and reused: a House can borrow the Room concept three times. A bad concept fails loudly, naming the missing reference or the cycle it found.</p>
 <pre><code>Root
 |
 +--Application

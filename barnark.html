@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barnark · Barn</title>
-  <meta name="description" content="Barnark keeps a codebase in the architecture you chose: drift shows up immediately, new parts land in the right place, and changing style is a guided move.">
+  <meta name="description" content="Barnark starts a new project in the architecture you choose, gives every folder a meaning that says what belongs in it, creates new parts in the right place, and checks that nothing has strayed.">
   <link rel="icon" href="assets/barnark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -29,8 +29,8 @@
     <section class="hero">
       <div class="wrap">
         <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 14.5h20l-3.2 5.5H5.2zM6.5 13V9.5L12 5.5l5.5 4V13z"/></svg>Barnark</span>
-        <h1>Keep your codebase in the shape <span class="accent">you chose</span>.</h1>
-        <p class="lede">Every team agrees an architecture. Few can tell when the code stops following it. Barnark gives your code a shape it can be checked against, grows it in the right places, and lets you change style later without starting again. In a <a href="barn.html">barn</a> it is the Architecture tab, and it works on its own in any project too.</p>
+        <h1>A place for every folder, <span class="accent">and a reason for it</span>.</h1>
+        <p class="lede">Without a shared architectural vocabulary, classes of every sort end up in any folder. Barnark starts a new project in the architecture you choose, gives every folder a meaning that says what belongs in it, and creates each new part in its right place. Would you know if a new developer had just saved an Application file into the Domain? With every folder’s meaning written down, anyone reading it can spot a file in the wrong place. In a <a href="barn.html">barn</a> it is the Architecture tab, and it works on its own in any project too.</p>
         <div class="actions">
           <a class="btn" href="#get-started">Get started</a>
           <a class="btn ghost" href="#deeper">Go deeper</a>
@@ -39,7 +39,7 @@
       <div class="wrap wide hero-shot">
         <figure class="shot">
           <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Workspace</span></div>
-          <img src="assets/screens/ark-browse.webp" width="1280" height="620" alt="The Barnark workspace showing three tracked folders, each with its own architecture template, and a real codebase's tree with Create New Context and Create New Aggregate buttons.">
+          <img src="assets/screens/ark-browse.webp" width="1280" height="620" alt="The Barnark workspace showing three tracked folders, each with its own architecture template, and a new project's Domain Driven Design tree with Create New Aggregate and Create New Context buttons.">
         </figure>
       </div>
     </section>
@@ -49,36 +49,60 @@
         <div class="feature">
           <div>
             <span class="kicker">No favourites</span>
-            <h2>Any architecture. Yours included.</h2>
-            <p>Barnark has no style of its own. Pick from a catalogue of well-known shapes, or describe your own, and give each part of your project the one that suits it. An application’s core, its website and a shared library can each follow a different template in one workspace. Every template says what it suits, and the GUI shows its shape before you pick it.</p>
+            <h2>Any architecture. Several in one project.</h2>
+            <p>Barnark has no style of its own. Pick from a catalogue of well-known shapes, or describe your own, and give each part of your project the one that suits it. An application’s core can be Domain Driven Design, its website Model View Controller and a shared library a Library, <strong>all in one project</strong>. Every template says what it suits, and Barnark shows its shape before you pick it.</p>
           </div>
           <div class="grid two">
             <div class="card"><h3>Domain Driven Design</h3><p>Bounded contexts around a shared kernel.</p></div>
             <div class="card"><h3>Feature Based</h3><p>Each feature in one self-contained folder.</p></div>
             <div class="card"><h3>Model View Controller</h3><p>The classic three-way split.</p></div>
             <div class="card"><h3>Library</h3><p>A small public surface over hidden internals.</p></div>
-            <div class="card" style="grid-column: 1 / -1; border-style: dashed; box-shadow: none"><h3>Your own</h3><p>Describe a shape once, and Barnark checks and grows it exactly like the built-in ones.</p></div>
+            <div class="card"><h3>Package App</h3><p>A whole application behind a public Api.</p></div>
+            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own</h3><p>Describe a shape once, and Barnark creates and checks it like the built-in ones.</p></div>
           </div>
         </div>
 
         <div class="feature stacked">
           <div>
             <div class="copy-head">
-              <span class="kicker">Conformance</span>
-              <h2>Drift shows up the day it happens.</h2>
+              <span class="kicker">One click</span>
+              <h2>Pick an architecture. Get the folder.</h2>
             </div>
             <div>
-              <p>Nobody has to declare a codebase “well architected”. One click, or one step in CI, <strong>checks the whole codebase against its template</strong>. Either it comes back clean, or it names exactly what doesn’t belong and where.</p>
-              <p>It’s the same idea as a proven story in Barnspec, applied to structure: the evidence decides, not opinion.</p>
+              <p>Click <strong>New</strong>, choose the architecture the folder should follow, and it is created with its whole structure. Beside each choice is what it suits and the shape a folder following it takes, so you see the architecture <strong>before</strong> anything is made.</p>
+              <p>That’s the bar Barnark sets itself: better than copying a folder of empty folders from a README.</p>
             </div>
           </div>
           <figure>
             <div class="shot">
-              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Check</span></div>
-              <img src="assets/screens/ark-check.webp" width="1280" height="330" alt="The Barnark Check tab for a real project's source folder, reporting: Conformant, no inconsistencies found.">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Add a folder</span></div>
+              <img src="assets/screens/ark-new.webp" width="1280" height="800" alt="The Barnark form for adding a folder named Money under lib. Each template card says what the architecture is and what it suits. Library is chosen, and beside it is the shape a Library folder takes: Api with Contract, Exception, ValueObject and Factory, and Internal with a named Feature and Shared.">
             </div>
-            <figcaption>A real hotel-booking codebase, checked against Domain Driven Design.</figcaption>
+            <figcaption>A Library-shaped folder, about to be added beside the project’s Domain Driven Design code.</figcaption>
           </figure>
+        </div>
+
+        <div class="feature flip">
+          <div>
+            <span class="kicker">Meaning</span>
+            <h2>Every folder says what it is for.</h2>
+            <p>Each folder in a template has <strong>a meaning in plain words</strong>: what belongs in it, and which way its dependencies point. A team that has never talked about dependency direction learns that there is such a thing, just by reading its own architecture.</p>
+            <p>Dependency direction is taught, not enforced. Following it stays a human matter, and a team that wants enforcement can add a tool such as deptrac.</p>
+          </div>
+          <div class="panel" aria-label="Two folder meanings from the Domain Driven Design template">
+            <span class="stamp">Domain Driven Design · a bounded context</span>
+            <dl class="terms">
+              <div>
+                <dt>Domain/</dt>
+                <dd>The core business logic and rules, expressed as Aggregates, kept independent of delivery mechanism and infrastructure. It depends only on its own Context’s Domain and PublicApi and on the Domain Kernel, never on another Context.</dd>
+              </div>
+              <div>
+                <dt>PublicApi/</dt>
+                <dd>The only part of a Context another Context may depend on: what it publishes about itself, with its internals kept behind it.</dd>
+              </div>
+            </dl>
+            <p class="terms-note">Word for word from the bundled template.</p>
+          </div>
         </div>
 
         <div class="feature">
@@ -86,7 +110,7 @@
             <span class="kicker">Grow it right</span>
             <h2>New parts land in the right place.</h2>
             <p>The template knows what belongs where. Wherever something may be added, Barnark offers a button for it. Name it, and the whole structure it needs is created for you, so <strong>the right way is also the easy way</strong>.</p>
-            <p>New files arrive as real code, in the right place, ready to fill in.</p>
+            <p>Barnark makes folders, not code. What goes in a folder is yours to write, and its meaning says what that is.</p>
           </div>
           <div class="panel" aria-label="Creating a new context named Billing">
             <p class="muted" style="margin-bottom: 14px">Create New Context → <strong style="color: var(--text)">Billing</strong></p>
@@ -99,29 +123,39 @@
           </div>
         </div>
 
-        <div class="feature flip">
+        <div class="feature stacked">
           <div>
-            <span class="kicker">Migration</span>
-            <h2>Change style without a rewrite.</h2>
-            <p>Architectures should be allowed to change as you learn. Barnark moves your real code from one template to another, <strong>asking you about each move</strong> and saving the plan as you go.</p>
-            <p>Confirm a suggestion, rename, choose another home or leave it where it is. Stop whenever you like and carry on later. Nothing moves until the plan is complete, and then it checks the result against the new template.</p>
+            <div class="copy-head">
+              <span class="kicker">Conformance</span>
+              <h2>Has anything strayed? Ask.</h2>
+            </div>
+            <div>
+              <p>Nobody has to declare a project “well architected”. Press a button, or run one command, and Barnark <strong>checks every tracked folder against its architecture</strong>. Either it comes back clean, or it names each folder that doesn’t belong, and where.</p>
+              <p>It’s the same idea as a proven story in Barnspec, applied to structure: the evidence decides, not opinion.</p>
+            </div>
           </div>
-          <div class="panel" aria-label="A switch plan from one template to another, part decided">
-            <p class="muted" style="margin-bottom: 14px">Domain Driven Design → <strong style="color: var(--text)">Library</strong> · plan</p>
-            <ul class="examples" style="margin-top: 0">
-              <li><span class="lamp green"></span>Context/FrontDesk<span class="state">→ Internal/Feature/FrontDesk</span></li>
-              <li><span class="lamp green"></span>Context/Property<span class="state">→ Internal/Feature/Property</span></li>
-              <li><span class="lamp green"></span>Context/Reservation<span class="state">→ Internal/Feature/Reservation</span></li>
-              <li><span class="lamp yellow"></span>Kernel/Infrastructure/Persistence<span class="state">decide later</span></li>
-              <li><span class="lamp yellow"></span>Transport/Http/Json/V1/Guest<span class="state">decide later</span></li>
-            </ul>
-            <p class="muted" style="margin: 16px 0 0; font-size: 0.9rem">A hotel-booking codebase part way through its plan. Two paths are still to decide, so nothing has been written.</p>
-          </div>
+          <figure>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Check</span></div>
+              <img src="assets/screens/ark-check.webp" width="1280" height="330" alt="The Barnark Check tab for a project's src folder, reporting: Conformant, no inconsistencies found.">
+            </div>
+            <figcaption>A new project’s <code>src/</code>, checked against Domain Driven Design.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="deeper">
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="kicker">Honest about its scope</span>
+          <h2>Made for new projects.</h2>
+          <p>Barnark keeps a new project well shaped from its first commit. It isn’t for judging a codebase that never followed an architecture: a check over one would list a great many problems, and that isn’t what it’s for. It looks after folders, not files, and it teaches dependency direction rather than enforcing it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="deeper">
       <div class="wrap">
         <div class="section-head">
           <span class="kicker">Go deeper</span>
@@ -144,35 +178,29 @@
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, so your own are written the same way, with a description of what they are and what they suit, and can borrow a bundled one whole.</p>
+              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, so your own is written the same way, with a description of what it is and what it suits, and a meaning for every folder. A template is complete in itself: copy what you need from another rather than refer to it, so that no change made elsewhere can reach the folders built from yours.</p>
             </div>
           </details>
           <details>
-            <summary><span>Checking a real project<small>Slots, exclusions and nested folders</small></span></summary>
+            <summary><span>Checking a project<small>Slots, exclusions and nested folders</small></span></summary>
             <div class="body">
-              <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the template and records it, so your real contexts are checked where they actually are. Anything it can’t settle is listed, which is usually your to-do list for extending the template.</p>
+              <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the template and records it, so your contexts are checked where they actually are. Anything it can’t settle is listed, which is usually your to-do list for extending the template. Files are never checked: a template says only what folders there are.</p>
               <p>Paths with no architectural meaning, like test fixtures, can be excluded. A tracked folder inside another follows its own template.</p>
             </div>
           </details>
           <details>
-            <summary><span>What gets created<small>Real declarations, interfaces, exceptions and other file types</small></span></summary>
+            <summary><span>What gets created<small>Folders, with their whole structure</small></span></summary>
             <div class="body">
-              <p>A folder you name arrives with its whole fixed structure. A file you name arrives as a real PHP declaration in the namespace your autoloader expects. The template decides whether it’s an interface, an exception or a class, or another file type entirely, such as a Twig view. Nothing already on disk is overwritten.</p>
+              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten.</p>
             </div>
           </details>
           <details>
-            <summary><span>Switching templates<small>A plan, one decision at a time</small></span></summary>
+            <summary><span>The command line<small>For scripts, agents and terminal lovers</small></span></summary>
             <div class="body">
-              <p>A switch asks what to do with each real piece of a folder: move it under a part of the new template (keeping its name or giving it a new one), leave it where it is, or decide later. A mapping table only suggests; you confirm. The plan is saved after every answer in <code>.barnark/switch-plans/</code> (in a barn, <code>.barn/barnark/switch-plans/</code>), so you can stop and carry on. When nothing is left to decide it runs in one go: units move with their namespaces rewritten, empty old folders go if you asked, the folder's slots are recorded, and a check against the new template lists what is left to tidy inside the moved folders. Plan it in the terminal or in the GUI's switch tab: they share the plan, so you can start in one and finish in the other.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>The command line<small>For CI, scripts and terminal lovers</small></span></summary>
-            <div class="body">
-<pre><code><span class="p">$ </span>barnark template:check              <span class="c"># check every tracked folder</span>
-<span class="p">$ </span>barnark template:offers src/Context <span class="c"># what may be created here?</span>
+<pre><code><span class="p">$ </span>barnark template:scaffold Library lib/Money <span class="c"># a new folder, tracked</span>
+<span class="p">$ </span>barnark template:offers src/Context         <span class="c"># what may be created here?</span>
 <span class="p">$ </span>barnark template:new Context Billing src/Context
-<span class="p">$ </span>barnark template:switch Library src   <span class="c"># plan a switch, one question at a time</span></code></pre>
+<span class="p">$ </span>barnark template:check                      <span class="c"># check every tracked folder</span></code></pre>
               <p>Tracked folders live in <code>barnark-workspace.json</code> (in a barn, <code>.barn/barnark-workspace.json</code>), committed with your code, so a check needs no arguments.</p>
             </div>
           </details>
@@ -180,11 +208,11 @@
       </div>
     </section>
 
-    <section class="section" id="get-started">
+    <section class="section alt" id="get-started">
       <div class="wrap cta">
         <span class="kicker">Get started</span>
-        <h2>Open your codebase in the workspace.</h2>
-        <p>Barnark needs PHP 8.5 and Composer. Install it, then run one command from anywhere in your project.</p>
+        <h2>Start your project in the workspace.</h2>
+        <p>Barnark needs PHP 8.5 and Composer. Install it into a new project, run one command from anywhere in it, and add your first folder.</p>
 <pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>barnark gui</code></pre>
         <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">
           <details>
@@ -198,11 +226,11 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section">
       <div class="wrap">
         <div class="grid two">
           <a class="card product" data-brand="spec" href="barnspec.html"><span class="role">Understand the need</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><mask id="spec-tick"><rect x="3" y="3" width="18" height="18" rx="5" fill="#fff"/><path d="M8 12.5l3 3 5-6" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask><rect x="3" y="3" width="18" height="18" rx="5" mask="url(#spec-tick)"/></svg>Barnspec</h3><p>Know what the code is for, and prove that it does it.</p><span class="more">Explore Barnspec</span></a>
-          <a class="card product" data-brand="cept" href="barncept.html"><span class="role">Organise the concepts</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept</h3><p>Every Barnark template is a Barncept concept graph underneath.</p><span class="more">Explore Barncept</span></a>
+          <a class="card product" data-brand="cept" href="barncept.html"><span class="role">Organise the concepts</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept</h3><p>Barnark’s templates are written as Barncept concepts.</p><span class="more">Explore Barncept</span></a>
         </div>
       </div>
     </section>

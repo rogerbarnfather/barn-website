@@ -155,6 +155,34 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="wrap">
+        <div class="feature">
+          <div>
+            <span class="kicker">Keep the story of the shape</span>
+            <h2>Every schema edit leaves a revision.</h2>
+            <p>When you add or remove a named folder, Barnark saves a new schema snapshot with your reason for the change. The old snapshot stays in the history, and the GUI lets you browse each version as a read-only tree.</p>
+            <p>Barnark's PHP API can also copy a fixed part from a template into the project schema. It refuses a copy that contains a repeatable collection, so a one-off structure cannot be mistaken for something meant to recur.</p>
+            <p>Revisions preserve the folder schema and its metadata, not the files inside those folders. Before a destructive edit, back up or commit any files you need to keep.</p>
+          </div>
+          <div class="panel" aria-label="Example schema revision history">
+            <span class="stamp">Architecture · History</span>
+            <dl class="terms">
+              <div>
+                <dt>Current · Add Billing context</dt>
+                <dd>Billing/ · Application/ · Domain/ · Infrastructure/ · PublicApi/</dd>
+              </div>
+              <div>
+                <dt>Previous · Initial project schema</dt>
+                <dd>The earlier tree remains available to inspect.</dd>
+              </div>
+            </dl>
+            <p class="terms-note">History is read-only; edits continue from the current schema.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="deeper">
       <div class="wrap">
         <div class="section-head">
@@ -191,7 +219,7 @@
           <details>
             <summary><span>What gets created<small>Folders, with their whole structure</small></span></summary>
             <div class="body">
-              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten.</p>
+              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing named folders creates a schema revision; the current snapshot is kept alongside the workspace record.</p>
             </div>
           </details>
           <details>

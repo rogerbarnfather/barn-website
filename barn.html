@@ -90,12 +90,14 @@
   .barn/
     barn.json                <span class="c"># marks the barn and names it</span>
     barnspec.json            <span class="c"># where generated test ports go</span>
-    barnspec/                <span class="c"># the story map</span>
+    barnspec/                <span class="c"># Barnspec stories, scenarios and work</span>
+      area-of-business-storage.json
+    concepts/                 <span class="c"># Barncept-managed concept structures</span>
     barnark-workspace.json   <span class="c"># tracked folders and their templates</span>
   composer.json
   src/
   tests/</code></pre>
-              <p>Every tool finds the barn from any folder inside it, so <code>barnspec</code>, <code>barnark template:check</code>, <code>port-generator</code> and <code>scenario-bridge</code> all work from deep in <code>src/</code>. Outside a barn each tool works as it always has.</p>
+              <p>Every tool finds the barn from any folder inside it. Barnspec keeps its own records under <code>.barn/barnspec/</code> and uses Barncept for Area of Business, Role and Story structure under <code>.barn/concepts/</code>, behind the Barnspec API. Existing barns migrate that structure on first use and keep the original files. <code>barnspec</code>, <code>barnark template:check</code>, <code>port-generator</code> and <code>scenario-bridge</code> all work from deep in <code>src/</code>; outside a barn each tool works on its own.</p>
             </div>
           </details>
           <details>

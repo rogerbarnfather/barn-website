@@ -266,7 +266,7 @@
 <span class="p">$ </span>vendor/bin/barnspec review    <span class="c"># turn it into a real one</span>
 <span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
 <span class="p">$ </span>vendor/bin/barnspec map --output-dir=docs/map   <span class="c"># an HTML story map</span></code></pre>
-              <p>Everything is stored as readable JSON in <code>.barnspec/</code> (in a barn, <code>.barn/barnspec/</code>), committed alongside your code.</p>
+              <p>Outside a barn, Barnspec stores its records as readable JSON under <code>.barnspec/</code>. In a barn, its story, scenario and work records live under <code>.barn/barnspec/</code>; Barnspec manages the Area of Business, Role and Story structure through Barncept in <code>.barn/concepts/</code>. The GUI and CLI still go through the Barnspec API, which keeps Barnspec’s domain rules in one place. Existing barns migrate that structure on first use, with the original files retained.</p>
             </div>
           </details>
         </div>
@@ -295,7 +295,7 @@
       <div class="wrap">
         <div class="grid two">
           <a class="card product" data-brand="ark" href="barnark.html"><span class="role">Shape the software</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 14.5h20l-3.2 5.5H5.2zM6.5 13V9.5L12 5.5l5.5 4V13z"/></svg>Barnark</h3><p>Keep the code that fulfils your stories in the shape you chose.</p><span class="more">Explore Barnark</span></a>
-          <a class="card product" data-brand="cept" href="barncept.html"><span class="role">A separate package</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept</h3><p>Trees of what goes where, each thought with a meaning, never left invalid.</p><span class="more">Explore Barncept</span></a>
+          <a class="card product" data-brand="cept" href="barncept.html"><span class="role">A separate package</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept</h3><p>Generic concept management used by Barnspec and Barnark, with each tool keeping its own rules and API.</p><span class="more">Explore Barncept</span></a>
         </div>
       </div>
     </section>

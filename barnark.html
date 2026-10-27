@@ -38,8 +38,8 @@
       </div>
       <div class="wrap wide hero-shot">
         <figure class="shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Workspace</span></div>
-          <img src="assets/screens/ark-browse.webp" width="1280" height="620" alt="The Barnark workspace showing three tracked folders, each with its own architecture template, and a new project's Domain Driven Design tree with Create New Aggregate and Create New Context buttons.">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Browse</span></div>
+          <img src="assets/screens/ark-browse.webp" width="1280" height="620" alt="Barnark showing three tracked folders, each following a schema of its own: Hotel, Website and StayPeriod. The src folder's tree is open at a Reservation context, with Create New Aggregate and Create New Context buttons where its schema allows them.">
         </figure>
       </div>
     </section>
@@ -50,7 +50,7 @@
           <div>
             <span class="kicker">No favourites</span>
             <h2>Any architecture. Several in one project.</h2>
-            <p>Barnark has no style of its own. Pick from a catalogue of well-known shapes, or describe your own, and give each part of your project the one that suits it. An application’s core can be Domain Driven Design, its website Model View Controller and a shared library a Library, <strong>all in one project</strong>. Every template says what it suits, and Barnark shows its shape before you pick it.</p>
+            <p>Barnark has no style of its own. Pick from a catalogue of well-known shapes, and give each part of your project the one that suits it. An application’s core can be Domain Driven Design, its website Model View Controller and a shared library a Library, <strong>all in one project</strong>. Every template says what it suits, and Barnark shows its shape before you pick it.</p>
           </div>
           <div class="grid two">
             <div class="card"><h3>Domain Driven Design</h3><p>Bounded contexts around a shared kernel.</p></div>
@@ -58,7 +58,7 @@
             <div class="card"><h3>Model View Controller</h3><p>The classic three-way split.</p></div>
             <div class="card"><h3>Library</h3><p>A small public surface over hidden internals.</p></div>
             <div class="card"><h3>Package App</h3><p>A whole application behind a public Api.</p></div>
-            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own</h3><p>Describe a shape once, and Barnark creates and checks it like the built-in ones.</p></div>
+            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own copy</h3><p>Each folder follows a copy of its template, named by you. Later changes to the catalogue never reach it.</p></div>
           </div>
         </div>
 
@@ -69,16 +69,16 @@
               <h2>Pick an architecture. Get the folder.</h2>
             </div>
             <div>
-              <p>Click <strong>New</strong>, choose the architecture the folder should follow, and it is created with its whole structure. Each choice has a description recommending what that architecture is best suited for. Its folder structure is shown, so you can see how the architecture looks <strong>before</strong> anything is made.</p>
+              <p>Click <strong>New</strong>, choose the architecture the folder should follow, name your copy of it, and the folder is created with its whole structure. Each choice has a description recommending what that architecture is best suited for. Its folder structure is shown, so you can see how the architecture looks <strong>before</strong> anything is made.</p>
               <p>No copying and pasting necessary. Just click and go.</p>
             </div>
           </div>
           <figure>
             <div class="shot">
-              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Add a folder</span></div>
-              <img src="assets/screens/ark-new.webp" width="1280" height="800" alt="The Barnark form for adding a folder named Money under lib. Each template card says what the architecture is and what it suits. Library is chosen, and beside it is the shape a Library folder takes: Api with Contract, Exception, ValueObject and Factory, and Internal with a named Feature and Shared.">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · New folder</span></div>
+              <img src="assets/screens/ark-new.webp" width="1280" height="1006" alt="The Barnark form for a new folder named Money under lib. Each template card says what the architecture is and what it suits. Library is chosen, and beside it is the shape a Library folder takes: Api with Contract, Exception, ValueObject and Factory, and Internal with a named Feature and Shared. Below, the schema name Money: the project's own copy of the template.">
             </div>
-            <figcaption>A Library-shaped folder, about to be added beside the project’s Domain Driven Design code.</figcaption>
+            <figcaption>A Library-shaped folder, about to be added beside the project’s Domain Driven Design code, following a copy named Money.</figcaption>
           </figure>
         </div>
 
@@ -109,7 +109,7 @@
           <div>
             <span class="kicker">Grow it right</span>
             <h2>New parts land in the right place.</h2>
-            <p>The template knows what belongs where. Wherever something may be added, Barnark offers a button for it. Name it, and the whole structure it needs is created for you, so <strong>the right way is also the easy way</strong>.</p>
+            <p>Your schema knows what belongs where. Wherever something may be added, Barnark offers a button for it. Name it, and the whole structure it needs is created for you, so <strong>the right way is also the easy way</strong>.</p>
             <p>Barnark makes folders, not code. What goes in a folder is yours to write, and its meaning says what that is.</p>
           </div>
           <div class="panel" aria-label="Creating a new context named Billing">
@@ -137,9 +137,9 @@
           <figure>
             <div class="shot">
               <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · Check</span></div>
-              <img src="assets/screens/ark-check.webp" width="1280" height="330" alt="The Barnark Check tab for a project's src folder, reporting: Conformant, no inconsistencies found.">
+              <img src="assets/screens/ark-check.webp" width="1280" height="330" alt="The Barnark Check tab for a project's src folder, which follows the schema Hotel, reporting: Conformant, no inconsistencies found.">
             </div>
-            <figcaption>A new project’s <code>src/</code>, checked against Domain Driven Design.</figcaption>
+            <figcaption>A project’s <code>src/</code>, checked against Hotel, its own copy of Domain Driven Design.</figcaption>
           </figure>
         </div>
       </div>
@@ -159,25 +159,24 @@
       <div class="wrap">
         <div class="feature">
           <div>
-            <span class="kicker">Keep the story of the shape</span>
-            <h2>Every schema edit leaves a revision.</h2>
-            <p>When you add or remove a named folder, Barnark saves a new schema snapshot with your reason for the change. The old snapshot stays in the history, and the GUI lets you browse each version as a read-only tree.</p>
-            <p>Barnark's PHP API can also copy a fixed part from a template into the project schema. It refuses a copy that contains a repeatable collection, so a one-off structure cannot be mistaken for something meant to recur.</p>
-            <p>Revisions preserve the folder schema and its metadata, not the files inside those folders. Before a destructive edit, back up or commit any files you need to keep.</p>
+            <span class="kicker">Yours to keep</span>
+            <h2>Your own copy, tied to nothing.</h2>
+            <p>When you make a folder, Barnark copies the template into a <strong>schema of your own</strong>, under the name you give it. Nothing ties the copy back: a later change to the catalogue never reaches it, and nothing in your project names the template it came from.</p>
+            <p>A schema is kept as revisions, and none is ever changed in place. Adding a context or a feature uses the schema without changing it, so it makes no revision. The History tab shows each revision as a read-only tree.</p>
           </div>
           <div class="panel" aria-label="Example schema revision history">
             <span class="stamp">Architecture · History</span>
             <dl class="terms">
               <div>
-                <dt>Current · Add Billing context</dt>
-                <dd>Billing/ · Application/ · Domain/ · Infrastructure/ · PublicApi/</dd>
+                <dt>Hotel · Created with its folder</dt>
+                <dd>Kernel/ · Transport/ · Context/, which holds a member type: Context</dd>
               </div>
               <div>
-                <dt>Previous · Initial project schema</dt>
-                <dd>The earlier tree remains available to inspect.</dd>
+                <dt>Create New Context → Billing</dt>
+                <dd>Uses the schema, and makes no revision.</dd>
               </div>
             </dl>
-            <p class="terms-note">History is read-only; edits continue from the current schema.</p>
+            <p class="terms-note">History is read-only.</p>
           </div>
         </div>
       </div>
@@ -206,30 +205,30 @@
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, so your own is written the same way, with a description of what it is and what it suits, and a meaning for every folder. A template is complete in itself: copy what you need from another rather than refer to it, so that no change made elsewhere can reach the folders built from yours.</p>
+              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Barnark reads one only to copy it into a new folder’s schema; from then on the folder follows its copy.</p>
             </div>
           </details>
           <details>
             <summary><span>Checking a project<small>Slots, exclusions and nested folders</small></span></summary>
             <div class="body">
-              <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the template and records it, so your contexts are checked where they actually are. Anything it can’t settle is listed, which is usually your to-do list for extending the template. Files are never checked: a template says only what folders there are.</p>
-              <p>Paths with no architectural meaning, like test fixtures, can be excluded. A tracked folder inside another follows its own template.</p>
+              <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the schema and records it, so your contexts are checked where they actually are. Anything it can’t settle is listed. Files are never checked: a template says only what folders there are.</p>
+              <p>Paths with no architectural meaning, like test fixtures, can be excluded. A tracked folder inside another follows its own schema.</p>
             </div>
           </details>
           <details>
             <summary><span>What gets created<small>Folders, with their whole structure</small></span></summary>
             <div class="body">
-              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing named folders creates a schema revision; the current snapshot is kept alongside the workspace record.</p>
+              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing a folder you named leaves the schema as it is. Each schema is kept in <code>.barnark/schemas/</code> (in a barn, <code>.barn/barnark/schemas/</code>).</p>
             </div>
           </details>
           <details>
             <summary><span>The command line<small>For scripts, agents and terminal lovers</small></span></summary>
             <div class="body">
-<pre><code><span class="p">$ </span>barnark template:scaffold Library lib/Money <span class="c"># a new folder, tracked</span>
-<span class="p">$ </span>barnark template:offers src/Context         <span class="c"># what may be created here?</span>
+<pre><code><span class="p">$ </span>barnark template:scaffold Library Money lib/Money <span class="c"># a new folder, following your copy, Money</span>
+<span class="p">$ </span>barnark template:offers src/Context               <span class="c"># what may be created here?</span>
 <span class="p">$ </span>barnark template:new Context Billing src/Context
-<span class="p">$ </span>barnark template:check                      <span class="c"># check every tracked folder</span></code></pre>
-              <p>Tracked folders live in <code>barnark-workspace.json</code> (in a barn, <code>.barn/barnark-workspace.json</code>), committed with your code, so a check needs no arguments.</p>
+<span class="p">$ </span>barnark template:check                            <span class="c"># check every tracked folder</span></code></pre>
+              <p>Tracked folders live in <code>.barnark/tracked-folders.json</code> (in a barn, <code>.barn/barnark/tracked-folders.json</code>), committed with your code and their schemas, so a check needs no arguments.</p>
             </div>
           </details>
         </div>
@@ -239,7 +238,7 @@
     <section class="section alt" id="get-started">
       <div class="wrap cta">
         <span class="kicker">Get started</span>
-        <h2>Start your project in the workspace.</h2>
+        <h2>Start your project in shape.</h2>
         <p>Barnark needs PHP 8.5 and Composer. Install it into a new project, run one command from anywhere in it, and add your first folder.</p>
 <pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>barnark gui</code></pre>
         <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">

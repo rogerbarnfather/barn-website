@@ -162,7 +162,7 @@
             <span class="kicker">Yours to keep</span>
             <h2>Your own copy, tied to nothing.</h2>
             <p>When you make a folder, Barnark copies the template into a <strong>schema of your own</strong>, under the name you give it. Nothing ties the copy back: a later change to the catalogue never reaches it, and nothing in your project names the template it came from.</p>
-            <p>A schema is kept as revisions, and none is ever changed in place. Adding a context or a feature uses the schema without changing it, so it makes no revision. The History tab shows each revision as a read-only tree.</p>
+            <p>A schema is kept as revisions, and none is ever changed in place. Adding a context or a feature adds it to the schema as a new revision, and so does deleting one. Barnark writes each revision's reason. The History tab lists them, and shows each as a read-only tree.</p>
           </div>
           <div class="panel" aria-label="Example schema revision history">
             <span class="stamp">Architecture · History</span>
@@ -172,8 +172,8 @@
                 <dd>Kernel/ · Transport/ · Context/, which holds a member type: Context</dd>
               </div>
               <div>
-                <dt>Create New Context → Billing</dt>
-                <dd>Uses the schema, and makes no revision.</dd>
+                <dt>Hotel · Added Context/Billing.</dt>
+                <dd>A new revision. Billing/ arrives with its Domain/, Application/, Infrastructure/ and PublicApi/.</dd>
               </div>
             </dl>
             <p class="terms-note">History is read-only.</p>

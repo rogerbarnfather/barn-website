@@ -58,7 +58,7 @@
             <div class="card"><h3>Model View Controller</h3><p>The classic three-way split.</p></div>
             <div class="card"><h3>Library</h3><p>A small public surface over hidden internals.</p></div>
             <div class="card"><h3>Package App</h3><p>A whole application behind a public Api.</p></div>
-            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own copy</h3><p>Each folder follows a copy of its template, named by you. Later changes to the catalogue never reach it.</p></div>
+            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own templates</h3><p>Copy any template, or your project’s schema, into a template of your own, named by you. Changing one never changes the other.</p></div>
           </div>
         </div>
 
@@ -69,7 +69,7 @@
               <h2>Pick an architecture. Get the folder.</h2>
             </div>
             <div>
-              <p>Click <strong>New</strong>, choose the architecture the folder should follow, name your copy of it, and the folder is created with its whole structure. Each choice has a description recommending what that architecture is best suited for. Its folder structure is shown, so you can see how the architecture looks <strong>before</strong> anything is made.</p>
+              <p>Click <strong>Clone into the project</strong>, choose the architecture your project should follow, name your copy of it, and the folder is created with its whole structure. Each choice has a description recommending what that architecture is best suited for. Its folder structure is shown, so you can see how the architecture looks <strong>before</strong> anything is made.</p>
               <p>No copying and pasting necessary. Just click and go.</p>
             </div>
           </div>
@@ -130,7 +130,7 @@
               <h2>Has anything strayed? Ask.</h2>
             </div>
             <div>
-              <p>Nobody has to declare a project “well architected”. Press a button, or run one command, and Barnark <strong>checks every tracked folder against its architecture</strong>. Either it comes back clean, or it names each folder that doesn’t belong, and where.</p>
+              <p>Nobody has to declare a project “well architected”. Press a button, or run one command, and Barnark <strong>checks your project’s folder against its architecture</strong>. Either it comes back clean, or it names each folder that doesn’t belong, and where.</p>
               <p>It’s the same idea as a proven story in Barnspec, applied to structure: the evidence decides, not opinion.</p>
             </div>
           </div>
@@ -205,30 +205,31 @@
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Barnark reads one only to copy it into a new folder’s schema; from then on the folder follows its copy.</p>
+              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Barnark reads one only to copy it, into your project’s schema or a template of your own; from then on the copy is yours.</p>
             </div>
           </details>
           <details>
-            <summary><span>Checking a project<small>Slots, exclusions and nested folders</small></span></summary>
+            <summary><span>Checking a project<small>Slots and exclusions</small></span></summary>
             <div class="body">
               <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the schema and records it, so your contexts are checked where they actually are. Anything it can’t settle is listed. Files are never checked: a template says only what folders there are.</p>
-              <p>Paths with no architectural meaning, like test fixtures, can be excluded. A tracked folder inside another follows its own schema.</p>
+              <p>Paths with no architectural meaning, like test fixtures, can be excluded.</p>
             </div>
           </details>
           <details>
             <summary><span>What gets created<small>Folders, with their whole structure</small></span></summary>
             <div class="body">
-              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing a folder you named leaves the schema as it is. Each schema is kept in <code>.barnark/schemas/</code> (in a barn, <code>.barn/barnark/schemas/</code>).</p>
+              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing a folder you named is a new revision of the schema. Each schema is kept in <code>.barnark/schemas/</code> (in a barn, <code>.barn/barnark/schemas/</code>).</p>
             </div>
           </details>
           <details>
             <summary><span>The command line<small>For scripts, agents and terminal lovers</small></span></summary>
             <div class="body">
-<pre><code><span class="p">$ </span>barnark template:scaffold Library Money lib/Money <span class="c"># a new folder, following your copy, Money</span>
-<span class="p">$ </span>barnark template:offers src/Context               <span class="c"># what may be created here?</span>
+<pre><code><span class="p">$ </span>barnark template:clone "Domain Driven Design" Shop src    <span class="c"># your project's schema, Shop, and src/</span>
+<span class="p">$ </span>barnark template:offers src/Context                       <span class="c"># what may be created here?</span>
 <span class="p">$ </span>barnark template:new Context Billing src/Context
-<span class="p">$ </span>barnark template:check                            <span class="c"># check every tracked folder</span></code></pre>
-              <p>Tracked folders live in <code>.barnark/tracked-folders.json</code> (in a barn, <code>.barn/barnark/tracked-folders.json</code>), committed with your code and their schemas, so a check needs no arguments.</p>
+<span class="p">$ </span>barnark template:check                                    <span class="c"># check src/ against Shop</span>
+<span class="p">$ </span>barnark template:copy Shop Market                         <span class="c"># a template of your own</span></code></pre>
+              <p>The folder your project’s schema is bound to is recorded in <code>.barnark/tracked-folders.json</code> (in a barn, <code>.barn/barnark/tracked-folders.json</code>), committed with your code and the schemas, so a check needs no arguments.</p>
             </div>
           </details>
         </div>

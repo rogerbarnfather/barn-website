@@ -50,7 +50,7 @@
           <div>
             <span class="kicker">Three tabs</span>
             <h2>Home, Business and Architecture.</h2>
-            <p><strong>Home</strong> is where the barn stands: every area of business with its scenarios counted by colour, and your project’s folder with whether it still fits its schema.</p>
+            <p><strong>Home</strong> is where the barn stands: every area of business with its scenarios counted by colour, and your project’s folder with whether it still fits its template.</p>
             <p><strong>Business</strong> is <a href="barnspec.html">Barnspec</a>: the story map, its scenarios and the work behind them. <strong>Architecture</strong> is <a href="barnark.html">Barnark</a>: your folders, the architecture each one follows, and a check of each.</p>
             <p>The two are kept apart on purpose. Each speaks its own language, and the home page is where you see both at once.</p>
           </div>
@@ -93,7 +93,7 @@
     barnspec/                <span class="c"># Barnspec stories, scenarios and work</span>
       area-of-business-storage.json
     concepts/                 <span class="c"># Barncept-managed concept structures</span>
-    barnark/                 <span class="c"># your project’s schema and your own templates</span>
+    barnark/                 <span class="c"># your project’s template and any others of your own</span>
   composer.json
   src/
   tests/</code></pre>
@@ -103,8 +103,8 @@
           <details>
             <summary><span>Building<small>What <code>barn build</code> asks and makes</small></span></summary>
             <div class="body">
-              <p>It asks for the barn’s name, its Composer package, its root namespace and the architecture for <code>src/</code>, suggesting each from the folder’s name, with Domain Driven Design as the default. Then it asks what to call <code>src/</code>’s schema, your own copy of that architecture, with no suggestion. Every answer can be given as an option instead. The folder has to be new or empty.</p>
-<pre><code><span class="p">$ </span>barn build shop --package=acme/shop --namespace="Acme\Shop" --template=Library --schema=Shop</code></pre>
+              <p>It asks for the barn’s name, its Composer package, its root namespace and the architecture for <code>src/</code>, suggesting each from the folder’s name, with Domain Driven Design as the default. Then it asks what to call the project’s template, your own copy of that architecture, with no suggestion. Every answer can be given as an option instead. The folder has to be new or empty.</p>
+<pre><code><span class="p">$ </span>barn build shop --package=acme/shop --namespace="Acme\Shop" --template=Library --template-name=Shop</code></pre>
               <p>It runs <code>git init</code> without committing anything and then <code>composer install</code>; <code>--no-install</code> leaves that to you.</p>
             </div>
           </details>

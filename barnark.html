@@ -58,7 +58,7 @@
             <div class="card"><h3>Model View Controller</h3><p>The classic three-way split.</p></div>
             <div class="card"><h3>Library</h3><p>A small public surface over hidden internals.</p></div>
             <div class="card"><h3>Package App</h3><p>A whole application behind a public Api.</p></div>
-            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own templates</h3><p>Copy any template, or your project’s schema, into a template of your own, named by you. Changing one never changes the other.</p></div>
+            <div class="card" style="border-style: dashed; box-shadow: none"><h3>Your own templates</h3><p>Copy any template, your project’s one included, into a template of your own, named by you. Changing one never changes the other.</p></div>
           </div>
         </div>
 
@@ -109,7 +109,7 @@
           <div>
             <span class="kicker">Grow it right</span>
             <h2>New parts land in the right place.</h2>
-            <p>Your schema knows what belongs where. Wherever something may be added, Barnark offers a button for it. Name it, and the whole structure it needs is created for you, so <strong>the right way is also the easy way</strong>.</p>
+            <p>Your project’s template knows what belongs where. Wherever something may be added, Barnark offers a button for it. Name it, and the whole structure it needs is created for you, so <strong>the right way is also the easy way</strong>.</p>
             <p>Barnark makes folders, not code. What goes in a folder is yours to write, and its meaning says what that is.</p>
           </div>
           <div class="panel" aria-label="Creating a new context named Billing">
@@ -161,10 +161,10 @@
           <div>
             <span class="kicker">Yours to keep</span>
             <h2>Your own copy, tied to nothing.</h2>
-            <p>When you make a folder, Barnark copies the template into a <strong>schema of your own</strong>, under the name you give it. Nothing ties the copy back: a later change to the catalogue never reaches it, and nothing in your project names the template it came from.</p>
-            <p>A schema is kept as revisions, and none is ever changed in place. Adding a context or a feature adds it to the schema as a new revision, and so does deleting one. Barnark writes each revision's reason. The History tab lists them, and shows each as a read-only tree.</p>
+            <p>When you make a folder, Barnark copies the template into <strong>a template of your own</strong>, under the name you give it. Nothing ties the copy back: a later change to the catalogue never reaches it, and nothing in your project names the template it came from.</p>
+            <p>Your project’s template is kept as revisions, and none is ever changed in place. Adding a context or a feature adds it to the template as a new revision, and so does deleting one. Barnark writes each revision's reason. The History tab lists them, and shows each as a read-only tree.</p>
           </div>
-          <div class="panel" aria-label="Example schema revision history">
+          <div class="panel" aria-label="Example template revision history">
             <span class="stamp">Architecture · History</span>
             <dl class="terms">
               <div>
@@ -205,31 +205,31 @@
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Barnark reads one only to copy it, into your project’s schema or a template of your own; from then on the copy is yours.</p>
+              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Barnark reads one only to copy it, into your project’s template or another of your own; from then on the copy is yours.</p>
             </div>
           </details>
           <details>
             <summary><span>Checking a project<small>Slots and exclusions</small></span></summary>
             <div class="body">
-              <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the schema and records it, so your contexts are checked where they actually are. Anything it can’t settle is listed. Files are never checked: a template says only what folders there are.</p>
+              <p>A template describes a shape, not your code: its parts are the folders it names itself, and “Context” is a slot your own folders fill. Barnark works out which slot each folder fills from the project’s template and records it, so your contexts are checked where they actually are. Anything it can’t settle is listed. Files are never checked: a template says only what folders there are.</p>
               <p>Paths with no architectural meaning, like test fixtures, can be excluded.</p>
             </div>
           </details>
           <details>
             <summary><span>What gets created<small>Folders, with their whole structure</small></span></summary>
             <div class="body">
-              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing a folder you named is a new revision of the schema. Each schema is kept in <code>.barnark/schemas/</code> (in a barn, <code>.barn/barnark/schemas/</code>).</p>
+              <p>A folder you name arrives with its whole fixed structure, and a folder created empty keeps a <code>.gitkeep</code> so that git keeps it. Apart from that, Barnark never creates a file in your folders. Nothing already on disk is overwritten. Adding or removing a folder you named is a new revision of the template. Each template of your own is kept in <code>.barnark/templates/</code> (in a barn, <code>.barn/barnark/templates/</code>).</p>
             </div>
           </details>
           <details>
             <summary><span>The command line<small>For scripts, agents and terminal lovers</small></span></summary>
             <div class="body">
-<pre><code><span class="p">$ </span>barnark template:clone "Domain Driven Design" Shop src    <span class="c"># your project's schema, Shop, and src/</span>
+<pre><code><span class="p">$ </span>barnark template:clone "Domain Driven Design" Shop src    <span class="c"># your project's template, Shop, and src/</span>
 <span class="p">$ </span>barnark template:offers src/Context                       <span class="c"># what may be created here?</span>
 <span class="p">$ </span>barnark template:new Context Billing src/Context
 <span class="p">$ </span>barnark template:check                                    <span class="c"># check src/ against Shop</span>
 <span class="p">$ </span>barnark template:copy Shop Market                         <span class="c"># a template of your own</span></code></pre>
-              <p>The folder your project’s schema is bound to is recorded in <code>.barnark/tracked-folders.json</code> (in a barn, <code>.barn/barnark/tracked-folders.json</code>), committed with your code and the schemas, so a check needs no arguments.</p>
+              <p>The folder your project’s template is bound to is recorded in <code>.barnark/tracked-folders.json</code> (in a barn, <code>.barn/barnark/tracked-folders.json</code>), committed with your code and the templates, so a check needs no arguments.</p>
             </div>
           </details>
         </div>

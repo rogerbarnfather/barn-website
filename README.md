@@ -26,11 +26,15 @@ released) in headless Chrome at twice the size:
   (House, Room, Kitchen, Garden, Pet) and Barnark's current Domain Driven Design
   template, open on House's Living room and on a bounded context's Domain.
 
-The Barnark page also describes immutable project schema revisions, added on
+The Barnark page also describes immutable revisions of the project’s template, added on
 2026-10-26. The existing `ark-browse` screenshot remains a Browse view; it does
 not show the new History tab. The revisions are in the pushed Barncept, Barnark,
 CLI, GUI and Barn main branches. These website edits are local, and the package
 changes have not yet been released with new tags.
+
+Since 2026-10-28 Barnark says "template" for every tree, the bound one too. The `ark-browse`,
+`ark-new`, `ark-check` and `barn-home` screenshots, and their alt text, still say "schema", and
+some show three tracked folders; retake them, alt text included, before the next release.
 
 The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
 `spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing

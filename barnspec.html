@@ -138,7 +138,7 @@
           <div>
             <span class="kicker">Change</span>
             <h2>Change your mind without losing the thread.</h2>
-            <p>Learned something after release? Change the story in the current slice. Barnspec records what changed beside the original, so a year later anyone can see <strong>what you did first, what you learned and what you did about it</strong>.</p>
+            <p>Until a slice is released, anything in it can be reworded or deleted: a first wording is a draft. Learned something after release? Change the story in the current slice. Barnspec records what changed beside the original, so a year later anyone can see <strong>what you did first, what you learned and what you did about it</strong>.</p>
             <p>Released work stays proven while the change is built, so nothing is broken along the way.</p>
           </div>
           <div class="panel" aria-label="An example story and its history">
@@ -261,10 +261,11 @@
           <details>
             <summary><span>The command line<small>Everything the browser does, and more, from a terminal</small></span></summary>
             <div class="body">
-              <p>An interactive wizard captures stories, and every step also has a scripted form for CI and AI agents.</p>
-<pre><code><span class="p">$ </span>vendor/bin/barnspec draft     <span class="c"># capture a rough story</span>
-<span class="p">$ </span>vendor/bin/barnspec review    <span class="c"># turn it into a real one</span>
+              <p>Every step has a scripted form for CI and AI agents, and an interactive wizard adds scenarios.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barnspec create-story --area-of-business=reservations --role=guest \
+    --goal="cancel their booking" --reward="are not held to a stay they will not take"
 <span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
+<span class="p">$ </span>vendor/bin/barnspec reword    <span class="c"># or delete, until its slice is released</span>
 <span class="p">$ </span>vendor/bin/barnspec map --output-dir=docs/map   <span class="c"># an HTML story map</span></code></pre>
               <p>Outside a barn, Barnspec stores its records as readable JSON under <code>.barnspec/</code>. In a barn, its story, scenario and work records live under <code>.barn/barnspec/</code>; Barnspec manages the Area of Business, Role and Story structure through Barncept in <code>.barn/concepts/</code>. The GUI and CLI still go through the Barnspec API, which keeps Barnspec’s domain rules in one place. Existing barns migrate that structure on first use, with the original files retained.</p>
             </div>

@@ -7,34 +7,29 @@ Barnark and Barncept. There is no build step.
 
 It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
-The screenshots in `assets/screens/` are real. The two Barnspec shots
-(`spec-map`, `spec-work`) are the Barnspec GUI running against a copy of
-Pleasant Stay, with one extra in-progress Phase added to that copy so the map
-shows every status.
+The screenshots in `assets/screens/` are real, taken in Chrome at twice the size.
 
-The others were retaken on 2026-10-25, after Barnark lost switching, files and
-borrowing and Barn lost `barn adopt`, from the local checkouts (not yet
-released) in headless Chrome at twice the size:
+Retaken on 2026-11-03, on Barnspec 3.1.0 and the Barnark 7 line, against a
+made-up hotel whose stories were written through Barnspec's API for the shots:
 
-- `barn-home`, `ark-browse`, `ark-check` and `ark-new`: a new barn made with
-  `barn build --template="Domain Driven Design"`, given three contexts, two
-  aggregates, a Model View Controller `site/` and a Library `lib/StayPeriod`, and
-  Pleasant Stay's story map copied in. The home shot hides the barn's path, which
-  was a scratch folder.
+- `spec-map` and `spec-work`: the Barnspec GUI's Story map and a Work board. In
+  `spec-work` the scenario's two tickets are done and it has never been run.
+- `barn-home`, `ark-browse` and `ark-check`: a barn made with
+  `barn build --template="Domain Driven Design" --template-name=Hotel`, given
+  three contexts and two aggregates, with the same hotel's stories. The home shot
+  hides the barn's path, which was a scratch folder. The Barnark shots leave out
+  the barn's top bar.
+- `ark-new`: the Barnark GUI on its own, in a project with nothing bound yet,
+  with Clone into the project filled in.
+
+Retaken on 2026-10-25:
+
 - `cept-vocab` (the name is kept because READMEs embed it) and `cept-editor`:
   the Barncept GUI over a folder holding Barncept's own example concepts
-  (House, Room, Kitchen, Garden, Pet) and Barnark's current Domain Driven Design
+  (House, Room, Kitchen, Garden, Pet) and Barnark's Domain Driven Design
   template, open on House's Living room and on a bounded context's Domain.
 
-The Barnark page also describes immutable revisions of the project’s template, added on
-2026-10-26. The existing `ark-browse` screenshot remains a Browse view; it does
-not show the new History tab. The revisions are in the pushed Barncept, Barnark,
-CLI, GUI and Barn main branches. These website edits are local, and the package
-changes have not yet been released with new tags.
-
-Since 2026-10-28 Barnark says "template" for every tree, the bound one too. The `ark-browse`,
-`ark-new`, `ark-check` and `barn-home` screenshots, and their alt text, still say "schema", and
-some show three tracked folders; retake them, alt text included, before the next release.
+No shot shows Barnark's History tab (the revisions of the project's template).
 
 The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
 `spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing

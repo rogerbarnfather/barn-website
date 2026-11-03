@@ -38,8 +38,8 @@
       </div>
       <div class="wrap wide hero-shot">
         <figure class="shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · History</span></div>
-          <img src="assets/screens/spec-map.webp" width="1408" height="711" alt="The Barnspec History page for a hotel's reservations, its story map Phase by Phase. Columns follow a guest's journey; rows are slices of work. The slice being built is at the top and shows each story's real state; the released slices below it are proven.">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · Story map</span></div>
+          <img src="assets/screens/spec-map.webp" width="1408" height="522" alt="The Barnspec Story map for a hotel's reservations: every story once, as it reads now, grouped by the role that wants it. Columns follow a stay from establishing to terminating. Stories changed since they were first released are marked elaborated, and those still being built are marked planned.">
         </figure>
       </div>
     </section>
@@ -111,7 +111,7 @@
           <figure>
             <div class="shot">
               <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · Work</span></div>
-              <img src="assets/screens/spec-work.webp" width="1408" height="662" alt="A Barnspec work board for the scenario “book room 101 again for 2 nights from 1 December”. The brief lists two Given conditions, the action and the expected outcome. Both tickets are done, yet it reads “All tickets done — not yet run”, with the command that proves it.">
+              <img src="assets/screens/spec-work.webp" width="1408" height="638" alt="A Barnspec work board for the scenario “add Alex to the 3-night booking for room 12”. The brief gives the Given condition, the action and the expected outcome. Both tickets are done, yet it reads “All tickets done — not yet run”, with the command that proves it.">
             </div>
             <figcaption>Both tickets are done. It stays “not yet proven” until a run says otherwise.</figcaption>
           </figure>
@@ -122,7 +122,7 @@
             <span class="kicker">Focus</span>
             <h2>One slice at a time.</h2>
             <p>Work happens in slices: small, whole pieces of value, built from end to end. There is the slice being built now and the ones already released. <strong>There is no backlog</strong>, and nothing to estimate.</p>
-            <p>When every story in the slice is proven, release it and start the next. Barnspec refuses to release a slice that isn’t proven, with no way around it. Released slices fold away but stay proven, and they keep being re-checked while new work is built.</p>
+            <p>When every story in the slice is proven, release it, copy its release notes and start the next. Barnspec refuses to release a slice that isn’t proven, with no way around it. Released slices fold away but stay proven, and they keep being re-checked while new work is built.</p>
           </div>
           <div class="panel" aria-label="Slices of work: three released, one being built">
             <ul class="phases">
@@ -219,6 +219,13 @@
             </div>
           </details>
           <details>
+            <summary><span>Story map and History<small>Every story once, or slice by slice</small></span></summary>
+            <div class="body">
+              <p>The <strong>Story map</strong> is where an area of business opens: every story once, as it reads now, under the role that wants it. Stories still being built are marked planned, and those changed since their first release are marked elaborated. Filter it to one role’s stories, or to those whose scenarios are about one subject. It changes nothing.</p>
+              <p><strong>History</strong> is the same map slice by slice, newest first, each slice holding the stories it added or changed. It’s where slices are planned, stories are changed and slices are released. Each released slice has <strong>release notes</strong> to copy: its stories, and the scenarios each one added, replaced or retired.</p>
+            </div>
+          </details>
+          <details>
             <summary><span>How a story’s status is decided<small>Rough, expressed, in progress, built, fulfilled</small></span></summary>
             <div class="body">
               <p>Each story is pinned down by <strong>scenarios</strong>: concrete Given / When / Then examples. A scenario’s colour is worked out, never set:</p>
@@ -254,6 +261,7 @@
             <summary><span>How the glossary is built<small>The ubiquitous language, one glossary per area of business</small></span></summary>
             <div class="body">
               <p>Domain-Driven Design calls a business’s shared vocabulary its <strong>ubiquitous language</strong>. Barnspec builds it from the stories themselves: each role, subject, fact and action keeps the meaning it was given when it was created, and the glossary gathers them for each area of business. Who takes part, what they deal with and what can be true of it, and everything they can do.</p>
+              <p>A detail a fact or action takes, such as a booking’s number of nights, can carry an example (“3”), shown beside its meaning. Examples can be changed at any time, even after release.</p>
               <p>Nothing is summarised or made up. It’s exactly what was written, sorted so any word can be found at a glance. Open it from the Glossary tab, or write it out next to the story pages, where the history links each area of business to its glossary.</p>
 <pre><code><span class="p">$ </span>vendor/bin/barnspec glossary --output-dir=docs/glossary   <span class="c"># a page per area of business, plus an index</span></code></pre>
             </div>
@@ -266,8 +274,9 @@
     --goal="cancel their booking" --reward="are not held to a stay they will not take"
 <span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
 <span class="p">$ </span>vendor/bin/barnspec reword    <span class="c"># or delete, until its slice is released</span>
-<span class="p">$ </span>vendor/bin/barnspec map --area-of-business=reservations   <span class="c"># the story map, every story once</span>
-<span class="p">$ </span>vendor/bin/barnspec history --output-dir=docs/history   <span class="c"># an HTML history, slice by slice</span></code></pre>
+<span class="p">$ </span>vendor/bin/barnspec map --area-of-business=reservations --subject=booking   <span class="c"># the story map, every story once</span>
+<span class="p">$ </span>vendor/bin/barnspec history --output-dir=docs/history   <span class="c"># an HTML history, slice by slice</span>
+<span class="p">$ </span>vendor/bin/barnspec release-notes --area-of-business=reservations --phase="first bookings"</code></pre>
               <p>Outside a barn, Barnspec stores its records as readable JSON under <code>.barnspec/</code>. In a barn, its story, scenario and work records live under <code>.barn/barnspec/</code>; Barnspec manages the Area of Business, Role and Story structure through Barncept in <code>.barn/concepts/</code>. The GUI and CLI still go through the Barnspec API, which keeps Barnspec’s domain rules in one place. Existing barns migrate that structure on first use, with the original files retained.</p>
             </div>
           </details>

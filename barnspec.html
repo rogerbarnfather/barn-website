@@ -105,7 +105,7 @@
             </div>
             <div>
             <p>Each story is pinned down by concrete examples. Tickets track the work, but moving a ticket to Done never makes anything green. Only <strong>a passing run against the real software</strong> does, and a later failure turns it red again.</p>
-            <p>So when the map says a story is fulfilled, it is. Nobody has to take anyone’s word for it.</p>
+            <p>So when Barnspec says a story is fulfilled, it is. Nobody has to take anyone’s word for it.</p>
             </div>
           </div>
           <figure>
@@ -190,7 +190,7 @@
           <div class="card">
             <span class="icon" aria-hidden="true">📖</span>
             <h3>Newcomers</h3>
-            <p>Generated story pages, <a href="#glossary">a glossary</a> of the business’s own words, and a map that links them all together.</p>
+            <p>Generated story pages, <a href="#glossary">a glossary</a> of the business’s own words, and a slice-by-slice history that links them all together.</p>
           </div>
         </div>
       </div>
@@ -233,7 +233,7 @@
           <details>
             <summary><span>From examples to running tests<small>How a scenario is checked against real code</small></span></summary>
             <div class="body">
-              <p>Barnspec generates a small adapter class for each fact, action and role your scenarios use. You fill them in with calls into your application, and every scenario then runs on its own, from a clean start, as an ordinary test. Every run is recorded, pass or fail, and that record is what colours the map.</p>
+              <p>Barnspec generates a small adapter class for each fact, action and role your scenarios use. You fill them in with calls into your application, and every scenario then runs on its own, from a clean start, as an ordinary test. Every run is recorded, pass or fail, and that record is what colours each story.</p>
 <pre><code><span class="p">$ </span>vendor/bin/port-generator generate reservations
 <span class="p">$ </span>vendor/bin/scenario-bridge run-all reservations --released   <span class="c"># keep released slices proven</span></code></pre>
             </div>
@@ -254,7 +254,7 @@
             <summary><span>How the glossary is built<small>The ubiquitous language, one glossary per area of business</small></span></summary>
             <div class="body">
               <p>Domain-Driven Design calls a business’s shared vocabulary its <strong>ubiquitous language</strong>. Barnspec builds it from the stories themselves: each role, subject, fact and action keeps the meaning it was given when it was created, and the glossary gathers them for each area of business. Who takes part, what they deal with and what can be true of it, and everything they can do.</p>
-              <p>Nothing is summarised or made up. It’s exactly what was written, sorted so any word can be found at a glance. Open it from the Glossary tab beside the map, or write it out next to the story pages, where the map links each area of business to its glossary.</p>
+              <p>Nothing is summarised or made up. It’s exactly what was written, sorted so any word can be found at a glance. Open it from the Glossary tab, or write it out next to the story pages, where the history links each area of business to its glossary.</p>
 <pre><code><span class="p">$ </span>vendor/bin/barnspec glossary --output-dir=docs/glossary   <span class="c"># a page per area of business, plus an index</span></code></pre>
             </div>
           </details>
@@ -266,7 +266,7 @@
     --goal="cancel their booking" --reward="are not held to a stay they will not take"
 <span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
 <span class="p">$ </span>vendor/bin/barnspec reword    <span class="c"># or delete, until its slice is released</span>
-<span class="p">$ </span>vendor/bin/barnspec map --output-dir=docs/map   <span class="c"># an HTML story map</span></code></pre>
+<span class="p">$ </span>vendor/bin/barnspec history --output-dir=docs/history   <span class="c"># an HTML history, slice by slice</span></code></pre>
               <p>Outside a barn, Barnspec stores its records as readable JSON under <code>.barnspec/</code>. In a barn, its story, scenario and work records live under <code>.barn/barnspec/</code>; Barnspec manages the Area of Business, Role and Story structure through Barncept in <code>.barn/concepts/</code>. The GUI and CLI still go through the Barnspec API, which keeps Barnspec’s domain rules in one place. Existing barns migrate that structure on first use, with the original files retained.</p>
             </div>
           </details>

@@ -38,8 +38,8 @@
       </div>
       <div class="wrap wide hero-shot">
         <figure class="shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · Story map</span></div>
-          <img src="assets/screens/spec-map.webp" width="1408" height="711" alt="The Barnspec story map for a hotel's reservations. Columns follow a guest's journey; rows are slices of work. The slice being built is at the top and shows each story's real state; the released slices below it are proven.">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · History</span></div>
+          <img src="assets/screens/spec-map.webp" width="1408" height="711" alt="The Barnspec History page for a hotel's reservations, its story map Phase by Phase. Columns follow a guest's journey; rows are slices of work. The slice being built is at the top and shows each story's real state; the released slices below it are proven.">
         </figure>
       </div>
     </section>
@@ -266,6 +266,7 @@
     --goal="cancel their booking" --reward="are not held to a stay they will not take"
 <span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
 <span class="p">$ </span>vendor/bin/barnspec reword    <span class="c"># or delete, until its slice is released</span>
+<span class="p">$ </span>vendor/bin/barnspec map --area-of-business=reservations   <span class="c"># the story map, every story once</span>
 <span class="p">$ </span>vendor/bin/barnspec history --output-dir=docs/history   <span class="c"># an HTML history, slice by slice</span></code></pre>
               <p>Outside a barn, Barnspec stores its records as readable JSON under <code>.barnspec/</code>. In a barn, its story, scenario and work records live under <code>.barn/barnspec/</code>; Barnspec manages the Area of Business, Role and Story structure through Barncept in <code>.barn/concepts/</code>. The GUI and CLI still go through the Barnspec API, which keeps Barnspec’s domain rules in one place. Existing barns migrate that structure on first use, with the original files retained.</p>
             </div>

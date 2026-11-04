@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barncept · Barn</title>
-  <meta name="description" content="Barncept keeps trees of what goes where, every thought with a plain meaning, and refuses any change that would leave one invalid. How you understand something outlives how it is built.">
+  <meta name="description" content="Barncept keeps a tree of items in line with the types of thing it may hold, each type a leaf, a list or a map with a plain meaning, and refuses any change that would break them. How you understand something outlives how it is built.">
   <link rel="icon" href="assets/barncept.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -30,7 +30,7 @@
       <div class="wrap">
         <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 6 6 17M12 6l6 11M6 17h12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5.5" r="3"/><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/></svg>Barncept · Reasoning</span>
         <h1>Your understanding <span class="accent">outlives your code</span>.</h1>
-        <p class="lede">Code is rewritten, frameworks come and go, folders get reshuffled. What lasts is how you understand the domain. With Barncept you <strong>come up with a concept, fill it with your thoughts, then reuse those concepts in bigger concepts</strong>. Every thought has a plain meaning, every change is checked so a tree is never left invalid, and the whole can be realised in any way you like.</p>
+        <p class="lede">Code is rewritten, frameworks come and go, folders get reshuffled. What lasts is how you understand the domain. With Barncept you <strong>name the types of thing in one subject, and Barncept builds the tree of items that follows them</strong>. Every type has a plain meaning, every change is checked so the tree never breaks its types, and the whole can be realised in any way you like.</p>
         <div class="actions">
           <a class="btn" href="#get-started">Get started</a>
           <a class="btn ghost" href="#deeper">Go deeper</a>
@@ -39,7 +39,7 @@
       <div class="wrap wide hero-shot">
         <figure class="shot">
           <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Concept Manager</span></div>
-          <img src="assets/screens/cept-vocab.webp" width="1280" height="720" alt="The Barncept Concept Manager open on the House concept. Its tree of thoughts runs from House to Ground floor, Hallway, Kitchen and Living room. The selected thought, Living room, means where the household sits in the evening, and borrows the Room concept, which brings in Walls, Flooring and Lighting.">
+          <img src="assets/screens/cept-items.webp" width="1280" height="720" alt="The Barncept Concept Manager editing the House concept: its tree of items on the left, and the Bedrooms list selected, with its two members, Front bedroom and Back bedroom, each with buttons to move or remove it.">
         </figure>
       </div>
     </section>
@@ -49,12 +49,13 @@
         <div class="feature">
           <div>
             <span class="kicker">Meaning first</span>
-            <h2>Thoughts that explain themselves.</h2>
-            <p>Every thought in a concept has a name and <strong>a meaning written in plain words</strong>, and its place in the tree says what it holds and what holds it. Months later, anyone can open the graph and understand not just what exists, but what each thing is for. Each concept’s <strong>Glossary</strong> puts every term and its meaning on one page, so a newcomer, or an AI agent, can learn the vocabulary in one read.</p>
+            <h2>Types that explain themselves.</h2>
+            <p>A concept names the <strong>types</strong> of thing in one subject, and every type has a name and <strong>a meaning written in plain words</strong>. A type is a <strong>leaf</strong>, which holds nothing, a <strong>list</strong> of one type, or a <strong>map</strong> of several. A house is a map of a ground floor, an upstairs and a garden; its bedrooms are a list, and each bedroom is a leaf.</p>
+            <p>Months later, anyone can open the tree and understand not just what exists, but what each thing is for. Each concept’s <strong>Glossary</strong> puts every type and its meaning on one page, so a newcomer, or an AI agent, can learn the vocabulary in one read.</p>
           </div>
           <figure class="panel" style="margin: 0">
             <svg viewBox="0 0 490 300" role="img" aria-labelledby="graph-title" style="display: block; width: 100%; height: auto">
-              <title id="graph-title">The House concept: a ground floor, an upstairs and an outside, with what each holds</title>
+              <title id="graph-title">The House concept: a ground floor, an upstairs and a garden, with what each holds</title>
               <g stroke="var(--border)" stroke-width="2">
                 <line x1="240" y1="64" x2="100" y2="150"/>
                 <line x1="240" y1="64" x2="240" y2="150"/>
@@ -78,13 +79,13 @@
                 <text x="240" y="28">House</text>
                 <text x="100" y="122">Ground floor</text>
                 <text x="240" y="122">Upstairs</text>
-                <text x="380" y="122">Outside</text>
+                <text x="380" y="122">Garden</text>
               </g>
               <g font-family="var(--sans)" font-size="12" fill="var(--text-muted)" text-anchor="middle">
                 <text x="50" y="272">Hallway</text>
                 <text x="155" y="272">Living room</text>
-                <text x="312" y="272">Back garden</text>
-                <text x="436" y="272">Driveway</text>
+                <text x="312" y="272">Shed</text>
+                <text x="436" y="272">Beds</text>
               </g>
             </svg>
           </figure>
@@ -94,15 +95,15 @@
           <div>
             <span class="kicker">Always valid</span>
             <h2>A change that would break it is refused.</h2>
-            <p>Checking that every change is valid is Barncept’s core job. A tree is <strong>never left half-broken</strong>: a reference to something that isn’t there, a loop, or a thought nothing can reach is refused, with a message that says why. That makes it safer to drive than the file underneath, whether a person, a program or an AI agent is doing the driving.</p>
+            <p>Barncept builds the tree from the types: a map’s items are made for you, one for each type it holds, and you add the <strong>members</strong> of a list, each with a name you give it. Keeping the tree in line with its types is Barncept’s core job. It is <strong>never left half-broken</strong>: a type nobody has described, a map that holds itself forever, two members of one list with the same name, or a member added where there is no list is refused, with a message that says why. That makes it safer to drive than the file underneath, whether a person, a program or an AI agent is doing the driving.</p>
             <p>A file that was broken outside Barncept fails loudly when it is read, and says what is wrong and where.</p>
           </div>
           <div class="panel" aria-label="Changes Barncept checks before it makes them">
             <p class="muted" style="margin-bottom: 14px">Before any change is kept</p>
             <ul class="examples" style="margin-top: 0">
-              <li><span class="lamp green"></span>Add a Porch to Outside<span class="state">kept</span></li>
-              <li><span class="lamp red"></span>Put Hallway inside itself<span class="state">refused: a loop</span></li>
-              <li><span class="lamp red"></span>Give Hallway a Cellar nobody has described<span class="state">refused: not there</span></li>
+              <li><span class="lamp green"></span>Add a Back bedroom to Bedrooms<span class="state">kept</span></li>
+              <li><span class="lamp red"></span>Add a second Back bedroom<span class="state">refused: the name is taken</span></li>
+              <li><span class="lamp red"></span>Add a Pantry to the Kitchen<span class="state">refused: a leaf holds nothing</span></li>
             </ul>
           </div>
         </div>
@@ -110,60 +111,54 @@
         <div class="feature">
           <div>
             <span class="kicker">A shared capability</span>
-            <h2>One concept manager. Clear boundaries.</h2>
-            <p>Barncept manages reusable concept structures through a generic interface. Barnark uses it for architecture templates; Barnspec uses it for Area of Business, Role and Story structure. Each tool keeps its own API and domain rules, so Barncept does not need to know what either tool means by those structures.</p>
+            <h2>One engine. Clear boundaries.</h2>
+            <p>Barncept keeps concepts through a generic interface, and knows nothing of what they are about. Barnark uses it for architecture templates; Barnspec keeps each Area of Business through it. Each tool keeps its own API and domain rules, so Barncept does not need to know what either tool means by what it keeps.</p>
           </div>
           <div class="panel" aria-label="The responsibilities of Barncept and its client tools">
             <ul class="examples" style="margin-top: 0">
               <li><strong>Barnark</strong><span class="state">architecture rules and folder checks</span></li>
               <li><strong>Barnspec</strong><span class="state">business rules and project management</span></li>
-              <li><strong>Barncept</strong><span class="state">generic concept structure management</span></li>
+              <li><strong>Barncept</strong><span class="state">types, and trees that follow them</span></li>
             </ul>
-          </div>
-        </div>
-
-        <div class="feature">
-          <div>
-            <span class="kicker">Build on what you have</span>
-            <h2>Small concepts, built into bigger ones.</h2>
-            <p>A concept can <strong>borrow another one whole</strong>. A House borrows the Room concept three times, a Garden once, and a Kitchen that has a Room of its own. Write a thing once, and everything built on it follows when it changes. Choices made inside a borrowed concept come with it and stay put, so each decision is made in one place.</p>
-            <p>Because a borrow is live, a change can break the concepts built on it. Barncept checks first: <strong>before you save or delete, it tells you which concepts would stop working</strong>, and you decide whether to go ahead.</p>
-          </div>
-          <div class="panel" aria-label="The House concept and the concepts it borrows">
-            <p class="muted" style="margin-bottom: 14px">House · in the Home group</p>
-            <ul class="examples" style="margin-top: 0">
-              <li><strong>Living room</strong><span class="state">borrows Room</span></li>
-              <li><strong>Main bedroom</strong><span class="state">borrows Room</span></li>
-              <li><strong>Spare bedroom</strong><span class="state">borrows Room</span></li>
-              <li><strong>Back garden</strong><span class="state">borrows Garden</span></li>
-              <li><strong>Kitchen</strong><span class="state">borrows Kitchen, built on a Room</span></li>
-            </ul>
-            <ul class="examples">
-              <li><span class="lamp red"></span>Remove Room’s Lighting<span class="state">would break House</span></li>
-            </ul>
-            <p class="muted" style="margin: 16px 0 0; font-size: 0.9rem">House chose spotlights for its kitchen, which is a Room too, so Barncept asks before Lighting goes.</p>
           </div>
         </div>
 
         <div class="feature stacked">
           <div>
             <div class="copy-head">
-              <span class="kicker">Realise it any way</span>
-              <h2>One model. Any shape.</h2>
+              <span class="kicker">Change your mind</span>
+              <h2>Change the types. See what goes first.</h2>
             </div>
             <div>
-            <p>Barncept never decides what a graph becomes. A folder structure, a diagram and a set of documents are each <strong>one possible realisation</strong>, never the model itself. Turn the same graph into real folders, an architecture to check code against, or whatever you need next.</p>
-            <p>Four come built in, each for whoever reads it: a <strong>document</strong> for people, <strong>folders</strong> with a README in each for developers and tools, a <strong>diagram</strong> for a README, a pull request or a slide, and the plain tree for a quick look. View and download any of them in the browser, or export them from the command line.</p>
-            <p>Every <a href="barnark.html">Barnark</a> architecture template is written as a Barncept concept, and can be opened and edited in exactly the same way.</p>
+            <p>Understanding grows, and the types change with it. Change what a map or a list holds, or turn a list into a leaf, and Barncept <strong>fits the tree to the new types</strong>: an item still of the type expected where it sits stays, with its name, a map entry the new types call for is made, and anything whose type has gone is removed with everything in it.</p>
+            <p>Barncept decides nothing for you. <strong>Before anything is removed, the editor lists it and asks</strong>, and nothing is saved until you save the concept.</p>
             </div>
           </div>
           <figure>
             <div class="shot">
               <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Concept Manager</span></div>
-              <img src="assets/screens/cept-editor.webp" width="1280" height="720" alt="The Barncept Concept Manager open on Barnark's Domain Driven Design template, with a bounded context's Domain selected. Its meaning says it holds the core business rules as Aggregates and depends only on its own Context's Domain and PublicApi and on the Domain Kernel, never on another Context. Parts are marked with solid squares and slots with dashed ones.">
+              <img src="assets/screens/cept-change-types.webp" width="1400" height="900" alt="The Barncept Concept Manager after the House concept’s Garden type was changed to a leaf. A dialog, The tree would lose items, lists House / Garden / Shed and House / Garden / Beds, which would be removed with everything in them, and offers Remove them and apply, or Cancel.">
             </div>
-            <figcaption>An architecture template is a concept graph too.</figcaption>
+            <figcaption>A type change that would remove items asks first.</figcaption>
           </figure>
+        </div>
+
+        <div class="feature">
+          <div>
+            <span class="kicker">Realise it any way</span>
+            <h2>One model. Any shape.</h2>
+            <p>Barncept never decides what a tree becomes. A folder structure, a diagram and a set of documents are each <strong>one possible realisation</strong>, never the model itself. Turn the same tree into real folders, an architecture to check code against, or whatever you need next.</p>
+            <p>Four come built in, each for whoever reads it. View and download any of them in the browser, or export them from the command line.</p>
+            <p>Every <a href="barnark.html">Barnark</a> architecture template is written as a Barncept concept, and can be opened and edited in exactly the same way.</p>
+          </div>
+          <div class="panel" aria-label="The four built-in realisations of a concept">
+            <ul class="examples" style="margin-top: 0">
+              <li><strong>Document</strong><span class="state">for people: a heading per item, its meaning beneath</span></li>
+              <li><strong>Folders</strong><span class="state">for developers and tools, a README in each</span></li>
+              <li><strong>Diagram</strong><span class="state">for a README, a pull request or a slide</span></li>
+              <li><strong>Tree</strong><span class="state">for a quick look</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -177,39 +172,43 @@
         </div>
         <div class="deeper">
           <details>
-            <summary><span>The three kinds of thought<small>Parts, Slots and Choices</small></span></summary>
+            <summary><span>Types and items<small>Leaves, lists and maps, and the tree that follows them</small></span></summary>
             <div class="body">
               <ul>
-                <li><strong>Part</strong>: a part that is always there, and can hold other thoughts beneath it, such as <code>Application</code> or <code>Domain</code>.</li>
-                <li><strong>Slot</strong>: a slot that has to be filled, such as <code>Aggregate</code> or <code>Command</code>.</li>
-                <li><strong>Choice</strong>: a concrete thing that fills one slot, such as <code>Basket</code> filling <code>Aggregate</code>.</li>
+                <li><strong>Leaf</strong>: a type of nothing, such as <code>Kitchen</code>.</li>
+                <li><strong>List</strong>: a type of exactly one type, such as <code>Bedrooms</code>, a list of <code>Bedroom</code>. Its items are its members, any number of them, each with a name you give it.</li>
+                <li><strong>Map</strong>: a type of a set of types, each at most once, such as <code>House</code>, a map of <code>Ground floor</code>, <code>Upstairs</code> and <code>Garden</code>.</li>
               </ul>
-              <p>The editor marks a part with a solid square, a slot with a dashed one waiting to be filled, and a choice with a puzzle piece. A thought that borrows another concept wears a corner arrow too.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>Concepts, blank and settled<small>Portable vocabulary, and the things that use it</small></span></summary>
-            <div class="body">
-              <p>A <strong>concept</strong> is a broad, structured collection of thoughts about one thing, kept as one file, with a name and a description of what it is for. The concept is itself the top of its tree: a part, always there wherever it is borrowed, or a slot, which a choice fills.</p>
-              <p>A concept with every slot still open is a <strong>blank</strong> plan, a reusable vocabulary. Once choices fill its slots it is <strong>settled</strong>, and resolves from an entry point, a choice no other choice picks, into a concrete, named tree. A dinner party, settled for Friday:</p>
-<pre><code>Friday with the Hendersons
+              <p>A concept names its <strong>root</strong> type, and types refer to each other only by name, so one type can be used in many places. Every item follows one type and has an id that Barncept generates. A concept written as types only is given its <strong>skeleton</strong> when it is read: the root, and every map entry below it, down to empty lists and leaves. Add two bedrooms and the House reads:</p>
+<pre><code>House
 |
-+--Tomato soup
-+--Mushroom risotto</code></pre>
-              <p>A bad concept fails loudly. A badly written file lists every fault at once, each with where it is, and a broken graph names the missing reference or the loop it found.</p>
++--Ground floor
+   |
+   +--Hallway
+   +--Kitchen
+   +--Living room
++--Upstairs
+   |
+   +--Bathroom
+   +--Bedrooms
+      |
+      +--Front bedroom
+      +--Back bedroom
++--Garden
+   |
+   +--Shed
+   +--Beds</code></pre>
+              <p>The editor marks a map, a list and a leaf each with its own icon, and its Help page explains every word it uses.</p>
             </div>
           </details>
           <details>
-            <summary><span>Keeping many concepts in order<small>Groups, and a check for CI</small></span></summary>
+            <summary><span>Keeping many concepts in order<small>A check for CI</small></span></summary>
             <div class="body">
-              <p>Give related concepts the same <strong>group</strong> and the editor lists them together under one heading, so House, Room, Kitchen and Garden sit under Home. A group only tidies the list: it changes nothing about borrowing.</p>
-              <p><code>barncept check</code> composes every concept and prints one line each: settled, open (with the slots still open) or broken (with what broke it). It fails on a broken concept or an unreadable file, so it fits in CI. Open slots don’t fail it, because a plan left open is often deliberate.</p>
+              <p><code>barncept check</code> reads every concept and prints one line each: valid, or broken with what broke it. It fails on a broken concept or an unreadable file, so it fits in CI.</p>
 <pre><code><span class="p">$ </span>vendor/bin/barncept check
 Checking the concepts in /path/to/project/concepts
-Garden: open: nothing chosen yet
-House: broken: Concept "Kitchen" references concept "Room" but no such concept is registered
-Kitchen: broken: Concept "Kitchen" references concept "Room" but no such concept is registered
-Pet: open: nothing chosen yet</code></pre>
+Garden: valid
+Pond: broken: Type 'Pond' is of 'Fish', which is not one of the concept's types.</code></pre>
             </div>
           </details>
           <details>
@@ -220,33 +219,34 @@ Pet: open: nothing chosen yet</code></pre>
 <span class="p">$ </span>vendor/bin/barncept export House --as=folder --to=house
 <span class="p">$ </span>vendor/bin/barncept export House --as=mermaid
 flowchart TD
-    n1["12 Orchard Lane"]
+    n1["House"]
     n2["Ground floor"]
     n1 --> n2</code></pre>
             </div>
           </details>
           <details>
-            <summary><span>Realising a graph as a PHP codebase<small>Scaffold it, then check it still matches</small></span></summary>
+            <summary><span>Realising a concept as a PHP codebase<small>Scaffold it, then check it still matches</small></span></summary>
             <div class="body">
-              <p>Barnscaff, Barncept’s companion, turns a resolved graph into a PHP codebase’s directories and files, and scans an existing folder to check it still matches.</p>
-<pre><code><span class="p">$ </span>vendor/bin/barnscaff scaffold House "Orchard Lane" ./generated --apply
-<span class="p">$ </span>vendor/bin/barnscaff scan House "Orchard Lane" ./generated
+              <p>Barnscaff, Barncept’s companion, turns a concept’s tree into a PHP codebase’s folders and files, and scans an existing folder to check it still matches.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barnscaff scaffold House ./generated --apply
+<span class="p">$ </span>vendor/bin/barnscaff scan House ./generated
 Conformant.</code></pre>
             </div>
           </details>
           <details>
-            <summary><span>From PHP<small>Read a folder of concepts, compose one, resolve it, export it</small></span></summary>
+            <summary><span>From PHP<small>Read a concept, add a member, save it, export it</small></span></summary>
             <div class="body">
-<pre><code>$registry = new ConceptRegistryFactory()->create('concepts');
-$concept  = new ConceptComposerFactory()->create($registry)
-    ->compose($registry->get('House'));
-
-$instance = new ResolverFactory()->create()
-    ->resolve($concept, $concept->entryPoints()->first());
+<pre><code>$store = new ConceptStoreFactory()->create('concepts');
+$house = new ConceptEditorFactory()->create()->addMember(
+    $store->read('House'),
+    new ItemPath('Upstairs', 'Bedrooms'),
+    new ItemName('Front bedroom'),
+);
+$store->write($house);
 
 $document = new ProjectorRegistryFactory()->create()
     ->get(ProjectionKind::new('markdown'))
-    ->project($instance);
+    ->project($house);
 
 new ProjectionWriterFactory()->create()->write($document, 'house.md');</code></pre>
             </div>

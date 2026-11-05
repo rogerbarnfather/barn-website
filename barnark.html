@@ -86,23 +86,47 @@
           <div>
             <span class="kicker">Meaning</span>
             <h2>Every folder knows what it’s for.</h2>
-            <p>Each folder in a template has <strong>a meaning in plain words</strong>: what belongs in it, and which way its dependencies point. A team that has never talked about dependency direction learns that there is such a thing, just by reading its own architecture.</p>
+            <p>Each folder in a template has <strong>a meaning in plain words</strong>: what belongs in it. A tag says which layer it belongs to, and the tag’s meaning says which way that layer’s dependencies point. A team that has never talked about dependency direction learns that there is such a thing, just by reading its own architecture.</p>
             <p>Dependency direction is taught, not enforced. Following it stays a human matter, and a team that wants enforcement can add a tool such as deptrac.</p>
           </div>
-          <div class="panel" aria-label="Two folder meanings from the Domain Driven Design template">
+          <div class="panel" aria-label="Two folder meanings and a tag's meaning from the Domain Driven Design template">
             <span class="stamp">Domain Driven Design · a bounded context</span>
             <dl class="terms">
               <div>
-                <dt>Domain/</dt>
-                <dd>The core business logic and rules, expressed as Aggregates, kept independent of delivery mechanism and infrastructure. It depends only on its own Context’s Domain and PublicApi and on the Domain Kernel, never on another Context.</dd>
+                <dt>Domain/<span class="kind">Domain</span></dt>
+                <dd>The core business logic and rules, expressed as Aggregates.</dd>
+              </div>
+              <div>
+                <dt>Domain<span class="kind">tag</span></dt>
+                <dd>The layer that holds the business model: the Aggregates and the rules they keep. A Context’s Domain depends only on itself, its own PublicApi and the Kernel’s Domain, never on another Context. The Kernel’s Domain depends on nothing else in the project.</dd>
               </div>
               <div>
                 <dt>PublicApi/</dt>
-                <dd>The only part of a Context another Context may depend on: what it publishes about itself, with its internals kept behind it.</dd>
+                <dd>The only part of a Context another Context may depend on: what it publishes about itself, with its internals kept behind it. It depends on nothing but the Domain Kernel, so everything a published Contract takes, returns or throws lives here too.</dd>
               </div>
             </dl>
             <p class="terms-note">Word for word from the bundled template.</p>
           </div>
+        </div>
+
+        <div class="feature stacked">
+          <div>
+            <div class="copy-head">
+              <span class="kicker">Layers</span>
+              <h2>See a whole layer at once.</h2>
+            </div>
+            <div>
+              <p>A layer’s folders sit all over a project: the Kernel has an Application folder, and so does every context. Each one carries <strong>the layer’s tag</strong>, shown beside its name. Pick a tag, and Barnark shows only the folders that carry it, with the folders above them, so the whole layer is in front of you.</p>
+              <p>The tags come with the template, written by its author. Barnark never guesses one from a folder’s name.</p>
+            </div>
+          </div>
+          <figure>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnark · History</span></div>
+              <img src="assets/screens/ark-tags.webp" width="1280" height="920" alt="The Barnark History tab for the project's src folder, which follows Hotel, its own copy of Domain Driven Design. Above the current template's tree are its four tags, Application, Domain, Infrastructure and Transport. Application is picked: its meaning says what the layer does and what it may depend on, and the tree shows only the Application folders of the Kernel, of the Context member type and of the Reservation, Billing and Housekeeping contexts, each with an Application tag beside it.">
+            </div>
+            <figcaption>Hotel’s <code>Application</code> layer: the Kernel’s and every context’s.</figcaption>
+          </figure>
         </div>
 
         <div class="feature">
@@ -205,7 +229,7 @@
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Barnark reads one only to copy it, into your project’s template or another of your own; from then on the copy is yours.</p>
+              <p style="margin-top: 14px">Templates are <a href="barncept.html">Barncept</a> concepts, each with a description of what it is and what it suits, and a meaning for every folder. Domain Driven Design and Package App also tag their layers’ folders. Barnark reads one only to copy it, into your project’s template or another of your own; from then on the copy is yours.</p>
             </div>
           </details>
           <details>

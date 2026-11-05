@@ -9,6 +9,12 @@ It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
 The screenshots in `assets/screens/` are real, taken in Chrome at twice the size.
 
+Taken on 2026-11-05, on the Barnark 8.2 line:
+
+- `ark-tags`: the Barnark GUI on its own, in a project made with
+  `barnark template:clone "Domain Driven Design" Hotel src` and given three
+  contexts, on the History tab with the `Application` tag picked out.
+
 Retaken on 2026-11-03, on Barnspec 3.1.0 and the Barnark 7 line, against a
 made-up hotel whose stories were written through Barnspec's API for the shots:
 
@@ -28,8 +34,6 @@ Retaken on 2026-10-25:
   the Barncept GUI over a folder holding Barncept's own example concepts
   (House, Room, Kitchen, Garden, Pet) and Barnark's Domain Driven Design
   template, open on House's Living room and on a bounded context's Domain.
-
-No shot shows Barnark's History tab (the revisions of the project's template).
 
 The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
 `spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing

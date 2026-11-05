@@ -88,16 +88,15 @@
             <div class="body">
 <pre><code>my-shop/
   .barn/
-    barn.json                <span class="c"># marks the barn and names it</span>
-    barnspec.json            <span class="c"># where generated test ports go</span>
-    barnspec/                <span class="c"># Barnspec stories, scenarios and work</span>
-      area-of-business-storage.json
-    concepts/                 <span class="c"># Barncept-managed concept structures</span>
+    barn/settings.json       <span class="c"># names the barn</span>
+    barnspec/                <span class="c"># Barnspec: areas of business, scenarios and work</span>
+      settings.json          <span class="c"># where generated test ports go</span>
     barnark/                 <span class="c"># your project’s template and any others of your own</span>
+    barncept/concepts/       <span class="c"># your own concepts, once you use Barncept</span>
   composer.json
   src/
   tests/</code></pre>
-              <p>Every tool finds the barn from any folder inside it. Barnspec keeps its own records under <code>.barn/barnspec/</code> and uses Barncept for Area of Business, Role and Story structure under <code>.barn/concepts/</code>, behind the Barnspec API. Existing barns migrate that structure on first use and keep the original files. <code>barnspec</code>, <code>barnark template:check</code>, <code>port-generator</code> and <code>scenario-bridge</code> all work from deep in <code>src/</code>; outside a barn each tool works on its own.</p>
+              <p>A barn is any project with a <code>.barn/</code> folder, and every tool keeps everything of its own in a folder there, nothing else in your project’s root. Every tool finds the barn from any folder inside it and names it, so <code>barnspec</code>, <code>barnark template:check</code>, <code>port-generator</code> and <code>scenario-bridge</code> all work from deep in <code>src/</code>. Each tool works without Barn too: its <code>init</code>, or its app’s offer, makes the <code>.barn/</code> folder. Outside a barn a tool writes nothing and says where it looked.</p>
             </div>
           </details>
           <details>

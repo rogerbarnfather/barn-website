@@ -206,7 +206,8 @@
             <div class="body">
               <p><code>barncept check</code> reads every concept and prints one line each: valid, or broken with what broke it. It fails on a broken concept or an unreadable file, so it fits in CI.</p>
 <pre><code><span class="p">$ </span>vendor/bin/barncept check
-Checking the concepts in /path/to/project/concepts
+Barn: /path/to/project
+Checking the concepts in /path/to/project/.barn/barncept/concepts
 Garden: valid
 Pond: broken: Type 'Pond' is of 'Fish', which is not one of the concept's types.</code></pre>
             </div>
@@ -259,7 +260,7 @@ new ProjectionWriterFactory()->create()->write($document, 'house.md');</code></p
       <div class="wrap cta">
         <span class="kicker">Get started</span>
         <h2>Open your concepts in the browser.</h2>
-        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. Set up your project once, then open the editor.</p>
+        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. Set up your project once, then open the editor. Everything Barncept keeps goes in one <code>.barn</code> folder, and nothing else is added to your project.</p>
 <pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>vendor/bin/barncept init
 <span class="p">$ </span>vendor/bin/barncept gui</code></pre>
         <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">

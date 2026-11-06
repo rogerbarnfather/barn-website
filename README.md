@@ -40,10 +40,10 @@ The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
 one updates those READMEs too, and renaming or removing one breaks them. Their
 alt text describes the picture, so it changes with it.
 
-Open `index.html` in a browser, or serve the folder:
+Open `index.html` in a browser, or run this from the website checkout:
 
 ```bash
-php -S localhost:8000 -t website
+php -S localhost:8000 -t .
 ```
 
 Each tool has one colour, shared with its GUI:

@@ -96,7 +96,7 @@
   composer.json
   src/
   tests/</code></pre>
-              <p>A barn is any project with a <code>.barn/</code> folder, and every tool keeps everything of its own in a folder there, nothing else in your project’s root. Every tool finds the barn from any folder inside it and names it, so <code>barnspec</code>, <code>barnark template:check</code>, <code>port-generator</code> and <code>scenario-bridge</code> all work from deep in <code>src/</code>. Each tool works without Barn too: its <code>init</code>, or its app’s offer, makes the <code>.barn/</code> folder. Outside a barn a tool writes nothing and says where it looked.</p>
+              <p>A barn is any project with a <code>.barn/</code> folder. Each tool keeps its settings and records in its own folder there. The tools find the nearest barn, so commands such as <code>barnspec show</code> and <code>barnark template:check</code> work from deep in <code>src/</code>. To use the tools without installing Barn, create the <code>.barn/</code> folder with <code>barnspec init</code>, <code>barnark init</code>, <code>barncept init</code> or the offer in any of their browser apps. Outside a barn, commands that need one write nothing and say where they looked.</p>
             </div>
           </details>
           <details>

@@ -112,7 +112,7 @@
           <div>
             <span class="kicker">A shared capability</span>
             <h2>One engine. Clear boundaries.</h2>
-            <p>Barncept keeps concepts through a generic interface, and knows nothing of what they are about. Barnark uses it for architecture templates; Barnspec keeps each Area of Business through it. Each tool keeps its own API and domain rules, so Barncept does not need to know what either tool means by what it keeps.</p>
+            <p>Barncept keeps concepts through a generic interface, and knows nothing of what they are about. Barnark uses it for architecture templates. Barnspec uses its generic document store to keep each area of business. Each tool keeps its own API and domain rules, so Barncept does not need to know what either tool means by what it keeps.</p>
           </div>
           <div class="panel" aria-label="The responsibilities of Barncept and its client tools">
             <ul class="examples" style="margin-top: 0">
@@ -237,7 +237,22 @@ Conformant.</code></pre>
           <details>
             <summary><span>From PHP<small>Read a concept, add a member, save it, export it</small></span></summary>
             <div class="body">
-<pre><code>$store = new ConceptStoreFactory()->create('concepts');
+              <p>This example reads a House concept already saved in <code>.barn/barncept/concepts/</code>. Place the script in the project root, with Barncept and its command line or browser app installed.</p>
+<pre><code>&lt;?php
+
+use Rmb32\Barncept\Api\Factory\ConceptEditorFactory;
+use Rmb32\Barncept\Api\Factory\ConceptStoreFactory;
+use Rmb32\Barncept\Api\Factory\ProjectionWriterFactory;
+use Rmb32\Barncept\Api\Factory\ProjectorRegistryFactory;
+use Rmb32\Barncept\Api\ValueObject\ItemName;
+use Rmb32\Barncept\Api\ValueObject\ItemPath;
+use Rmb32\Barncept\Api\ValueObject\Projection\ProjectionKind;
+use Rmb32\BarnPaths\Api\ValueObject\BarnPaths;
+
+require __DIR__ . '/vendor/autoload.php';
+
+$barn = BarnPaths::at(__DIR__);
+$store = new ConceptStoreFactory()->create($barn->barnceptConcepts);
 $house = new ConceptEditorFactory()->create()->addMember(
     $store->read('House'),
     new ItemPath('Upstairs', 'Bedrooms'),
@@ -249,7 +264,7 @@ $document = new ProjectorRegistryFactory()->create()
     ->get(ProjectionKind::new('markdown'))
     ->project($house);
 
-new ProjectionWriterFactory()->create()->write($document, 'house.md');</code></pre>
+new ProjectionWriterFactory()->create()->write($document, __DIR__ . '/house.md');</code></pre>
             </div>
           </details>
         </div>
@@ -260,7 +275,7 @@ new ProjectionWriterFactory()->create()->write($document, 'house.md');</code></p
       <div class="wrap cta">
         <span class="kicker">Get started</span>
         <h2>Open your concepts in the browser.</h2>
-        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. Set up your project once, then open the editor. Everything Barncept keeps goes in one <code>.barn</code> folder, and nothing else is added to your project.</p>
+        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. If the project has no barn, run <code>init</code> once to create <code>.barn/</code>, then open the editor. Barncept keeps its concepts in <code>.barn/barncept/concepts/</code>.</p>
 <pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>vendor/bin/barncept init
 <span class="p">$ </span>vendor/bin/barncept gui</code></pre>
         <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">

@@ -649,6 +649,10 @@ figcaption {
   margin-top: clamp(72px, 11vw, 136px);
 }
 
+#manage-apps {
+  scroll-margin-top: 7rem;
+}
+
 .feature.flip > :first-child {
   order: 2;
 }
@@ -1432,6 +1436,10 @@ td code {
 }
 
 @media (max-width: 640px) {
+  #manage-apps {
+    scroll-margin-top: 9rem;
+  }
+
   body {
     font-size: 16px;
   }

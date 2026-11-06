@@ -72,6 +72,21 @@
 <span class="p">$ </span>barn gui                <span class="c"># Home, Business, Architecture</span>
 <span class="p">$ </span>barn status             <span class="c"># the home page, in the terminal</span></code></pre>
         </div>
+
+        <div class="feature" id="manage-apps">
+          <div>
+            <span class="kicker">Existing projects</span>
+            <h2>Manage the Barn apps you use.</h2>
+            <p><strong>Available in the development checkout.</strong> These commands are awaiting a Packagist release.</p>
+            <p>From the folder with your <code>composer.json</code>, add <a href="barncept.html">Barncept</a>, <a href="barnark.html">Barnark</a> or <a href="barnspec.html">Barnspec</a> as a development tool. Use <code>barn add all</code> to install all three.</p>
+            <p>Update stays within your current version constraints. Remove drops direct development requirements and keeps your <code>.barn/</code> data. Both show the selected packages and ask you to confirm. Press Enter to cancel.</p>
+            <p>Open an installed editor from the project root or any subfolder. Plain <code>barn gui</code> opens the dashboard.</p>
+          </div>
+<pre><code>barn add barncept
+barn gui barncept
+barn update barncept
+barn remove barncept</code></pre>
+        </div>
       </div>
     </section>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barncept · Barn</title>
-  <meta name="description" content="Barncept keeps a tree of items in line with the types of thing it may hold, each type a leaf, a list or a map with a plain meaning, and refuses any change that would break them. How you understand something outlives how it is built.">
+  <meta name="description" content="Design reusable Templates with leaves, lists and maps. Create independent Constructions from saved revisions, add real members, and follow every saved change in History.">
   <link rel="icon" href="assets/barncept.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -30,7 +30,7 @@
       <div class="wrap">
         <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path transform="translate(-4 -4)" d="M16 8V27.5M11 14.5L16 8L21 14.5M10 21L16 14.5L22 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Barncept · Reasoning</span>
         <h1>Your understanding <span class="accent">outlives your code</span>.</h1>
-        <p class="lede">Code is rewritten, frameworks come and go, folders get reshuffled. What lasts is how you understand the domain. With Barncept you <strong>name the types of thing in one subject, and Barncept builds the tree of items that follows them</strong>. Every type has a plain meaning, every change is checked so the tree never breaks its types, and the whole can be realised in any way you like.</p>
+        <p class="lede">Code is rewritten, frameworks come and go, folders get reshuffled. What lasts is how you understand the domain. With Barncept you <strong>design a reusable Template, then create Constructions that follow it</strong>. Describe what each building block means, arrange leaves, lists and maps, and add real members to each Construction. Every saved change has a history, and each Construction keeps the exact Template revision it started from.</p>
         <div class="actions">
           <a class="btn" href="#get-started">Get started</a>
           <a class="btn ghost" href="#deeper">Go deeper</a>
@@ -38,8 +38,8 @@
       </div>
       <div class="wrap wide hero-shot">
         <figure class="shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Concept Manager</span></div>
-          <img src="assets/screens/cept-items.webp" width="1280" height="720" alt="The Barncept Concept Manager editing the House concept: its tree of items on the left, and the Bedrooms list selected, with its two members, Front bedroom and Back bedroom, each with buttons to move or remove it.">
+          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Templates and Constructions</span></div>
+          <img src="assets/screens/cept-editor.webp" width="1280" height="820" alt="The current Barncept Template workspace showing the expanded House tree, its reusable maps, lists and leaves in one sidebar, and the Construct action.">
         </figure>
       </div>
     </section>
@@ -50,8 +50,8 @@
           <div>
             <span class="kicker">Meaning first</span>
             <h2>Types that explain themselves.</h2>
-            <p>A concept names the <strong>types</strong> of thing in one subject, and every type has a name and <strong>a meaning written in plain words</strong>. A type is a <strong>leaf</strong>, which holds nothing, a <strong>list</strong> of one type, or a <strong>map</strong> of several. A house is a map of a ground floor, an upstairs and a garden; its bedrooms are a list, and each bedroom is a leaf.</p>
-            <p>Months later, anyone can open the tree and understand not just what exists, but what each thing is for. Each concept’s <strong>Glossary</strong> puts every type and its meaning on one page, so a newcomer, or an AI agent, can learn the vocabulary in one read.</p>
+            <p>A Template names the <strong>types</strong> of thing in one subject. Each building block has an identifier, a name and <strong>a meaning written in plain words</strong>. A type is a <strong>leaf</strong>, which holds nothing, a <strong>list</strong> of one type, or a <strong>map</strong> of several. A house is a map of a ground floor, an upstairs and a garden; its bedrooms are a list, and each bedroom is a leaf.</p>
+            <p>Months later, anyone can open the tree and understand not just what exists, but what each thing is for. Each Template’s <strong>Glossary</strong> puts every type and its meaning on one page, so a newcomer, or an AI agent, can learn the vocabulary in one read.</p>
           </div>
           <figure class="panel" style="margin: 0">
             <svg viewBox="0 0 490 300" role="img" aria-labelledby="graph-title" style="display: block; width: 100%; height: auto">
@@ -95,7 +95,7 @@
           <div>
             <span class="kicker">Always valid</span>
             <h2>A change that would break it is refused.</h2>
-            <p>Barncept builds the tree from the types: a map’s items are made for you, one for each type it holds, and you add the <strong>members</strong> of a list, each with a name you give it. Keeping the tree in line with its types is Barncept’s core job. It is <strong>never left half-broken</strong>: a type nobody has described, a map that holds itself forever, two members of one list with the same name, or a member added where there is no list is refused, with a message that says why. That makes it safer to drive than the file underneath, whether a person, a program or an AI agent is doing the driving.</p>
+            <p>Create a Construction from a saved Template. Its required map children are made for you, and its lists start empty. Use <strong>+ Add</strong> to give a list real <strong>members</strong>, each with its own name. Keeping the tree in line with its types is Barncept’s core job. It is <strong>never left half-broken</strong>: a type nobody has described, a map that holds itself forever, two members of one list with the same name, or a member added where there is no list is refused, with a message that says why. That makes it safer to drive than the file underneath, whether a person, a program or an AI agent is doing the driving.</p>
             <p>A file that was broken outside Barncept fails loudly when it is read, and says what is wrong and where.</p>
           </div>
           <div class="panel" aria-label="Changes Barncept checks before it makes them">
@@ -126,20 +126,60 @@
         <div class="feature stacked">
           <div>
             <div class="copy-head">
-              <span class="kicker">Change your mind</span>
-              <h2>Change the types. See what goes first.</h2>
+              <span class="kicker">Reusable rules</span>
+              <h2>Design once. Construct separately.</h2>
             </div>
             <div>
-            <p>Understanding grows, and the types change with it. Change what a map or a list holds, or turn a list into a leaf, and Barncept <strong>fits the tree to the new types</strong>: an item still of the type expected where it sits stays, with its name, a map entry the new types call for is made, and anything whose type has gone is removed with everything in it.</p>
-            <p>Barncept decides nothing for you. <strong>Before anything is removed, the editor lists it and asks</strong>, and nothing is saved until you save the concept.</p>
+              <p>A Template’s tree shows its fixed children and the structure each list repeats. The sidebar groups its reusable <strong>Maps, Lists and Leaves</strong>. Select a building block to see its meaning and uses, then choose <strong>Edit</strong>. Drag a building block’s grip onto a compatible target, or use the keyboard controls to add or replace a connection.</p>
+              <p><strong>Save and Cancel belong to the object being edited.</strong> Save records the whole session as one revision; Cancel restores the saved version. Shared changes and losses ask for confirmation, and leaving an unfinished edit offers Save, Discard or Stay.</p>
             </div>
           </div>
           <figure>
             <div class="shot">
-              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Concept Manager</span></div>
-              <img src="assets/screens/cept-change-types.webp" width="1400" height="900" alt="The Barncept Concept Manager after the House concept’s Garden type was changed to a leaf. A dialog, The tree would lose items, lists House / Garden / Shed and House / Garden / Beds, which would be removed with everything in them, and offers Remove them and apply, or Cancel.">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Editing a building block</span></div>
+              <img src="assets/screens/cept-template-edit.webp" width="1280" height="820" loading="lazy" alt="Barncept editing the Kitchen leaf in the House Template, with its name, meaning, kind and tags, and Save and Cancel beside the editing heading.">
             </div>
-            <figcaption>A type change that would remove items asks first.</figcaption>
+            <figcaption>One building block, one editing session, one saved revision.</figcaption>
+          </figure>
+        </div>
+
+        <div class="feature stacked">
+          <div>
+            <div class="copy-head">
+              <span class="kicker">Real members</span>
+              <h2>One Template. Independent Constructions.</h2>
+            </div>
+            <div>
+              <p>Choose <strong>Construct</strong>, give it a name, and Barncept opens the new Construction’s tree. Add, rename or remove list members within an explicit Save/Cancel session. Required map children and the captured building-block rules stay protected.</p>
+              <p>Willow Cottage can have a Front bedroom and a Back bedroom while another house has different rooms. Each Construction <strong>keeps its exact saved source revision</strong>: later Template changes leave it intact. Overview links back to that source, even if the live Template is later renamed or deleted.</p>
+            </div>
+          </div>
+          <figure>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · A Construction</span></div>
+              <img src="assets/screens/cept-items.webp" width="1280" height="820" loading="lazy" alt="The Willow Cottage Construction in Barncept, showing required House structure, Front bedroom and Back bedroom as real list members, and Add controls on eligible lists.">
+            </div>
+            <figcaption>A Construction holds real members; its Template supplies the rules.</figcaption>
+          </figure>
+        </div>
+
+        <div class="feature stacked">
+          <div>
+            <div class="copy-head">
+              <span class="kicker">A record of change</span>
+              <h2>History belongs to each object.</h2>
+            </div>
+            <div>
+              <p>Templates and Constructions each have their own <strong>History</strong>, newest revision first. See when a change was recorded and what changed, expand a combined save, or open a revision’s read-only snapshot.</p>
+              <p>Construction creation records its first revision immediately. Later saves add revisions only when something changed. Historical snapshots and captured sources remain read-only; restoring or upgrading them is outside the current editor.</p>
+            </div>
+          </div>
+          <figure>
+            <div class="shot">
+              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barncept · Construction history</span></div>
+              <img src="assets/screens/cept-history.webp" width="1280" height="820" loading="lazy" alt="Willow Cottage’s History in Barncept, listing its creation and the saved additions of Front bedroom and Back bedroom, with revision numbers that open immutable snapshots.">
+            </div>
+            <figcaption>Follow saved changes without altering the current tree.</figcaption>
           </figure>
         </div>
 
@@ -148,10 +188,10 @@
             <span class="kicker">Realise it any way</span>
             <h2>One model. Any shape.</h2>
             <p>Barncept never decides what a tree becomes. A folder structure, a diagram and a set of documents are each <strong>one possible realisation</strong>, never the model itself. Turn the same tree into real folders, an architecture to check code against, or whatever you need next.</p>
-            <p>Four come built in, each for whoever reads it. View and download any of them in the browser, or export them from the command line.</p>
-            <p>Every <a href="barnark.html">Barnark</a> architecture template is written as a Barncept concept, and can be opened and edited in exactly the same way.</p>
+            <p>Four Template projections come built in. Open <strong>View and export</strong> under a Template’s Overview to preview or download its saved item tree, or export it from the command line. Construction exports are not available yet.</p>
+            <p><a href="barnark.html">Barnark</a> architecture templates use Barncept concepts too. Barnark manages its own templates and folder rules; the new Construction workflow is not integrated with Barnark yet.</p>
           </div>
-          <div class="panel" aria-label="The four built-in realisations of a concept">
+          <div class="panel" aria-label="The four built-in Template projections">
             <ul class="examples" style="margin-top: 0">
               <li><strong>Document</strong><span class="state">for people: a heading per item, its meaning beneath</span></li>
               <li><strong>Folders</strong><span class="state">for developers and tools, a README in each</span></li>
@@ -179,7 +219,7 @@
                 <li><strong>List</strong>: a type of exactly one type, such as <code>Bedrooms</code>, a list of <code>Bedroom</code>. Its items are its members, any number of them, each with a name you give it.</li>
                 <li><strong>Map</strong>: a type of a set of types, each at most once, such as <code>House</code>, a map of <code>Ground floor</code>, <code>Upstairs</code> and <code>Garden</code>.</li>
               </ul>
-              <p>A concept names its <strong>root</strong> type, and types refer to each other only by name, so one type can be used in many places. Every item follows one type and has an id that Barncept generates. A concept written as types only is given its <strong>skeleton</strong> when it is read: the root, and every map entry below it, down to empty lists and leaves. Add two bedrooms and the House reads:</p>
+              <p>A Template names its <strong>root</strong> type, and types refer to each other only by name, so one type can be used in many places. Every item follows one type and has an id that Barncept generates. <strong>Skeleton</strong> is a read-only preview of the starting tree: the root and every required map child, down to empty lists and leaves. A new Construction starts there. Add two bedrooms to a House Construction and its tree reads:</p>
 <pre><code>House
 |
 +--Ground floor
@@ -199,6 +239,22 @@
    +--Shed
    +--Beds</code></pre>
               <p>The editor marks a map, a list and a leaf each with its own icon, and its Help page explains every word it uses.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span>Templates, Constructions and History from the command line<small>The same saved data as the browser</small></span></summary>
+            <div class="body">
+              <p>Read Templates and their building blocks, create Constructions, manage real list members and inspect revision history without a running GUI. Template and building-block editing remains in the browser.</p>
+<pre><code><span class="p">$ </span>vendor/bin/barncept template:list
+<span class="p">$ </span>vendor/bin/barncept template:show House --view=skeleton
+<span class="p">$ </span>vendor/bin/barncept type:show House Bedroom
+<span class="p">$ </span>vendor/bin/barncept construction:create House --name="Willow Cottage"
+<span class="p">$ </span>vendor/bin/barncept construction:list
+<span class="p">$ </span>vendor/bin/barncept construction:show CONSTRUCTION_ID
+<span class="p">$ </span>vendor/bin/barncept member:add CONSTRUCTION_ID --list=LIST_ITEM_ID --name="Front bedroom"
+<span class="p">$ </span>vendor/bin/barncept construction:history CONSTRUCTION_ID
+<span class="p">$ </span>vendor/bin/barncept construction:show CONSTRUCTION_ID --view=source</code></pre>
+              <p>Replace the uppercase placeholders with the IDs printed by the list and show commands. Read commands support <code>--json</code>; member changes appear in the GUI and share its history. Member removal asks for confirmation.</p>
             </div>
           </details>
           <details>
@@ -274,8 +330,8 @@ new ProjectionWriterFactory()->create()->write($document, __DIR__ . '/house.md')
     <section class="section" id="get-started">
       <div class="wrap cta">
         <span class="kicker">Get started</span>
-        <h2>Open your concepts in the browser.</h2>
-        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. If the project has no barn, run <code>init</code> once to create <code>.barn/</code>, then open the editor. Barncept keeps its concepts in <code>.barn/barncept/concepts/</code>.</p>
+        <h2>Design a Template. Make it real.</h2>
+        <p>Barncept needs PHP 8.5, Composer and the <code>ds</code> extension. If the project has no barn, run <code>init</code> once to create <code>.barn/</code>, then open the editor. Existing Template files stay in <code>.barn/barncept/concepts/</code> and appear in the catalogue without importing them. Constructions and revision history are managed alongside them by Barncept.</p>
 <pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>vendor/bin/barncept init
 <span class="p">$ </span>vendor/bin/barncept gui</code></pre>
         <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">

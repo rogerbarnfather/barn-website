@@ -9,6 +9,23 @@ It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
 The screenshots in `assets/screens/` are real, taken in Chrome at twice the size.
 
+Retaken on 2026-11-08, on Barncept core 8.1.0, CLI 6.2.0 and GUI 6.3.0
+with the approved evergreen branding:
+
+- `cept-editor`: House’s expanded Template tree and its workspace sidebar.
+- `cept-template-edit`: the Kitchen leaf’s explicit editing session, with Save and Cancel.
+- `cept-items`: Willow Cottage, an independent House Construction with Front bedroom
+  and Back bedroom list members.
+- `cept-history`: the Construction’s creation and two member-addition revisions.
+- `cept-vocab`: the current House Glossary, retaining its existing public filename.
+
+These are real Chrome captures at 1280 × 820 CSS pixels and 2× resolution, using
+a disposable barn and the shipped House example. The temporary barn path is hidden
+in the screenshots. Construction creation and member additions use the released CLI;
+the GUI reads the same saved records. No real project data was changed.
+The Barncept page and related product summaries now describe Templates,
+Constructions, exact captured sources and immutable revision history.
+
 Taken on 2026-11-05, on the Barnark 8.2 line:
 
 - `ark-tags`: the Barnark GUI on its own, in a project made with
@@ -28,7 +45,7 @@ made-up hotel whose stories were written through Barnspec's API for the shots:
 - `ark-new`: the Barnark GUI on its own, in a project with nothing bound yet,
   with Clone into the project filled in.
 
-Retaken on 2026-10-25:
+Earlier captures on 2026-10-25 (superseded above):
 
 - `cept-vocab` (the name is kept because READMEs embed it) and `cept-editor`:
   the Barncept GUI over a folder holding Barncept's own example concepts

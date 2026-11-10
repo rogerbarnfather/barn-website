@@ -76,7 +76,7 @@
                 <circle cx="312" cy="240" r="10"/>
                 <circle cx="436" cy="240" r="10"/>
               </g>
-              <g font-family="var(--sans)" font-size="13" font-weight="650" fill="var(--text)" text-anchor="middle">
+              <g font-family="var(--sans)" font-size="13" style="font-weight: 650" fill="var(--text)" text-anchor="middle">
                 <text x="240" y="28">House</text>
                 <text x="100" y="122">Ground floor</text>
                 <text x="240" y="122">Upstairs</text>
@@ -99,7 +99,7 @@
             <p>Create a Construction from a saved Template. Its required map children are made for you, and its lists start empty. Use <strong>+ Add</strong> to give a list real <strong>members</strong>, each with its own name. Keeping the tree in line with its types is Barncept’s core job. It is <strong>never left half-broken</strong>: a type nobody has described, a map that holds itself forever, two members of one list with the same name, or a member added where there is no list is refused, with a message that says why. That makes it safer to drive than the file underneath, whether a person, a program or an AI agent is doing the driving.</p>
             <p>A file that was broken outside Barncept fails loudly when it is read, and says what is wrong and where.</p>
           </div>
-          <div class="panel" aria-label="Changes Barncept checks before it makes them">
+          <div class="panel" role="figure" aria-label="Changes Barncept checks before it makes them">
             <p class="muted" style="margin-bottom: 14px">Before any change is kept</p>
             <ul class="examples" style="margin-top: 0">
               <li><span class="lamp green"></span>Add a Back bedroom to Bedrooms<span class="state">kept</span></li>
@@ -115,7 +115,7 @@
             <h2>One engine. Clear boundaries.</h2>
             <p>Barncept keeps concepts through a generic interface, and knows nothing of what they are about. Barnark uses it for architecture templates. Barnspec uses its generic document store to keep each area of business. Each tool keeps its own API and domain rules, so Barncept does not need to know what either tool means by what it keeps.</p>
           </div>
-          <div class="panel" aria-label="The responsibilities of Barncept and its client tools">
+          <div class="panel" role="figure" aria-label="The responsibilities of Barncept and its client tools">
             <ul class="examples" style="margin-top: 0">
               <li><strong>Barnark</strong><span class="state">architecture rules and folder checks</span></li>
               <li><strong>Barnspec</strong><span class="state">business rules and project management</span></li>
@@ -192,7 +192,7 @@
             <p>Four Template projections come built in. Open <strong>View and export</strong> under a Template’s Overview to preview or download its saved item tree, or export it from the command line. Construction exports are not available yet.</p>
             <p><a href="barnark.html">Barnark</a> architecture templates use Barncept concepts too. Barnark manages its own templates and folder rules; the new Construction workflow is not integrated with Barnark yet.</p>
           </div>
-          <div class="panel" aria-label="The four built-in Template projections">
+          <div class="panel" role="figure" aria-label="The four built-in Template projections">
             <ul class="examples" style="margin-top: 0">
               <li><strong>Document</strong><span class="state">for people: a heading per item, its meaning beneath</span></li>
               <li><strong>Folders</strong><span class="state">for developers and tools, a README in each</span></li>

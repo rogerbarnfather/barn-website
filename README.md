@@ -3,13 +3,13 @@
 Part of [Barn](https://rogerbarnfather.github.io/barn-website/).
 
 A static site for Barn: a home page, a page for Barn itself, one page each for Barnspec,
-Barnark and Barncept, and a Philosophy page. There is no build step.
+Barnark and Barntree, and a Philosophy page. There is no build step.
 
 It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
 The screenshots in `assets/screens/` are real, taken in Chrome at twice the size.
 
-Retaken on 2026-11-08, on Barncept core 8.1.0, CLI 6.2.0 and GUI 6.3.0
+Retaken on 2026-11-08, on Barntree core 8.1.0, CLI 6.2.0 and GUI 6.3.0
 with the approved evergreen branding:
 
 - `cept-editor`: House’s expanded Template tree and its workspace sidebar.
@@ -23,7 +23,7 @@ These are real Chrome captures at 1280 × 820 CSS pixels and 2× resolution, usi
 a disposable barn and the shipped House example. The temporary barn path is hidden
 in the screenshots. Construction creation and member additions use the released CLI;
 the GUI reads the same saved records. No real project data was changed.
-The Barncept page and related product summaries now describe Templates,
+The Barntree page and related product summaries now describe Templates,
 Constructions, exact captured sources and immutable revision history.
 
 Taken on 2026-11-05, on the Barnark 8.2 line:
@@ -48,11 +48,11 @@ made-up hotel whose stories were written through Barnspec's API for the shots:
 Earlier captures on 2026-10-25 (superseded above):
 
 - `cept-vocab` (the name is kept because READMEs embed it) and `cept-editor`:
-  the Barncept GUI over a folder holding Barncept's own example concepts
+  the Barntree GUI over a folder holding Barntree's own example concepts
   (House, Room, Kitchen, Garden, Pet) and Barnark's Domain Driven Design
   template, open on House's Living room and on a bounded context's Domain.
 
-The three GUIs' READMEs and Barnspec's, Barnark's and Barncept's embed
+The three GUIs' READMEs and Barnspec's, Barnark's and Barntree's embed
 `spec-map`, `ark-browse` and `cept-vocab` by their published URL, so replacing
 one updates those READMEs too, and renaming or removing one breaks them. Their
 alt text describes the picture, so it changes with it.
@@ -69,7 +69,7 @@ Each tool has one colour, shared with its GUI:
 |---|---|---|
 | Barnspec (mint) | `#18d19e` fill, `#07795f` text | `#3ff0bf` |
 | Barnark (orange) | `#f25c05` fill, `#c84600` text | `#ff9244` |
-| Barncept (sky blue) | `#0b95e0` fill, `#0a76b5` text | `#55c9ff` |
+| Barntree (sky blue) | `#0b95e0` fill, `#0a76b5` text | `#55c9ff` |
 
 A page takes its colour from `<body data-brand="spec|ark|cept">`, and any
 element with `data-brand` takes that tool's colour. The tokens are at the top

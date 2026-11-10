@@ -3,7 +3,7 @@
  * Each tool owns one colour, taken from its GUI:
  *   Barnspec  mint    (gui/barnspec-gui/frontend/src/index.css)
  *   Barnark   orange  (gui/barnark-gui/frontend/src/styles/theme.css)
- *   Barncept  sky     (gui/barncept-gui/frontend/src/styles/theme.css)
+ *   Barntree  sky     (gui/barntree-gui/frontend/src/styles/theme.css)
  * A page picks its colour with <body data-brand="spec|ark|cept">; anything
  * inside an element carrying data-brand takes that tool's colour instead. */
 
@@ -40,7 +40,7 @@
   --ark-bright: #f25c05;
   --ark-tint: #fff0e3;
 
-  /* Barncept — sky blue, at Barnark's lightness and Barnspec's saturation. */
+  /* Barntree — sky blue, at Barnark's lightness and Barnspec's saturation. */
   --cept: #0b95e0;
   --cept-ink: #ffffff;
   --cept-text: #0a76b5;

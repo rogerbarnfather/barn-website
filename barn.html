@@ -19,7 +19,7 @@
           <li><a href="barn.html" aria-current="page">Barn</a></li>
           <li data-brand="spec"><a href="barnspec.html"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
           <li data-brand="ark"><a href="barnark.html"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
-          <li data-brand="cept"><a href="barncept.html"><span class="dot" aria-hidden="true"></span>Barncept</a></li>
+          <li data-brand="cept"><a href="barntree.html"><span class="dot" aria-hidden="true"></span>Barntree</a></li>
           <li><a href="philosophy.html">Philosophy</a></li>
         </ul>
       </nav>
@@ -78,15 +78,15 @@
           <div>
             <span class="kicker">Existing projects</span>
             <h2>Manage the Barn apps you use.</h2>
-            <p>Add <a href="barncept.html">Barncept</a>, <a href="barnark.html">Barnark</a> or <a href="barnspec.html">Barnspec</a> from your Composer project’s root, or get all three with <code>barn add all</code>.</p>
+            <p>Add <a href="barntree.html">Barntree</a>, <a href="barnark.html">Barnark</a> or <a href="barnspec.html">Barnspec</a> from your Composer project’s root, or get all three with <code>barn add all</code>.</p>
             <p>Update or remove an app with one command. Barn asks you to confirm before making changes, and your project’s <code>.barn/</code> data stays put when you remove an app.</p>
             <p>Use <code>barn apps</code> to see what’s installed. Open an editor from the project root or any subfolder. Plain <code>barn gui</code> opens the dashboard.</p>
           </div>
-<pre><code>barn add barncept
+<pre><code>barn add barntree
 barn apps
-barn gui barncept
-barn update barncept
-barn remove barncept</code></pre>
+barn gui barntree
+barn update barntree
+barn remove barntree</code></pre>
         </div>
       </div>
     </section>
@@ -108,11 +108,11 @@ barn remove barncept</code></pre>
     barnspec/                <span class="c"># Barnspec: areas of business, scenarios and work</span>
       settings.json          <span class="c"># where generated test ports go</span>
     barnark/                 <span class="c"># your project’s template and any others of your own</span>
-    barncept/concepts/       <span class="c"># your Templates, once you use Barncept</span>
+    barntree/concepts/       <span class="c"># your Templates, once you use Barntree</span>
   composer.json
   src/
   tests/</code></pre>
-              <p>A barn is any project with a <code>.barn/</code> folder. Each tool keeps its settings and records in its own folder there. The tools find the nearest barn, so commands such as <code>barnspec show</code> and <code>barnark template:check</code> work from deep in <code>src/</code>. To use the tools without installing Barn, create the <code>.barn/</code> folder with <code>barnspec init</code>, <code>barnark init</code>, <code>barncept init</code> or the offer in any of their browser apps. Outside a barn, commands that need one write nothing and say where they looked.</p>
+              <p>A barn is any project with a <code>.barn/</code> folder. Each tool keeps its settings and records in its own folder there. The tools find the nearest barn, so commands such as <code>barnspec show</code> and <code>barnark template:check</code> work from deep in <code>src/</code>. To use the tools without installing Barn, create the <code>.barn/</code> folder with <code>barnspec init</code>, <code>barnark init</code>, <code>barntree init</code> or the offer in any of their browser apps. Outside a barn, commands that need one write nothing and say where they looked.</p>
             </div>
           </details>
           <details>
@@ -152,7 +152,7 @@ barn remove barncept</code></pre>
         <a href="index.html">Home</a>
         <a href="barnspec.html">Barnspec</a>
         <a href="barnark.html">Barnark</a>
-        <a href="barncept.html">Barncept</a>
+        <a href="barntree.html">Barntree</a>
         <a href="philosophy.html">Philosophy</a>
       </nav>
     </div>

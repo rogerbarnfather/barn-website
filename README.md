@@ -2,8 +2,8 @@
 
 Part of [Barn](https://rogerbarnfather.github.io/barn-website/).
 
-A static site for Barn: a home page, a page for Barn itself, and one page each for Barnspec,
-Barnark and Barncept. There is no build step.
+A static site for Barn: a home page, a page for Barn itself, one page each for Barnspec,
+Barnark and Barncept, and a Philosophy page. There is no build step.
 
 It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.

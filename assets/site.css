@@ -1204,6 +1204,46 @@ figcaption {
   font-weight: 550;
 }
 
+/* ---------- Philosophy tenets ---------- */
+
+.tenets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 48px) clamp(28px, 5vw, 64px);
+}
+
+.tenet {
+  min-width: 0;
+}
+
+.tenet h2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+}
+
+.tenet .emoji {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 1.9em;
+  height: 1.9em;
+  margin-top: -0.3em;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  font-size: 0.95em;
+  letter-spacing: 0;
+}
+
+.tenet p {
+  color: var(--text-muted);
+}
+
+.tenet p:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- Go deeper ---------- */
 
 .deeper {
@@ -1416,6 +1456,10 @@ td code {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
+  .tenets {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .feature,
   .feature.flip {
     grid-template-columns: minmax(0, 1fr);

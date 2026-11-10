@@ -40,7 +40,7 @@
       <div class="wrap wide hero-shot">
         <figure class="shot">
           <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barn · Home</span></div>
-          <img src="assets/screens/barn-home.webp" width="1360" height="284" alt="The home page of a barn named hotel. Business lists its area of business, Reservations, with its scenarios counted: 19 green, 0 yellow, 1 red and 2 not started. Architecture lists the project's folder, src, following its template Hotel, and clean.">
+          <img src="assets/screens/barn-home.webp" width="1360" height="284" alt="The home page of a barn named hotel. Spec lists its area of business, Reservations, with its scenarios counted: 19 green, 0 yellow, 1 red and 2 not started. Ark lists the project's folder, src, following its template Hotel, and clean.">
         </figure>
       </div>
     </section>
@@ -50,14 +50,14 @@
         <div class="feature">
           <div>
             <span class="kicker">Three tabs</span>
-            <h2>Home, Business and Architecture.</h2>
+            <h2>Home, Spec and Ark.</h2>
             <p><strong>Home</strong> is where the barn stands: every area of business with its scenarios counted by colour, and your project’s folder with whether it still fits its template.</p>
-            <p><strong>Business</strong> is <a href="barnspec.html">Barnspec</a>: the story map, its scenarios and the work behind them. <strong>Architecture</strong> is <a href="barnark.html">Barnark</a>: your project’s folder, the architecture it follows, and a check of it.</p>
+            <p><strong>Spec</strong> is <a href="barnspec.html">Barnspec</a>: the story map, its scenarios and the work behind them. <strong>Ark</strong> is <a href="barnark.html">Barnark</a>: your project’s folder, the architecture it follows, and a check of it.</p>
             <p>The two are kept apart on purpose. Each speaks its own language, and the home page is where you see both at once.</p>
           </div>
           <div class="grid two">
-            <a class="card product" data-brand="spec" href="barnspec.html"><span class="role">Business</span><h3>Barnspec</h3><p>What people need, proven by the real software.</p><span class="more">Explore Barnspec</span></a>
-            <a class="card product" data-brand="ark" href="barnark.html"><span class="role">Architecture</span><h3>Barnark</h3><p>The shape the code keeps, checked against it.</p><span class="more">Explore Barnark</span></a>
+            <a class="card product" data-brand="spec" href="barnspec.html"><span class="role">Spec</span><h3>Barnspec</h3><p>What people need, proven by the real software.</p><span class="more">Explore Barnspec</span></a>
+            <a class="card product" data-brand="ark" href="barnark.html"><span class="role">Ark</span><h3>Barnark</h3><p>The shape the code keeps, checked against it.</p><span class="more">Explore Barnark</span></a>
           </div>
         </div>
 
@@ -70,7 +70,7 @@
           </div>
 <pre><code><span class="p">$ </span>barn build my-shop      <span class="c"># a new barn</span>
 <span class="p">$ </span>cd my-shop
-<span class="p">$ </span>barn gui                <span class="c"># Home, Business, Architecture</span>
+<span class="p">$ </span>barn gui                <span class="c"># Home, Spec, Ark</span>
 <span class="p">$ </span>barn status             <span class="c"># the home page, in the terminal</span></code></pre>
         </div>
 
@@ -108,7 +108,7 @@ barn remove barntree</code></pre>
     barnspec/                <span class="c"># Barnspec: areas of business, scenarios and work</span>
       settings.json          <span class="c"># where generated test ports go</span>
     barnark/                 <span class="c"># your project’s template and any others of your own</span>
-    barntree/concepts/       <span class="c"># your Templates, once you use Barntree</span>
+    barntree/trees/       <span class="c"># your Templates, once you use Barntree</span>
   composer.json
   src/
   tests/</code></pre>
@@ -126,7 +126,7 @@ barn remove barntree</code></pre>
           <details>
             <summary><span>The app<small>One server, three tabs</small></span></summary>
             <div class="body">
-              <p><code>barn gui</code> serves the Barnspec and Barnark apps as the Business and Architecture tabs, with the home page beside them, from one local server. Started outside a barn, it offers to build one, showing <code>composer install</code> as it runs, and then serves it.</p>
+              <p><code>barn gui</code> serves the Barnspec and Barnark apps as the Spec and Ark tabs, with the home page beside them, from one local server. Started outside a barn, it offers to build one, showing <code>composer install</code> as it runs, and then serves it.</p>
             </div>
           </details>
         </div>

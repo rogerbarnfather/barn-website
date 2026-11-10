@@ -48,7 +48,7 @@ made-up hotel whose stories were written through Barnspec's API for the shots:
 Earlier captures on 2026-10-25 (superseded above):
 
 - `cept-vocab` (the name is kept because READMEs embed it) and `cept-editor`:
-  the Barntree GUI over a folder holding Barntree's own example concepts
+  the Barntree GUI over a folder holding Barntree's own example trees
   (House, Room, Kitchen, Garden, Pet) and Barnark's Domain Driven Design
   template, open on House's Living room and on a bounded context's Domain.
 

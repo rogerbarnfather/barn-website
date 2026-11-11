@@ -18,9 +18,9 @@
       <nav aria-label="Tools">
         <ul class="nav">
           <li><a href="barn.html">Barn</a></li>
-          <li data-brand="spec"><a href="barnspec.html" aria-current="page"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
-          <li data-brand="ark"><a href="barnark.html"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
-          <li data-brand="tree"><a href="barntree.html"><span class="dot" aria-hidden="true"></span>Barntree</a></li>
+          <li data-brand="spec"><a href="https://rogerbarnfather.github.io/barnspec-website/" aria-current="page"><span class="dot" aria-hidden="true"></span>Barnspec</a></li>
+          <li data-brand="ark"><a href="https://rogerbarnfather.github.io/barnark-website/"><span class="dot" aria-hidden="true"></span>Barnark</a></li>
+          <li data-brand="tree"><a href="https://rogerbarnfather.github.io/barntree-website/"><span class="dot" aria-hidden="true"></span>Barntree</a></li>
           <li><a href="philosophy.html">Philosophy</a></li>
         </ul>
       </nav>
@@ -30,286 +30,22 @@
   <main id="main">
     <section class="hero">
       <div class="wrap">
-        <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><g transform="translate(-4 -4)"><g transform="translate(16 16) scale(1.45) translate(-16 -16.5)" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12.2" cy="16.6" r="2.9"/><circle cx="19.8" cy="16.6" r="2.9"/><path d="M15 16c.6-.7 1.4-.7 2 0"/><path d="M10.15 14.55C9.65 13.95 9.2 13.55 8.7 13.55M21.85 14.55C22.35 13.95 22.8 13.55 23.3 13.55"/></g></g></svg>Barnspec · Spec</span>
+        <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><g transform="translate(-4 -4)"><g transform="translate(16 16) scale(1.45) translate(-16 -16.5)" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12.2" cy="16.6" r="2.9"/><circle cx="19.8" cy="16.6" r="2.9"/><path d="M15 16c.6-.7 1.4-.7 2 0"/><path d="M10.15 14.55C9.65 13.95 9.2 13.55 8.7 13.55M21.85 14.55C22.35 13.95 22.8 13.55 23.3 13.55"/></g></g></svg>Barnspec</span>
         <h1>See what’s proven, what’s being built, and <span class="accent">why</span>.</h1>
-        <p class="lede">Barnspec maps your software by the needs of the people it serves. Build it a slice at a time, and watch each piece turn green only when the real software proves it. In a <a href="barn.html">barn</a> it is the Spec tab, and <code>barnspec init</code> makes any project a barn to use it on its own.</p>
+        <p class="lede">Barnspec maps your software by the needs of the people it serves. Build it a slice at a time, and watch each piece turn green only when the real software proves it. In a <a href="barn.html">barn</a> it is the Spec tab.</p>
         <div class="actions">
-          <a class="btn" href="#get-started">Get started</a>
-          <a class="btn ghost" href="#deeper">Go deeper</a>
-        </div>
-      </div>
-      <div class="wrap wide hero-shot">
-        <figure class="shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · Story map</span></div>
-          <img src="assets/screens/spec-map.webp" width="1408" height="522" alt="The Barnspec Story map for a hotel's reservations: every story once, as it reads now, grouped by the role that wants it. Columns follow a stay from establishing to terminating. Stories changed since they were first released are marked elaborated, and those still being built are marked planned.">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="feature" id="why">
-          <div>
-            <span class="kicker">Start from people</span>
-            <h2>Stories, not tickets.</h2>
-            <p>Every piece of work starts as a sentence anyone can check: <strong>who</strong> needs something, <strong>what</strong> they want to do, and <strong>what they get</strong> from it. Barnspec’s wizard asks you to complete each sentence, so no technical knowledge is needed.</p>
-            <p>The map then lays stories out along the person’s journey, from getting started to finishing up, so gaps are obvious at a glance.</p>
-          </div>
-          <div class="panel" role="figure" aria-label="An example story">
-            <p class="sentence">A <span class="who">guest</span> wants to <span class="what">book again from a past stay</span>, so they <span class="why">can come back in a moment</span>.</p>
-            <div class="sentence-key" aria-hidden="true"><span class="k-who">who</span><span class="k-what">what</span><span class="k-why">why</span></div>
-            <ul class="examples">
-              <li><span class="lamp red"></span>book room 101 again for 2 nights from 1 December<span class="state">built, not proven</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="feature flip" id="glossary">
-          <div>
-            <span class="kicker">One language</span>
-            <h2>One word, one meaning, for everyone.</h2>
-            <p>Every person, thing and action in a story is given a meaning in plain words the first time it’s used. From then on, every story and every example uses <strong>the same word for the same thing</strong>.</p>
-            <p>Together those words are the business’s own language, kept as a glossary beside the map. Stakeholders, developers and newcomers all read the same meanings, so nobody forgets what “booking” meant, and nobody gets lost coming back to it a year later.</p>
-            <p>The examples that prove each story are built from the same words, so the language and the software can’t quietly drift apart.</p>
-          </div>
-          <div class="panel" role="figure" aria-label="An extract from a hotel’s reservations glossary">
-            <span class="stamp">📖 Glossary · reservations</span>
-            <dl class="terms">
-              <div class="who">
-                <dt>guest<span class="kind">who</span></dt>
-                <dd>choosing and securing somewhere to stay</dd>
-              </div>
-              <div>
-                <dt>booking<span class="kind">thing</span></dt>
-                <dd>a guest’s hold on a room for a run of nights</dd>
-                <dd><ul>
-                  <li><b>is confirmed</b>: holds the room for the guest on these nights</li>
-                  <li><b>has been cancelled</b>: no longer holds the room</li>
-                </ul></dd>
-              </div>
-              <div>
-                <dt>room<span class="kind">thing</span></dt>
-                <dd>a room the hotel lets to guests</dd>
-                <dd><ul>
-                  <li><b>is out of service</b>: the hotel is not letting it to guests for now</li>
-                </ul></dd>
-              </div>
-            </dl>
-            <p class="terms-note">Written once, then used word for word in every story, example and test.</p>
-          </div>
-        </div>
-
-        <div class="feature stacked" id="proof">
-          <div>
-            <div class="copy-head">
-              <span class="kicker">Proof, not promises</span>
-              <h2>A board that can’t be gamed.</h2>
-            </div>
-            <div>
-            <p>Each story is pinned down by concrete examples. Tickets track the work, but moving a ticket to Done never makes anything green. Only <strong>a passing run against the real software</strong> does, and a later failure turns it red again.</p>
-            <p>So when Barnspec says a story is fulfilled, it is. Nobody has to take anyone’s word for it.</p>
-            </div>
-          </div>
-          <figure>
-            <div class="shot">
-              <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Barnspec · Work</span></div>
-              <img src="assets/screens/spec-work.webp" width="1408" height="638" alt="A Barnspec work board for the scenario “add Alex to the 3-night booking for room 12”. The brief gives the Given condition, the action and the expected outcome. Both tickets are done, yet it reads “All tickets done — not yet run”, with the command that proves it.">
-            </div>
-            <figcaption>Both tickets are done. It stays “not yet proven” until a run says otherwise.</figcaption>
-          </figure>
-        </div>
-
-        <div class="feature" id="focus">
-          <div>
-            <span class="kicker">Focus</span>
-            <h2>One slice at a time.</h2>
-            <p>Work happens in slices: small, whole pieces of value, built from end to end. There is the slice being built now and the ones already released. <strong>There is no backlog</strong>, and nothing to estimate.</p>
-            <p>When every story in the slice is proven, release it, copy its release notes and start the next. Barnspec refuses to release a slice that isn’t proven, with no way around it. Released slices fold away but stay proven, and they keep being re-checked while new work is built.</p>
-          </div>
-          <div class="panel" role="figure" aria-label="Slices of work: three released, one being built">
-            <ul class="phases">
-              <li class="now"><span class="bar"></span><span class="name">returning guests</span><span class="meta">being built now</span></li>
-              <li><span class="bar"></span><span class="name">tightening bookings</span><span class="meta">✓ released</span></li>
-              <li><span class="bar"></span><span class="name">changing plans</span><span class="meta">✓ released</span></li>
-              <li><span class="bar"></span><span class="name">first bookings</span><span class="meta">✓ released</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="feature flip">
-          <div>
-            <span class="kicker">Change</span>
-            <h2>Change your mind without losing the thread.</h2>
-            <p>Until a slice is released, anything in it can be reworded or deleted: a first wording is a draft. Learned something after release? Change the story in the current slice. Barnspec records what changed beside the original, so a year later anyone can see <strong>what you did first, what you learned and what you did about it</strong>.</p>
-            <p>Released work stays proven while the change is built, so nothing is broken along the way.</p>
-          </div>
-          <div class="panel" role="figure" aria-label="An example story and its history">
-            <p class="sentence">A <span class="who">guest</span> wants to <span class="what">cancel their booking</span>, so they <span class="why">are not held to a stay they will not take</span>.</p>
-            <ul class="trail">
-              <li><b>first bookings</b><span>Cancelling frees the room. Cancelling twice is refused.</span></li>
-              <li><b>tightening bookings</b><span>Changed: cancelling twice does no harm. The original is kept beside it.</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="feature" id="value">
-          <div>
-            <span class="kicker">Value</span>
-            <h2>Find out if it mattered.</h2>
-            <p>A story working proves the person <em>can</em> do the thing. It doesn’t prove they got what they wanted. So when the next slice is released, Barnspec asks about the ones before it.</p>
-            <p>Only the people the work was for, or someone speaking for them, can say it succeeded. And “it works, but it didn’t help” is an answer you can give without penalty, which is why people give it.</p>
-          </div>
-          <div class="panel" role="figure" aria-label="Checking whether a story delivered its reward">
-            <span class="stamp"><span class="lamp green"></span>Works · released two slices ago</span>
-            <p class="sentence" style="font-size: 1.2rem">…so they <span class="why">have somewhere to stay</span>. <span class="muted">Did they?</span></p>
-            <div class="verdicts"><span class="verdict">still finding out</span><span class="verdict on">yes</span><span class="verdict">no</span><span class="verdict">the need moved on</span></div>
-            <blockquote class="quote">
-              <p>“I booked without phoning the front desk.”</p>
-              <cite>Sam, a guest</cite>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <div class="section-head center">
-          <span class="kicker">For the whole team</span>
-          <h2>One record, read by everyone.</h2>
-        </div>
-        <div class="grid three">
-          <div class="card">
-            <span class="icon" aria-hidden="true">💬</span>
-            <h3>Stakeholders</h3>
-            <p>Read plain sentences about real people, see exactly what’s proven, and say whether it delivered what they hoped.</p>
-          </div>
-          <div class="card">
-            <span class="icon" aria-hidden="true">🧪</span>
-            <h3>Developers</h3>
-            <p>Get concrete examples that run as tests against the real code, and a brief that never leaves the board.</p>
-          </div>
-          <div class="card">
-            <span class="icon" aria-hidden="true">📖</span>
-            <h3>Newcomers</h3>
-            <p>Generated story pages, <a href="#glossary">a glossary</a> of the business’s own words, and a slice-by-slice history that links them all together.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="deeper">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Go deeper</span>
-          <h2>How it works underneath.</h2>
-          <p>Everything above, in more detail, for when you want it.</p>
-        </div>
-        <div class="deeper">
-          <details>
-            <summary><span>The map’s five columns<small>Where a story sits in the person’s journey</small></span></summary>
-            <div class="body">
-              <p>Columns are the same for every part of the business, so maps line up side by side:</p>
-              <ul>
-                <li><strong>Establish</strong>: gaining what’s needed to take part, such as signing up or registering.</li>
-                <li><strong>Adjust</strong>: changing something that already exists, such as editing details.</li>
-                <li><strong>Act</strong>: the exchange the business exists for, such as paying or booking.</li>
-                <li><strong>Follow up</strong>: settling what already happened, such as chasing, disputing or asking for help.</li>
-                <li><strong>Terminate</strong>: ending something for good, such as cancelling or closing.</li>
-              </ul>
-              <p>Stories that aren’t about a journey, such as reporting or compliance, live in a permanent <strong>Unassigned</strong> column. It’s a home, not a queue.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>Story map and History<small>Every story once, or slice by slice</small></span></summary>
-            <div class="body">
-              <p>The <strong>Story map</strong> is where an area of business opens: every story once, as it reads now, under the role that wants it. Stories still being built are marked planned, and those changed since their first release are marked elaborated. Filter it to one role’s stories, or to those whose scenarios are about one subject. It changes nothing.</p>
-              <p><strong>History</strong> is the same map slice by slice, newest first, each slice holding the stories it added or changed. It’s where slices are planned, stories are changed and slices are released. Each released slice has <strong>release notes</strong> to copy: its stories, and the scenarios each one added, replaced or retired.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>How a story’s status is decided<small>Rough, expressed, in progress, built, fulfilled</small></span></summary>
-            <div class="body">
-              <p>Each story is pinned down by <strong>scenarios</strong>: concrete Given / When / Then examples. A scenario’s colour is worked out, never set:</p>
-              <ul>
-                <li><span class="lamp yellow"></span> <strong>Yellow</strong> while any ticket for it is still open.</li>
-                <li><span class="lamp red"></span> <strong>Red</strong> once every ticket is done, until a run against the real software passes, or after a run fails.</li>
-                <li><span class="lamp green"></span> <strong>Green</strong> only after a passing run. There is no button to mark it done.</li>
-              </ul>
-              <p>A story’s status is rolled up from its scenarios. Adding new work to a green scenario sends it back to yellow, because the old evidence predates the new work.</p>
-              <p>Tickets are scrap notes for the work, so they don’t have to last. Releasing a slice clears the finished tickets of scenarios that have been run, and a ticket can be deleted at any time. The runs stay, so a proven scenario stays green.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>From examples to running tests<small>How a scenario is checked against real code</small></span></summary>
-            <div class="body">
-              <p>Barnspec generates a small adapter class for each fact, action and role your scenarios use. You fill them in with calls into your application, and every scenario then runs on its own, from a clean start, as an ordinary test. Every run is recorded, pass or fail, and that record is what colours each story.</p>
-<pre><code><span class="p">$ </span>vendor/bin/port-generator generate reservations
-<span class="p">$ </span>vendor/bin/scenario-bridge run-all reservations --released   <span class="c"># keep released slices proven</span></code></pre>
-            </div>
-          </details>
-          <details>
-            <summary><span>Changing a released story<small>Elaborations: added, amended and retired scenarios</small></span></summary>
-            <div class="body">
-              <p>Once a slice is released, its stories’ scenarios no longer change directly. A change is an <strong>elaboration</strong> in the current slice: new wording, plus scenarios added, amended or retired. When that slice is released, the elaboration is merged in, and what it replaced is kept as a record. Until then, the released behaviour keeps being proven.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>Recording whether it mattered<small>Impact: evaluating, achieved, none, superseded</small></span></summary>
-            <div class="body">
-              <p>Each released story gets an <strong>Impact</strong>: dated observations, each saying who made it. Releasing a slice asks about earlier slices’ unsettled rewards, but never blocks the release. <strong>Achieved</strong> settles only on the word of the people the story was for, or someone speaking for them. Impact never changes a story’s colour: green and “none” is an honest, useful combination.</p>
-            </div>
-          </details>
-          <details>
-            <summary><span>How the glossary is built<small>The ubiquitous language, one glossary per area of business</small></span></summary>
-            <div class="body">
-              <p>Domain-Driven Design calls a business’s shared vocabulary its <strong>ubiquitous language</strong>. Barnspec builds it from the stories themselves: each role, subject, fact and action keeps the meaning it was given when it was created, and the glossary gathers them for each area of business. Who takes part, what they deal with and what can be true of it, and everything they can do.</p>
-              <p>A detail a fact or action takes, such as a booking’s number of nights, can carry an example (“3”), shown beside its meaning. Examples can be changed at any time, even after release.</p>
-              <p>Nothing is summarised or made up. It’s exactly what was written, sorted so any word can be found at a glance. Open it from the Glossary tab, or write it out next to the story pages, where the history links each area of business to its glossary.</p>
-<pre><code><span class="p">$ </span>vendor/bin/barnspec glossary --output-dir=docs/glossary   <span class="c"># a page per area of business, plus an index</span></code></pre>
-            </div>
-          </details>
-          <details>
-            <summary><span>The command line<small>Everything the browser does, and more, from a terminal</small></span></summary>
-            <div class="body">
-              <p>Every step has a scripted form for CI and AI agents, and an interactive wizard adds scenarios.</p>
-<pre><code><span class="p">$ </span>vendor/bin/barnspec create-story --area-of-business=reservations --role=guest \
-    --goal="cancel their booking" --reward="are not held to a stay they will not take"
-<span class="p">$ </span>vendor/bin/barnspec refine    <span class="c"># add its scenarios</span>
-<span class="p">$ </span>vendor/bin/barnspec reword    <span class="c"># or delete, until its slice is released</span>
-<span class="p">$ </span>vendor/bin/barnspec map --area-of-business=reservations --subject=booking   <span class="c"># the story map, every story once</span>
-<span class="p">$ </span>vendor/bin/barnspec history --output-dir=docs/history   <span class="c"># an HTML history, slice by slice</span>
-<span class="p">$ </span>vendor/bin/barnspec release-notes --area-of-business=reservations --phase="first bookings"</code></pre>
-              <p>Barnspec keeps its records in the barn’s <code>.barn/barnspec/</code>: each area of business, with its Roles and Stories, through Barntree in <code>areas-of-business/</code>, and its scenario runs and work beside them. The GUI and CLI go through the Barnspec API, which keeps Barnspec’s domain rules in one place.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="get-started">
-      <div class="wrap cta">
-        <span class="kicker">Get started</span>
-        <h2>Open the map on your own project.</h2>
-        <p>Barnspec needs PHP 8.5 and Composer. Install it into your project, then open the browser app. If the project has no barn yet, the app offers to create <code>.barn/</code> before opening the story map.</p>
-<pre style="max-width: 560px; margin: 0 auto 8px; text-align: left"><code><span class="p">$ </span>vendor/bin/barnspec gui</code></pre>
-        <div class="deeper" style="max-width: 760px; margin: 28px auto 0; text-align: left">
-          <details>
-            <summary><span>Installation<small>Install from Packagist</small></span></summary>
-            <div class="body">
-              <p>Require Barnspec, its command line and its browser app. Composer pulls in the rest.</p>
-<pre><code><span class="p">$ </span>composer require --dev rmb32/barnspec rmb32/barnspec-cli rmb32/barnspec-gui</code></pre>
-            </div>
-          </details>
+          <a class="btn" href="https://rogerbarnfather.github.io/barnspec-website/">Visit the Barnspec website</a>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
+        <p>Barnspec has its own website, with a quick start, the philosophy behind it and thorough documentation.</p>
         <div class="grid two">
-          <a class="card product" data-brand="ark" href="barnark.html"><span class="role">Shape the software</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 14.5h20l-3.2 5.5H5.2zM6.5 13V9.5L12 5.5l5.5 4V13z"/></svg>Barnark</h3><p>Keep the code that fulfils your stories in the shape you chose.</p><span class="more">Explore Barnark</span></a>
-          <a class="card product" data-brand="tree" href="barntree.html"><span class="role">A separate package</span><h3><svg class="mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path transform="translate(-4 -4)" d="M16 8V27.5M11 14.5L16 8L21 14.5M10 21L16 14.5L22 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Barntree</h3><p>Reusable Templates, independent Constructions and revision history, plus shared storage used by Barnspec and Barnark. Each tool keeps its own rules and API.</p><span class="more">Explore Barntree</span></a>
+          <a class="card" href="https://rogerbarnfather.github.io/barnspec-website/quick-start.html"><h3>Quick start</h3><p>Install it and map your first story.</p><span class="more">Open</span></a>
+          <a class="card" href="https://rogerbarnfather.github.io/barnspec-website/docs/index.html"><h3>Documentation</h3><p>The model, the browser app, the command line, proof and releasing.</p><span class="more">Open</span></a>
+          <a class="card" href="https://rogerbarnfather.github.io/barnspec-website/philosophy.html"><h3>Philosophy</h3><p>Why stories describe needs, and why done means proven.</p><span class="more">Open</span></a>
         </div>
       </div>
     </section>
@@ -321,9 +57,9 @@
       <nav aria-label="Footer">
         <a href="index.html">Home</a>
         <a href="barn.html">Barn</a>
-        <a href="barnspec.html" aria-current="page">Barnspec</a>
-        <a href="barnark.html">Barnark</a>
-        <a href="barntree.html">Barntree</a>
+        <a href="https://rogerbarnfather.github.io/barnspec-website/" aria-current="page">Barnspec</a>
+        <a href="https://rogerbarnfather.github.io/barnark-website/">Barnark</a>
+        <a href="https://rogerbarnfather.github.io/barntree-website/">Barntree</a>
         <a href="philosophy.html">Philosophy</a>
       </nav>
     </div>

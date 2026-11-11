@@ -169,7 +169,7 @@ Look at the rendered page, not only the HTML.
 ## 9. The stylesheets
 
 - `assets/base/base.css` is the entry: it declares the cascade layers (`tokens`, `reset`, `layout`,
-  `components`, `docs`) and imports one file per concern. Every other file reads only the tokens in
+  `components`, `illustration`, `docs`) and imports one file per concern. Every other file reads only the tokens in
   `tokens.css` (colours are `light-dark(light, dark)`, so one declaration serves both themes).
 - A component's responsive rules sit inside the component, as a nested `@media`. To change how
   something looks everywhere, change its file or its token; nothing else needs to move.

@@ -7,7 +7,7 @@
  * reads only the tokens, so a change to one file or one token propagates
  * without touching the others. */
 
-@layer tokens, reset, layout, components, docs;
+@layer tokens, reset, layout, components, illustration, docs;
 
 @import url("tokens.css") layer(tokens);
 @import url("reset.css") layer(reset);
@@ -23,5 +23,6 @@
 @import url("code.css") layer(components);
 @import url("table.css") layer(components);
 @import url("callout.css") layer(components);
+@import url("illustration.css") layer(illustration);
 @import url("docs.css") layer(docs);
 @import url("motion.css") layer(docs);

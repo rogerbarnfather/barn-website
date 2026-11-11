@@ -86,15 +86,20 @@
     }
   }
 
-  & .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--brand);
+  & .nav-logo {
+    flex: none;
+    border-radius: 5px;
   }
 
-  & a[aria-current="page"] .dot {
-    background: var(--brand-ink);
+  & li[data-brand] a[aria-current="page"] {
+    background: var(--brand-tint);
+    color: var(--brand-text);
+    font-weight: 750;
+  }
+
+  & .barn-mark {
+    width: 18px;
+    height: 18px;
   }
 }
 

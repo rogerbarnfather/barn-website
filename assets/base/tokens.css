@@ -23,12 +23,12 @@
   --status-red: light-dark(#cf222e, #ff7b72);
   --status-green: light-dark(#1a7f37, #56d364);
 
-  /* Barnspec: mint. The fill is too light for text, so text uses -text. */
-  --spec: light-dark(#18d19e, #3ff0bf);
-  --spec-ink: light-dark(#072a22, #071f19);
-  --spec-text: light-dark(#07795f, #8af5d6);
-  --spec-bright: light-dark(#11b88a, #8af5d6);
-  --spec-tint: light-dark(#e3fbf3, #123a30);
+  /* Barnspec: sky blue, at Barnark's lightness. White ink on the light fill. */
+  --spec: light-dark(#0b95e0, #55c9ff);
+  --spec-ink: light-dark(#ffffff, #04263a);
+  --spec-text: light-dark(#0a76b5, #55c9ff);
+  --spec-bright: light-dark(#0b95e0, #55c9ff);
+  --spec-tint: light-dark(#e0f3ff, #12354d);
 
   /* Barnark: burnt orange. */
   --ark: light-dark(#f25c05, #ff9244);
@@ -37,12 +37,12 @@
   --ark-bright: light-dark(#f25c05, #ff9244);
   --ark-tint: light-dark(#fff0e3, #3a2212);
 
-  /* Barntree: sky blue, at Barnark's lightness and Barnspec's saturation. */
-  --tree: light-dark(#0b95e0, #55c9ff);
-  --tree-ink: light-dark(#ffffff, #04263a);
-  --tree-text: light-dark(#0a76b5, #55c9ff);
-  --tree-bright: light-dark(#0b95e0, #55c9ff);
-  --tree-tint: light-dark(#e0f3ff, #12354d);
+  /* Barntree: mint, for trees. The fill is too light for text, so text uses -text. */
+  --tree: light-dark(#18d19e, #3ff0bf);
+  --tree-ink: light-dark(#072a22, #071f19);
+  --tree-text: light-dark(#07795f, #8af5d6);
+  --tree-bright: light-dark(#11b88a, #8af5d6);
+  --tree-tint: light-dark(#e3fbf3, #123a30);
 
   /* The current tool's colour. Neutral until a data-brand sets it. */
   --brand: var(--text);
@@ -71,7 +71,7 @@
 }
 
 [data-brand="spec"] {
-  --brand-on-code: #3ff0bf;
+  --brand-on-code: #55c9ff;
   --brand: var(--spec);
   --brand-ink: var(--spec-ink);
   --brand-text: var(--spec-text);
@@ -89,7 +89,7 @@
 }
 
 [data-brand="tree"] {
-  --brand-on-code: #55c9ff;
+  --brand-on-code: #3ff0bf;
   --brand: var(--tree);
   --brand-ink: var(--tree-ink);
   --brand-text: var(--tree-text);

@@ -62,7 +62,7 @@ documentation is the deeper material, and its content stays visible and linkable
   on the dark code blocks. `--brand` with `--brand-ink` is the one primary button per page region.
 - Don't hard-code a hex value in a page or a tool's `site.css`. Use a token. A new token goes in the
   master tokens and is reported in the change.
-- The known gap in the base guide (§4) applies: no new small white-on-orange or white-on-sky text.
+- The known gap in the base guide (§4) applies: no new small white-on-orange or white-on-sky text (Barnspec is the sky blue now).
 
 ## 4. Documentation pages
 

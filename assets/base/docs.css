@@ -1,0 +1,161 @@
+/* The documentation layout: a side navigation beside one article.
+ *   <div class="docs wrap wide">
+ *     <nav class="docs-nav" aria-label="Documentation">…</nav>
+ *     <article class="docs-article">…</article>
+ *   </div>
+ * The navigation sits above the article on a narrow screen. Every h2 and h3
+ * in the article has an id and carries its own `.anchor` link. */
+
+.docs {
+  --docs-nav: 15rem;
+  --docs-top: 5rem;
+
+  display: grid;
+  grid-template-columns: var(--docs-nav) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+  padding-top: clamp(32px, 5vw, 56px);
+  padding-bottom: clamp(56px, 8vw, 96px);
+
+  @media (max-width: 900px) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+.docs-nav {
+  position: sticky;
+  top: var(--docs-top);
+  max-height: calc(100vh - var(--docs-top) - 16px);
+  overflow-y: auto;
+  font-size: 0.93rem;
+
+  & h2 {
+    margin: 1.5em 0 0.4em;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & ul {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  & a {
+    display: block;
+    padding: 5px 10px;
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    text-decoration: none;
+
+    &:hover {
+      background: var(--brand-tint);
+      color: var(--brand-bright);
+    }
+
+    &[aria-current="page"] {
+      background: var(--brand-tint);
+      color: var(--brand-text);
+      font-weight: 650;
+    }
+  }
+
+  @media (max-width: 900px) {
+    position: static;
+    max-height: none;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-alt);
+  }
+}
+
+.docs-article {
+  max-width: 46rem;
+  min-width: 0;
+
+  & h1 {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+  }
+
+  & h2 {
+    margin-top: 2em;
+    font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  }
+
+  & h3 {
+    margin-top: 1.6em;
+  }
+
+  & :is(h2, h3)[id] {
+    scroll-margin-top: var(--docs-top);
+  }
+
+  & :is(ul, ol) {
+    padding-left: 1.3em;
+  }
+
+  & li {
+    margin-bottom: 0.4em;
+  }
+
+  & pre,
+  & .table-wrap {
+    margin: 1.25em 0;
+  }
+
+  & > .lede {
+    max-width: none;
+  }
+
+  & dl.glossary {
+    margin: 0;
+
+    & dt {
+      margin-top: 1.4em;
+      font-weight: 650;
+      scroll-margin-top: var(--docs-top);
+    }
+
+    & dd {
+      margin: 0.2em 0 0;
+      color: var(--text-muted);
+    }
+  }
+}
+
+.anchor {
+  margin-left: 0.4em;
+  color: var(--text-muted);
+  font-size: 0.7em;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.55;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--brand-text);
+    opacity: 1;
+  }
+}
+
+.docs-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--border);
+  font-weight: 650;
+}

@@ -1,0 +1,27 @@
+/* The Barn website's shared stylesheet. Every site (the main site and each
+ * tool's own) carries an identical copy of this folder; `bin/ci-all` fails when
+ * a copy differs from the master in the main site. Change it here, then copy it.
+ *
+ * Link this file, then the site's own `site.css`, which is unlayered and so
+ * always wins over everything below. Each file below holds one concern and
+ * reads only the tokens, so a change to one file or one token propagates
+ * without touching the others. */
+
+@layer tokens, reset, layout, components, docs;
+
+@import url("tokens.css") layer(tokens);
+@import url("reset.css") layer(reset);
+@import url("layout.css") layer(layout);
+@import url("header.css") layer(components);
+@import url("footer.css") layer(components);
+@import url("hero.css") layer(components);
+@import url("button.css") layer(components);
+@import url("shot.css") layer(components);
+@import url("feature.css") layer(components);
+@import url("card.css") layer(components);
+@import url("deeper.css") layer(components);
+@import url("code.css") layer(components);
+@import url("table.css") layer(components);
+@import url("callout.css") layer(components);
+@import url("docs.css") layer(docs);
+@import url("motion.css") layer(docs);

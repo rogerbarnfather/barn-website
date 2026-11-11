@@ -1,0 +1,104 @@
+/* The site header: wordmark and navigation. */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--border);
+
+  & .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    min-height: 60px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 750;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.barn-mark {
+  display: block;
+  width: 26px;
+  height: 26px;
+
+  & g > :nth-child(1) {
+    fill: var(--spec);
+  }
+
+  & g > :nth-child(2) {
+    fill: var(--ark);
+  }
+
+  & g > :nth-child(3) {
+    fill: var(--tree);
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+    font-weight: 550;
+    text-decoration: none;
+    transition: background-color 120ms, color 120ms;
+
+    &:hover {
+      background: var(--brand-tint);
+      color: var(--brand-bright);
+    }
+
+    &[aria-current="page"] {
+      background: var(--brand);
+      color: var(--brand-ink);
+    }
+
+    @media (max-width: 640px) {
+      padding: 5px 10px;
+      font-size: 0.88rem;
+    }
+  }
+
+  & .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--brand);
+  }
+
+  & a[aria-current="page"] .dot {
+    background: var(--brand-ink);
+  }
+}
+
+.mark {
+  display: inline-block;
+  flex: none;
+}

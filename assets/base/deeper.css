@@ -1,0 +1,80 @@
+/* "Go deeper": a list of collapsible details. */
+
+.deeper {
+  display: grid;
+  gap: 12px;
+
+  & details {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-raised);
+
+    &[open] summary::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  & summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    font-weight: 650;
+    font-size: 1.05rem;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--brand-tint);
+      color: var(--brand-bright);
+      font-size: 1.1rem;
+      transition: transform 160ms;
+    }
+
+    & small {
+      display: block;
+      margin-top: 2px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 450;
+    }
+  }
+
+  & .body {
+    padding: 0 24px 24px;
+    color: var(--text-muted);
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+
+    & strong {
+      color: var(--text);
+    }
+
+    & ul {
+      padding-left: 1.2em;
+    }
+
+    & li {
+      margin-bottom: 0.4em;
+    }
+
+    & pre {
+      margin: 14px 0;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+/* A feature row: copy beside a picture, flipped or stacked. */
+
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+
+  & + & {
+    margin-top: clamp(72px, 11vw, 136px);
+  }
+
+  &.flip > :first-child {
+    order: 2;
+  }
+
+  & figure {
+    margin: 0;
+  }
+
+  & h2 {
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  }
+
+  & p {
+    color: var(--text-muted);
+    font-size: 1.07rem;
+
+    & strong {
+      color: var(--text);
+    }
+  }
+
+  & .more {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: 650;
+    text-decoration: none;
+
+    &::after {
+      content: " →";
+    }
+  }
+
+  /* A screenshot needs the full width to be legible: copy above, shot below. */
+  &.stacked {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 44px);
+
+    & > :first-child {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+      gap: 8px clamp(28px, 5vw, 64px);
+      align-items: start;
+    }
+
+    & .copy-head > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &,
+    &.flip {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    &.flip > :first-child {
+      order: 0;
+    }
+
+    &.stacked > :first-child {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

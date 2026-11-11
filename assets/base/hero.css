@@ -1,0 +1,78 @@
+/* The hero that opens an introduction page. */
+
+.hero {
+  position: relative;
+  padding: clamp(56px, 10vw, 112px) 0 0;
+  overflow: hidden;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 30% 0;
+    background: radial-gradient(50% 70% at 50% 0%, var(--brand-tint), transparent 75%);
+    pointer-events: none;
+  }
+
+  & .wrap {
+    position: relative;
+  }
+
+  & h1 {
+    max-width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+
+    & .accent {
+      color: var(--brand-bright);
+    }
+  }
+
+  & .lede {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .actions {
+    justify-content: center;
+  }
+}
+
+.hero-shot {
+  position: relative;
+  margin-top: clamp(40px, 7vw, 72px);
+  margin-bottom: -2px;
+
+  & .shot {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: var(--brand-bright);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  & .mark {
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border-radius: 8px;
+    background: var(--brand);
+    color: var(--mark-ink);
+  }
+}
+
+.lede {
+  max-width: 36em;
+  color: var(--text-muted);
+  font-size: clamp(1.1rem, 2.1vw, 1.3rem);
+  line-height: 1.55;
+}

@@ -1,0 +1,52 @@
+/* A screenshot framed as a window. The window chrome is light in both themes,
+ * because the captures are. */
+
+.shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #f6f7f9;
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 6%),
+    0 24px 60px -12px rgb(15 23 42 / 22%);
+
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 24px 60px -12px rgb(0 0 0 / 70%);
+  }
+
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e3e6ea;
+  background: #eef0f3;
+  color: #5f6873;
+  font-size: 0.75rem;
+  font-weight: 550;
+
+  & i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d3d7dd;
+  }
+
+  & span {
+    flex: 1;
+    margin-right: 46px;
+    text-align: center;
+
+    @media (max-width: 640px) {
+      margin-right: 0;
+    }
+  }
+}

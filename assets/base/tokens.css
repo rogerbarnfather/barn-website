@@ -1,0 +1,98 @@
+/* Design tokens. Nothing else in the shared files states a colour, a size
+ * scale or a font: they read these. Each tool owns one colour, taken from its
+ * GUI. A page picks its colour with <body data-brand="spec|ark|tree">; anything
+ * inside an element carrying data-brand takes that tool's colour instead.
+ * Values are light-dark(light, dark) and follow prefers-color-scheme. */
+
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(#ffffff, #0d1117);
+  --bg-alt: light-dark(#f6f7f9, #131920);
+  --bg-raised: light-dark(#ffffff, #161b22);
+  --border: light-dark(#dcdfe4, #2a313a);
+  --text: light-dark(#1b1f23, #e6edf3);
+  --text-muted: light-dark(#5f6873, #9aa4af);
+  --code-bg: light-dark(#10151c, #161b22);
+  --code-fg: #e6edf3;
+  --code-muted: #8b949e;
+  --shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 6px 20px rgb(0 0 0 / 6%);
+
+  /* Fulfilment colours: Barnspec's yellow / red / green, never a brand. */
+  --status-yellow: light-dark(#b08800, #e3b341);
+  --status-red: light-dark(#cf222e, #ff7b72);
+  --status-green: light-dark(#1a7f37, #56d364);
+
+  /* Barnspec: mint. The fill is too light for text, so text uses -text. */
+  --spec: light-dark(#18d19e, #3ff0bf);
+  --spec-ink: light-dark(#072a22, #071f19);
+  --spec-text: light-dark(#07795f, #8af5d6);
+  --spec-bright: light-dark(#11b88a, #8af5d6);
+  --spec-tint: light-dark(#e3fbf3, #123a30);
+
+  /* Barnark: burnt orange. */
+  --ark: light-dark(#f25c05, #ff9244);
+  --ark-ink: light-dark(#ffffff, #2a1400);
+  --ark-text: light-dark(#c84600, #ff9244);
+  --ark-bright: light-dark(#f25c05, #ff9244);
+  --ark-tint: light-dark(#fff0e3, #3a2212);
+
+  /* Barntree: sky blue, at Barnark's lightness and Barnspec's saturation. */
+  --tree: light-dark(#0b95e0, #55c9ff);
+  --tree-ink: light-dark(#ffffff, #04263a);
+  --tree-text: light-dark(#0a76b5, #55c9ff);
+  --tree-bright: light-dark(#0b95e0, #55c9ff);
+  --tree-tint: light-dark(#e0f3ff, #12354d);
+
+  /* The current tool's colour. Neutral until a data-brand sets it. */
+  --brand: var(--text);
+  --brand-ink: var(--bg);
+  --brand-text: var(--text);
+  --brand-bright: var(--text);
+  --brand-tint: var(--bg-alt);
+  /* Terminal windows are dark in both themes, so they take the dark one. */
+  --brand-on-code: var(--code-muted);
+  --mark-ink: #ffffff;
+
+  --radius: 8px;
+  --radius-lg: 14px;
+  --wrap: 1080px;
+  --wrap-wide: 1240px;
+  --gutter: clamp(16px, 4vw, 32px);
+
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 8px 24px rgb(0 0 0 / 35%);
+  }
+}
+
+[data-brand="spec"] {
+  --brand-on-code: #3ff0bf;
+  --brand: var(--spec);
+  --brand-ink: var(--spec-ink);
+  --brand-text: var(--spec-text);
+  --brand-bright: var(--spec-bright);
+  --brand-tint: var(--spec-tint);
+}
+
+[data-brand="ark"] {
+  --brand-on-code: #ff9244;
+  --brand: var(--ark);
+  --brand-ink: var(--ark-ink);
+  --brand-text: var(--ark-text);
+  --brand-bright: var(--ark-bright);
+  --brand-tint: var(--ark-tint);
+}
+
+[data-brand="tree"] {
+  --brand-on-code: #55c9ff;
+  --brand: var(--tree);
+  --brand-ink: var(--tree-ink);
+  --brand-text: var(--tree-text);
+  --brand-bright: var(--tree-bright);
+  --brand-tint: var(--tree-tint);
+}

@@ -1,0 +1,33 @@
+/* Code, commands and output. Terminal blocks are dark in both themes. In a
+ * command block the prompt is `<span class="p">$</span>` and a comment is
+ * `<span class="c">`. */
+
+pre {
+  margin: 0;
+  padding: 16px 18px;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--code-fg);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  tab-size: 4;
+
+  & code {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: inherit;
+  }
+
+  & .c {
+    color: var(--code-muted);
+  }
+
+  & .p {
+    color: var(--brand-on-code);
+    user-select: none;
+  }
+}

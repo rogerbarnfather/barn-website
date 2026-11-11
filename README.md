@@ -9,6 +9,11 @@ It leads with the philosophy and the GUIs. Details, terminology, the command
 line and installation sit in each page's collapsible "Go deeper" sections.
 The screenshots in `assets/screens/` are real, taken in Chrome at twice the size.
 
+Styles: `assets/base/` is the shared stylesheet (tokens, layout, components and the documentation
+layout, one file each; `base.css` is the entry). Each tool's own site carries an identical copy, and
+`bin/ci-all` in the suite folder fails if one differs. `assets/site.css` holds only this site's own
+components. See `docs/style-guide.md`.
+
 Retaken on 2026-11-08, on Barntree core 8.1.0, CLI 6.2.0 and GUI 6.3.0
 with the approved evergreen branding:
 

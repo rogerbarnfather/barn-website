@@ -1,0 +1,39 @@
+/* Buttons and the row that holds them. */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--brand);
+  background: var(--brand);
+  color: var(--brand-ink);
+  font-weight: 650;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: filter 120ms, transform 120ms;
+
+  &:hover {
+    filter: brightness(1.07);
+    transform: translateY(-1px);
+  }
+
+  &.ghost {
+    background: transparent;
+    color: var(--brand-bright);
+    border-color: var(--border);
+
+    &:hover {
+      border-color: var(--brand);
+      filter: none;
+    }
+  }
+}

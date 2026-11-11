@@ -6,7 +6,7 @@ tool's own website (Barnspec, Barnark, Barntree).
 **This guide extends the Barn suite base style guide** (`docs/style-guide.md` in the suite folder). The
 base guide wins for anything it states: tool colours (§4), neutrals and themes (§5), typography and
 wording (§6), spacing (§7), controls (§8), states (§9), accessibility and motion (§10). This guide adds
-only what a website needs and the base guide lacks. `assets/site.css` is the reference implementation:
+only what a website needs and the base guide lacks. `assets/base/` (shared) and `assets/site.css` (the main site) are the reference implementation:
 where this guide and the stylesheet disagree, say so in the change and fix one of them.
 
 The suite's `purpose.md` wins over both: no page is added for completeness, only for a
@@ -146,7 +146,7 @@ with a reason, as each GUI's guide does. It may not contradict this guide.
 
 ### What it may not change
 
-- The shared stylesheet copy (`base.css`). A change goes in the master and is copied to every site in
+- The shared stylesheet copy (`assets/base/`). A change goes in the master and is copied to every site in
   the same change. The drift check fails when a copy differs.
 - The header and footer structure, the skip link, the navigation pattern and the documentation layout.
 - The base guide's rules. A rule that is wrong for every tool is changed in the base guide, not here.
@@ -165,3 +165,16 @@ Look at the rendered page, not only the HTML.
 - Search the page for the wording rules in §5, and for any claim about a version, a feature or a
   release, which is checked against the tags and the tool itself.
 - Report what was checked and what remains.
+
+## 9. The stylesheets
+
+- `assets/base/base.css` is the entry: it declares the cascade layers (`tokens`, `reset`, `layout`,
+  `components`, `docs`) and imports one file per concern. Every other file reads only the tokens in
+  `tokens.css` (colours are `light-dark(light, dark)`, so one declaration serves both themes).
+- A component's responsive rules sit inside the component, as a nested `@media`. To change how
+  something looks everywhere, change its file or its token; nothing else needs to move.
+- `assets/site.css` is a site's own, unlayered, so it wins over `base/` without raising specificity.
+  Put a component in `site.css` until a second site needs it, then move it to `base/` in the same
+  change as the copies.
+- Use the system's own tools before new ones: custom properties, `light-dark()`, nesting, grid, flex
+  and `clamp()`. No preprocessor and no build step.

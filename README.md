@@ -71,7 +71,7 @@ Each tool has one colour, shared with its GUI:
 | Barnark (orange) | `#f25c05` fill, `#c84600` text | `#ff9244` |
 | Barntree (sky blue) | `#0b95e0` fill, `#0a76b5` text | `#55c9ff` |
 
-A page takes its colour from `<body data-brand="spec|ark|cept">`, and any
+A page takes its colour from `<body data-brand="spec|ark|tree">`, and any
 element with `data-brand` takes that tool's colour. The tokens are at the top
 of `assets/site.css`.
 

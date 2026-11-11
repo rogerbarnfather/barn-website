@@ -4,7 +4,7 @@
  *   Barnspec  mint    (gui/barnspec-gui/frontend/src/index.css)
  *   Barnark   orange  (gui/barnark-gui/frontend/src/styles/theme.css)
  *   Barntree  sky     (gui/barntree-gui/frontend/src/styles/theme.css)
- * A page picks its colour with <body data-brand="spec|ark|cept">; anything
+ * A page picks its colour with <body data-brand="spec|ark|tree">; anything
  * inside an element carrying data-brand takes that tool's colour instead. */
 
 :root {
@@ -41,11 +41,11 @@
   --ark-tint: #fff0e3;
 
   /* Barntree — sky blue, at Barnark's lightness and Barnspec's saturation. */
-  --cept: #0b95e0;
-  --cept-ink: #ffffff;
-  --cept-text: #0a76b5;
-  --cept-bright: #0b95e0;
-  --cept-tint: #e0f3ff;
+  --tree: #0b95e0;
+  --tree-ink: #ffffff;
+  --tree-text: #0a76b5;
+  --tree-bright: #0b95e0;
+  --tree-tint: #e0f3ff;
 
   --brand: var(--text);
   --brand-ink: var(--bg);
@@ -92,11 +92,11 @@
     --ark-bright: #ff9244;
     --ark-tint: #3a2212;
 
-    --cept: #55c9ff;
-    --cept-ink: #04263a;
-    --cept-text: #55c9ff;
-    --cept-bright: #55c9ff;
-    --cept-tint: #12354d;
+    --tree: #55c9ff;
+    --tree-ink: #04263a;
+    --tree-text: #55c9ff;
+    --tree-bright: #55c9ff;
+    --tree-tint: #12354d;
   }
 }
 
@@ -118,13 +118,13 @@
   --brand-tint: var(--ark-tint);
 }
 
-[data-brand="cept"] {
+[data-brand="tree"] {
   --brand-on-code: #55c9ff;
-  --brand: var(--cept);
-  --brand-ink: var(--cept-ink);
-  --brand-text: var(--cept-text);
-  --brand-bright: var(--cept-bright);
-  --brand-tint: var(--cept-tint);
+  --brand: var(--tree);
+  --brand-ink: var(--tree-ink);
+  --brand-text: var(--tree-text);
+  --brand-bright: var(--tree-bright);
+  --brand-tint: var(--tree-tint);
 }
 
 /* ---------- Base ---------- */
@@ -289,7 +289,7 @@ strong {
 }
 
 .barn-mark g > :nth-child(3) {
-  fill: var(--cept);
+  fill: var(--tree);
 }
 
 .tri-rule i:nth-child(1) {
@@ -301,7 +301,7 @@ strong {
 }
 
 .tri-rule i:nth-child(3) {
-  background: var(--cept);
+  background: var(--tree);
 }
 
 .nav {

@@ -33,7 +33,7 @@ Every page has, in order:
    pages open with their heading (§4).
 4. A **site footer** (`footer.site-footer`): the credit line and one `nav aria-label="Footer"`.
 
-The header and footer markup is identical on every page of a site, apart from `aria-current`. There is
+The header and footer markup is identical on every page of a site, apart from `aria-current`. Pages in `docs/` link up with `../`, so they are compared with each other. There is
 no build step to share it, so a check in the suite's `bin/ci-all` compares them.
 
 Each page has:

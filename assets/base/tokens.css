@@ -88,7 +88,10 @@
   --brand-tint: var(--ark-tint);
 }
 
-[data-brand="tree"] {
+/* The main Barn site is mint too (green reads as passing), but it is its own
+ * brand so the home page can change without moving Barntree. */
+[data-brand="tree"],
+[data-brand="barn"] {
   --brand-on-code: #3ff0bf;
   --brand: var(--tree);
   --brand-ink: var(--tree-ink);

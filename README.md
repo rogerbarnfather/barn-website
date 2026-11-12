@@ -76,7 +76,10 @@ Each tool has one colour, shared with its GUI:
 | Barnark (orange) | `#f25c05` fill, `#c84600` text | `#ff9244` |
 | Barntree (mint) | `#18d19e` fill, `#07795f` text | `#3ff0bf` |
 
-A page takes its colour from `<body data-brand="spec|ark|tree">`, and any
+The main Barn site (`index.html`) uses mint too, as `data-brand="barn"`: green
+reads as passing, where blue felt sad on a home page.
+
+A page takes its colour from `<body data-brand="spec|ark|tree|barn">`, and any
 element with `data-brand` takes that tool's colour. The tokens are at the top
 of `assets/site.css`.
 

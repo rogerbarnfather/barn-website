@@ -107,3 +107,13 @@
   display: inline-block;
   flex: none;
 }
+
+/* The tool's logo beside its name: the figure is always white, whatever the colour. */
+.tool-mark {
+  width: 28px;
+  height: 28px;
+  padding: 3px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #ffffff;
+}

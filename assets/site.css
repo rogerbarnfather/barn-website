@@ -75,6 +75,77 @@
     color: var(--text);
   }
 
+  & .pain-problem,
+  & .pain-fix,
+  & .pain-toggle {
+    grid-column: 2;
+  }
+
+  & .pain-fix strong {
+    color: var(--status-green);
+  }
+
+  & .pain-toggle {
+    justify-self: start;
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--brand-text);
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+
+    &::after {
+      content: " →";
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* With scripting, both faces share one cell, so the card keeps the height
+   * of the taller one and the grid never jumps. Without it, both just show. */
+  &.interactive {
+    & li {
+      grid-template-rows: 1fr auto;
+    }
+
+    & .pain-problem,
+    & .pain-fix {
+      grid-row: 1;
+      transition: opacity 180ms, visibility 180ms;
+    }
+
+    & .pain-toggle {
+      grid-row: 2;
+    }
+
+    & .pain-fix {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    & li[data-open] {
+      & .pain-problem {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      & .pain-fix {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &::before {
+        content: "✓";
+        background: color-mix(in srgb, var(--status-green) 14%, transparent);
+        color: var(--status-green);
+      }
+    }
+  }
+
   @media (max-width: 900px) {
     grid-template-columns: minmax(0, 1fr);
   }

@@ -83,15 +83,51 @@
           <h2>Most project tools reward the “appearance” of progress.</h2>
         </div>
         <ul class="pains">
-          <li><div><strong>Estimates nobody believes</strong>Padded guesses, turned into deadlines, turned into blame.</div></li>
-          <li><div><strong>A backlog you’ll never finish</strong>Hundreds of “some day” tickets competing for attention with the work that matters now.</div></li>
-          <li><div><strong>“Done” that isn’t</strong>A card moved to the last column, with nothing to show the feature works.</div></li>
-          <li><div><strong>Tickets with no why</strong>“Improve login.” For whom? To what end? Nobody remembers.</div></li>
-          <li><div><strong>Charts that measure busyness</strong>Velocity and burndown tell you work happened, not that it helped.</div></li>
-          <li><div><strong>Work cut into layers</strong>One person on the database, one on the screen, nobody holding the whole thing.</div></li>
-          <li><div><strong>Code with no shape</strong>Classes of every sort in any folder, and nobody sure which way the dependencies should point.</div></li>
-          <li><div><strong>An architecture nobody can see</strong>It lives in one person’s head, so a newcomer guesses where a file goes, and guesses wrong.</div></li>
-          <li><div><strong>Confused language</strong>No glossary, so one thing has three names and one name means three things. Every meeting starts with translating.</div></li>
+          <li>
+            <div class="pain-problem"><strong>Estimates nobody believes</strong>Padded guesses, turned into deadlines, turned into blame.</div>
+            <div class="pain-fix"><strong>Prevented</strong>Work goes ahead one small slice at a time, and each slice is judged by proof. Nothing rests on a guess about the whole.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>A backlog you’ll never finish</strong>Hundreds of “some day” tickets competing for attention with the work that matters now.</div>
+            <div class="pain-fix"><strong>Prevented</strong>Barn has one active phase. Nothing is parked far ahead, and you replan after each release.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>“Done” that isn’t</strong>A card moved to the last column, with nothing to show the feature works.</div>
+            <div class="pain-fix"><strong>Prevented</strong>An example goes green only when it passes against the real software, and it goes red again if it breaks.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>Tickets with no why</strong>“Improve login.” For whom? To what end? Nobody remembers.</div>
+            <div class="pain-fix"><strong>Prevented</strong>Every piece of work carries the reason it exists, so nobody has to remember it.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>Charts that measure busyness</strong>Velocity and burndown tell you work happened, not that it helped.</div>
+            <div class="pain-fix"><strong>Prevented</strong>Progress means examples passing, and once it ships you discover its impact.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>Work cut into layers</strong>One person on the database, one on the screen, nobody holding the whole thing.</div>
+            <div class="pain-fix"><strong>Prevented</strong>Stories are slices of what a person can do, so each one is finished from end to end.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>Code with no shape</strong>Classes of every sort in any folder, and nobody sure which way the dependencies should point.</div>
+            <div class="pain-fix"><strong>Prevented</strong>Pick an architecture template and your codebase starts in a documented shape.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>An architecture nobody can see</strong>It lives in one person’s head, so a newcomer guesses where a file goes, and guesses wrong.</div>
+            <div class="pain-fix"><strong>Prevented</strong>The template says what every folder is for, and a check reports what’s missing or unexpected.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
+          <li>
+            <div class="pain-problem"><strong>Confused language</strong>No glossary, so one thing has three names and one name means three things. Every meeting starts with translating.</div>
+            <div class="pain-fix"><strong>Prevented</strong>A shared glossary and agreed names live with the work, so a word means one thing.</div>
+            <button class="pain-toggle" type="button" aria-expanded="false" hidden>The fix</button>
+          </li>
         </ul>
         <p class="punchline">Don’t try to “cure” these problems. Use Barn to prevent them.</p>
       </div>
@@ -328,5 +364,19 @@
       </nav>
     </div>
   </footer>
+<script>
+  document.querySelectorAll('.pains').forEach(function (list) {
+    list.classList.add('interactive');
+    list.querySelectorAll('li').forEach(function (card) {
+      var button = card.querySelector('.pain-toggle');
+      button.hidden = false;
+      button.addEventListener('click', function () {
+        var open = card.toggleAttribute('data-open');
+        button.setAttribute('aria-expanded', open);
+        button.textContent = open ? 'The problem' : 'The fix';
+      });
+    });
+  });
+</script>
 </body>
 </html>

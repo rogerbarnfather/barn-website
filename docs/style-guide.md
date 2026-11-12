@@ -40,7 +40,7 @@ Each page has:
 
 - `<html lang="en-GB">`, `charset`, `viewport`;
 - a `<title>` of the form `Page · Site`, and a `description` of one sentence;
-- the tool's favicon (`assets/<tool>.svg`), and `<body data-brand="spec|ark|tree">` on a tool's pages
+- the tool's favicon (`assets/base/<tool>.svg (the logos live in the shared base, so one edit reaches every site)`), and `<body data-brand="spec|ark|tree">` on a tool's pages
   (no `data-brand` on the Barn pages);
 - one `h1`, and headings that never skip a level.
 

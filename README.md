@@ -86,3 +86,10 @@ of `assets/site.css`.
 Large and decorative text (headline accent, kickers, the "+" icons, nav hover)
 uses `--brand-bright`; small body links keep the deeper `--brand-text` so they
 stay readable on white.
+
+### Barnark captures refreshed 2026-11-14
+
+`ark-browse.webp` and its theme-selected `ark-browse-dark.webp` companion are the same
+2× Chrome captures as the Barnark site: published core 0.3.0 / GUI 0.2.10, a disposable
+Hotel ark at `/src`, three contexts, Booking and tagged layers. The local barn path is hidden.
+Existing README embed URLs are retained.

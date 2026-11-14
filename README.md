@@ -115,3 +115,8 @@ was hidden before capture; no screenshot wording or result was painted over.
 Capture scripts, fixture records and verification are retained in the suite's
 `docs/plans/barnspek-rename-stage4b/` evidence. Website destination and publication
 remain pending; the existing verified site URL above is unchanged.
+
+### Spek tab screenshots — 2026-11-14
+
+The affected light and dark screenshots were recaptured from the real Barn GUI with the
+Spek label, using a disposable Hotel and Chrome at 2× resolution.

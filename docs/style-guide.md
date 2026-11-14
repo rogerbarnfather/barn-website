@@ -1,7 +1,7 @@
 # Barn website style guide
 
 Established 11 November 2026. The standard for new and changed pages on the Barn website and on each
-tool's own website (Barnspec, Barnark, Barntree).
+tool's own website (Barnspek, Barnark, Barntree).
 
 **This guide extends the Barn suite base style guide** (`docs/style-guide.md` in the suite folder). The
 base guide wins for anything it states: tool colours (§4), neutrals and themes (§5), typography and
@@ -62,7 +62,7 @@ documentation is the deeper material, and its content stays visible and linkable
   on the dark code blocks. `--brand` with `--brand-ink` is the one primary button per page region.
 - Don't hard-code a hex value in a page or a tool's `site.css`. Use a token. A new token goes in the
   master tokens and is reported in the change.
-- The known gap in the base guide (§4) applies: no new small white-on-orange or white-on-sky text (Barnspec is the sky blue now).
+- The known gap in the base guide (§4) applies: no new small white-on-orange or white-on-sky text (Barnspek is the sky blue now).
 
 ## 4. Documentation pages
 

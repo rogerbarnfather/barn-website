@@ -18,12 +18,12 @@
   --code-muted: #8b949e;
   --shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 6px 20px rgb(0 0 0 / 6%);
 
-  /* Fulfilment colours: Barnspec's yellow / red / green, never a brand. */
+  /* Fulfilment colours: Barnspek's yellow / red / green, never a brand. */
   --status-yellow: light-dark(#b08800, #e3b341);
   --status-red: light-dark(#cf222e, #ff7b72);
   --status-green: light-dark(#1a7f37, #56d364);
 
-  /* Barnspec: sky blue, at Barnark's lightness. White ink on the light fill. */
+  /* Barnspek: sky blue, at Barnark's lightness. White ink on the light fill. */
   --spec: light-dark(#0b95e0, #55c9ff);
   --spec-ink: light-dark(#ffffff, #04263a);
   --spec-text: light-dark(#0a76b5, #55c9ff);
